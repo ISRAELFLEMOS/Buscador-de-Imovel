@@ -5,7 +5,7 @@ export const emptyDataset: ListingsDataset = {
   generatedAt: new Date(0).toISOString(),
   center: SEARCH_CENTER,
   radiusKm: DEFAULT_RADIUS_KM,
-  strictRadiusDefault: true,
+  strictRadiusDefault: false,
   listings: [],
   reports: [],
   notices: [

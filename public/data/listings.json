@@ -1,22 +1,86 @@
 {
-  "generatedAt": "2026-06-15T23:58:20.764Z",
+  "generatedAt": "2026-06-16T13:24:34.662Z",
   "center": {
-    "label": "CMU - Av. Brasil, 1666",
+    "label": "Avenida Brasil, 1666",
     "address": "Avenida Brasil, 1666, Boa Viagem, Belo Horizonte, MG, 30140-004",
     "coordinates": {
       "lat": -19.9313091,
       "lon": -43.93434
     },
-    "coordinateSource": "Coordenada aproximada por Nominatim/OpenStreetMap para o segmento da Av. Brasil na regiao Boa Viagem/Savassi, validada contra endereco oficial da CMU."
+    "coordinateSource": "Coordenada aproximada por Nominatim/OpenStreetMap para o segmento da Avenida Brasil na regiao Boa Viagem/Savassi."
   },
   "radiusKm": 3.5,
-  "strictRadiusDefault": true,
+  "strictRadiusDefault": false,
   "listings": [
     {
-      "id": "90fc9e735096deaa",
+      "id": "6b71efc62fd7df02",
+      "source": "Lugar Certo",
+      "sourceListingId": "353660503",
+      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-1-quarto-barro-preto-belo-horizonte-aluguel-rs1100-id-353660503",
+      "title": "Apartamento, 1 Quarto Avenida Augusto de Lima, Barro Preto, Belo Horizonte, MG (CHAVE 35) EXCELENTE APARTAMENTO LOCALIZADO NA AVENIDA AUGUST",
+      "transaction": "rent",
+      "neighborhood": "Barro Preto",
+      "address": "Avenida Augusto de Lima",
+      "coordinates": {
+        "lat": -19.9188,
+        "lon": -43.9503
+      },
+      "distanceKm": 2.2,
+      "distanceConfidence": "estimated",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 1100,
+        "iptu": 1,
+        "monthlyTotal": 1101,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:34.511Z",
+      "rawText": "Apartamento, 1 Quarto Avenida Augusto de Lima, Barro Preto, Belo Horizonte, MG (CHAVE 35) EXCELENTE APARTAMENTO LOCALIZADO NA AVENIDA AUGUSTO DE LIMA, POSSUI 1 QUARTO COM ARMÁRIO, COZINHA COM ARMÁRIO E BANHEIRO COM REVESTIMENTO EM CERÂMICA. PRÉDIO POSSUI 2 ELEVADORES, PORTARIA 24 HORAS E ÁGUA INCLUSA NO CONDOMÍNIO. *OS VALORES ANUNCIADOS DE IPTU E CONDOMÍNIO SÃO REFERENCIAIS E PODEM SOFRER ALTERAÇÕES. WHATSAPP: (31) 98386-5510* QUARTO(S) 1 BANHEIRO(S) 1 R$ 1.100,00 Apartamento, 1 Quarto Avenida Augusto de Lima, Barro Preto, Belo Horizonte, MG (CHAVE 35) EXCELENTE APARTAMENTO LOCALIZADO NA AVENIDA AUGUSTO DE LIMA, POSSUI 1 QUARTO COM ARMÁRIO, COZINHA COM ARMÁRIO E BANHEIRO COM REVESTIMENTO EM CERÂMICA. PRÉDIO POSSUI 2 ELEVADORES, PORTARIA 24 HORAS E ÁGUA INCLUSA NO CONDOMÍNIO. *OS VALORES ANUNCIADOS DE IPTU E CONDOMÍNIO SÃO REFERENCIAIS E PODEM SOFRER ALTERAÇÕES. WHATSAPP: (31) 98386-5510* QUARTO(S) 1 BANHEIRO(S) 1 R$ 1.100,00 Ver detalhes",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "4d679699a6ed22d7",
+      "source": "Lugar Certo",
+      "sourceListingId": "348105048",
+      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-1-quarto-serrano-belo-horizonte-45m2-aluguel-rs950-id-348105048",
+      "title": "Apartamento, 1 Quarto Rua Ondina Pedrosa Nahas, Serrano, Belo Horizonte, MG APARTAMENTO DE 1 QUARTO, SALA, COPA, COZINHA, BANHEIRO, ÁREA DE ",
+      "transaction": "rent",
+      "neighborhood": "Centro",
+      "address": "Rua Ondina Pedrosa Nahas",
+      "coordinates": {
+        "lat": -19.9191,
+        "lon": -43.9386
+      },
+      "distanceKm": 1.4,
+      "distanceConfidence": "estimated",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 950,
+        "iptu": 950,
+        "monthlyTotal": 1900,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:34.511Z",
+      "rawText": "Apartamento, 1 Quarto Rua Ondina Pedrosa Nahas, Serrano, Belo Horizonte, MG APARTAMENTO DE 1 QUARTO, SALA, COPA, COZINHA, BANHEIRO, ÁREA DE SERVIÇO, PISO CERÂMICA, PRÓXIMO A AVENIDA SERRANA DE FÁCIL ACESSO AO CENTRO DE BH E CONTAGEM,. RESTRIÇÃO Á ANIMAIS. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP 31 983 867 630 ÁREA 45 QUARTO(S) 1 BANHEIRO(S) 1 R$ 950,00 Apartamento, 1 Quarto Rua Ondina Pedrosa Nahas, Serrano, Belo Horizonte, MG APARTAMENTO DE 1 QUARTO, SALA, COPA, COZINHA, BANHEIRO, ÁREA DE SERVIÇO, PISO CERÂMICA, PRÓXIMO A AVENIDA SERRANA DE FÁCIL ACESSO AO CENTRO DE BH E CONTAGEM,. RESTRIÇÃO Á ANIMAIS. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP 31 983 867 630 ÁREA 45 QUARTO(S) 1 BANHEIRO(S) 1 R$ 950,00 Ver detalhes",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "0897e14b25d760bd",
       "source": "QuintoAndar",
       "sourceListingId": "895483023",
-      "url": "https://www.quintoandar.com.br/imovel/895483023/alugar/apartamento-3-quartos-sion-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A6%2C%22personalization%22%3Afalse%7D",
+      "url": "https://www.quintoandar.com.br/imovel/895483023/alugar/apartamento-3-quartos-sion-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A6%2C%22personalization%22%3Afalse%7D",
       "title": "Anúncio novoAlugar apartamento com 3 quartos e varanda.",
       "transaction": "rent",
       "neighborhood": "Sion",
@@ -39,7 +103,7 @@
         "monthlyTotal": 3900,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
+      "collectedAt": "2026-06-16T13:24:24.368Z",
       "rawText": "Anúncio novoAlugar apartamento com 3 quartos e varanda.R$ 3.900 aluguelR$ 4.699 total90 m² · 3 quartos · 2 vagasRua Colômbia, Sion · Belo Horizonte Anúncio novoAlugar apartamento com 3 quartos e varanda.R$ 3.900 aluguelR$ 4.699 total90 m² · 3 quartos · 2 vagasRua Colômbia, Sion · Belo Horizonte",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
@@ -47,170 +111,63 @@
       ]
     },
     {
-      "id": "098b998e6573db6a",
-      "source": "QuintoAndar",
-      "sourceListingId": "894236444",
-      "url": "https://www.quintoandar.com.br/imovel/894236444/alugar/apartamento-2-quartos-santa-efigenia-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A3%2C%22personalization%22%3Afalse%7D",
-      "title": "Anúncio novoApartamento para alugar em Santa Efigênia de 62 m² com varanda.",
+      "id": "f54a2d6c68c48edb",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/oportunidade-apartamento-de-2-dormitorios-proximo-ao-2970321873.html?n_src=Listado&n_pills=Piscina&n_pg=1&n_pos=28",
+      "title": "Excelente apartamento de 2 quartos no Bairro do Carmo, próximo ao Pátio Savassi, sendo os dois quartos com armários forrados e divididos, pi",
       "transaction": "rent",
-      "neighborhood": "Santa Efigênia",
+      "neighborhood": "Savassi",
       "coordinates": {
-        "lat": -19.9256,
-        "lon": -43.9207
+        "lat": -19.9367,
+        "lon": -43.9342
       },
-      "distanceKm": 1.6,
+      "distanceKm": 0.6,
       "distanceConfidence": "estimated",
       "bedrooms": 2,
-      "parkingSpaces": 2,
-      "areaM2": 62,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novoApartamento para alugar em Santa Efigênia de 62 m²",
-      "images": [
-        "https://www.quintoandar.com.br/img/med/894236444-12.6317706049337Piaui200603SantaEfignia.jpg"
-      ],
-      "costs": {
-        "rent": 6600,
-        "monthlyTotal": 6600,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
-      "rawText": "Anúncio novoApartamento para alugar em Santa Efigênia de 62 m² com varanda.R$ 6.600 aluguelR$ 8.397 total62 m² · 2 quartos · 2 vagasRua Piauí, Santa Efigênia · Belo Horizonte Anúncio novoApartamento para alugar em Santa Efigênia de 62 m² com varanda.R$ 6.600 aluguelR$ 8.397 total62 m² · 2 quartos · 2 vagasRua Piauí, Santa Efigênia · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "01f501db14a0e29e",
-      "source": "Lugar Certo",
-      "sourceListingId": "353673952",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-sion-belo-horizonte-com-garagem-180m2-aluguel-rs8500-id-353673952",
-      "title": "Apartamento, 4 Quartos, 3 Vagas, 1 Suite Rua da Groenlândia, Sion, Belo Horizonte, MG - Salão amplo para dois ambientes, lavabo, piso em táb",
-      "transaction": "rent",
-      "neighborhood": "Sion",
-      "address": "Rua da Groenlândia",
-      "coordinates": {
-        "lat": -19.9522,
-        "lon": -43.9317
-      },
-      "distanceKm": 2.3,
-      "distanceConfidence": "estimated",
-      "bedrooms": 4,
-      "bathrooms": 1,
-      "parkingSpaces": 3,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "reformados, janelas esquadrias de alumínio. - Dep. Completa",
+      "parkingSpaces": 1,
+      "areaM2": 75,
+      "isNewOrRenovated": false,
       "images": [],
       "costs": {
-        "rent": 8500,
-        "monthlyTotal": 8500,
+        "rent": 4000,
+        "monthlyTotal": 4000,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:08.038Z",
-      "rawText": "Apartamento, 4 Quartos, 3 Vagas, 1 Suite Rua da Groenlândia, Sion, Belo Horizonte, MG - Salão amplo para dois ambientes, lavabo, piso em tábua corrida. - Cozinha montada com armários. - Quatro quartos, sendo uma suíte, todos com armários, piso revestido à tábua corrida, cortinas e lustres. - Banheiros com box e reformados, janelas esquadrias de alumínio. - Dep. Completa empregada. - Área de serviço. - Três vagas garagem - Dois apartamento por andar. - Portaria 24 horas com dois elevadores. - Excelente área verde - Salão de recepção decorado. - Playground com piscina para crianças. - Piscina adulto. - Quadra peteca. - Área gourmet com churrasqueira. - Academia ginastica completa. ÁREA 180 QUARTO(S) 4 VAGA(S) 3 BANHEIRO(S) 3 R$ 8.500,00 Apartamento, 4 Quartos, 3 Vagas, 1 Suite Rua da Groenlândia, Sion, Belo Horizonte, MG - Salão amplo para dois ambientes, lavabo, piso em tábua corrida. - Cozinha montada com armários. - Quatro quartos, sendo uma suíte, todos com armários, piso revestido à tábua corrida, cortinas e lustres. - Banheiros com box e reformados, janelas esquadrias de alumínio. - Dep. Completa empregada. - Área de serviço. - Três vagas garagem - Dois apartamento por andar. -",
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Excelente apartamento de 2 quartos no Bairro do Carmo, próximo ao Pátio Savassi, sendo os dois quartos com armários forrados e divididos, piso em laminado de madeira; banhos social e suíte, ambos com piso e bancada em granito, box blindex, revestimento em cerâmica, armários; salão para 2 ambientes com piso em cerâmica; cozinha ampla, com piso e revestimento em cerâmica, armários planejados, bancadas em granito; dispensa; área de serviço; banho de empregada; 1 vaga de garagem, livre e coberta. Prédio 100% revestido, com 2 elevadores; portaria 24 horas; hall social decorado; área de lazer com sauna, piscina, salão de festas, churrasqueira e play ground. R$ 4.000R$ 1.015 Condominio75 m² tot.2 quartos3 ban.1 vagaEndereço não informadoCarmo, Belo HorizonteExcelente apartamento de 2 quartos no Bairro do Carmo, próximo ao Pátio Savassi, sendo os dois quartos com armários forrados e divididos, piso em laminado de madeira; banhos social e suíte, ambos com piso e bancada em granito, box blindex, revestimento em cerâmica, armários; salão para 2 ambientes com piso em cerâmica; cozinha ampla, com piso e revestimento em cerâmica, armários planejados, bancadas em granito; dispensa; área de serviç",
       "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "fc43bb859f02a495",
-      "source": "QuintoAndar",
-      "sourceListingId": "892910425",
-      "url": "https://www.quintoandar.com.br/imovel/892910425/alugar/apartamento-4-quartos-sao-pedro-belo-horizonte?from_route=%22search_results%22&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A1%2C%22personalization%22%3Afalse%7D",
-      "title": "Apartamento para alugar em São Pedro de 260 m² com varanda gourmet.",
+      "id": "99a9b58cebc97b23",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/cobertura-padre-eustaquio-belo-horizonte-3025597806.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=1",
+      "title": "Cobertura- padre eustáquio-belo horizonte. Área: 158m² Sala ampla para dois ambientes, bem iluminada e com painel planejado; Cozinha montada",
       "transaction": "rent",
-      "neighborhood": "São Pedro",
+      "neighborhood": "Centro",
       "coordinates": {
-        "lat": -19.9398,
-        "lon": -43.9352
+        "lat": -19.9191,
+        "lon": -43.9386
       },
-      "distanceKm": 0.9,
-      "distanceConfidence": "estimated",
-      "bedrooms": 4,
-      "parkingSpaces": 3,
-      "areaM2": 260,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/892910425-785.4269508264341IMG3807.jpg"
-      ],
-      "costs": {
-        "rent": 6000,
-        "monthlyTotal": 6000,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
-      "rawText": "Apartamento para alugar em São Pedro de 260 m² com varanda gourmet.R$ 6.000 aluguelR$ 7.256 total260 m² · 4 quartos · 3 vagasRua São Domingos do Prata, São Pedro · Belo Horizonte Apartamento para alugar em São Pedro de 260 m² com varanda gourmet.R$ 6.000 aluguelR$ 7.256 total260 m² · 4 quartos · 3 vagasRua São Domingos do Prata, São Pedro · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "b2ff75626cb6c3d7",
-      "source": "VivaReal",
-      "sourceListingId": "2892755473",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-santa-efigenia-belo-horizonte-com-garagem-80m2-aluguel-RS4500-id-2892755473/?source=ranking%2Crp",
-      "title": "Decisão ImóveisApartamento para alugar com 80 m², 2 quartos, 2 banheiros, 2 vagas em Santa Efigênia, Belo HorizonteRua Romano StochieroTaman",
-      "transaction": "rent",
-      "neighborhood": "Santa Efigênia",
-      "coordinates": {
-        "lat": -19.9256,
-        "lon": -43.9207
-      },
-      "distanceKm": 1.6,
-      "distanceConfidence": "estimated",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parkingSpaces": 2,
-      "areaM2": 80,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/3162335a320013a01a0350b9731fe5ab/apartamento-com-2-quartos-para-alugar-80m-no-santa-efigenia-belo-horizonte.webp?action=fit-in&dimension=614x297"
-      ],
-      "costs": {
-        "rent": 4500,
-        "condominium": 615,
-        "iptu": 415,
-        "monthlyTotal": 5530,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "Decisão ImóveisApartamento para alugar com 80 m², 2 quartos, 2 banheiros, 2 vagas em Santa Efigênia, Belo HorizonteRua Romano StochieroTamanho do imóvel 80 m²Quantidade de quartos 2Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 4.500/mêsCond. R$ 615 • IPTU R$ 415Contatar Decisão ImóveisApartamento para alugar com 80 m², 2 quartos, 2 banheiros, 2 vagas em Santa Efigênia, Belo HorizonteRua Romano StochieroTamanho do imóvel 80 m²Quantidade de quartos 2Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 4.500/mêsCond. R$ 615 • IPTU R$ 415Contatar",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "34d0153372eebace",
-      "source": "QuintoAndar",
-      "sourceListingId": "894498211",
-      "url": "https://www.quintoandar.com.br/imovel/894498211/alugar/apartamento-3-quartos-serra-belo-horizonte?from_route=%22search_results%22&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A7%2C%22personalization%22%3Afalse%7D",
-      "title": "Apartamento com 3 quartos e varanda para alugar na Serra. Opção confortável e prática para aluguel na região.",
-      "transaction": "rent",
-      "neighborhood": "Serra",
-      "coordinates": {
-        "lat": -19.9442,
-        "lon": -43.9224
-      },
-      "distanceKm": 1.9,
+      "distanceKm": 1.4,
       "distanceConfidence": "estimated",
       "bedrooms": 3,
-      "parkingSpaces": 2,
-      "areaM2": 110,
+      "parkingSpaces": 3,
+      "areaM2": 158,
       "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/894498211-983.0489547638142GAB139023.jpg"
-      ],
+      "images": [],
       "costs": {
-        "rent": 6975,
-        "monthlyTotal": 6975,
+        "rent": 4200,
+        "monthlyTotal": 4200,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
-      "rawText": "Apartamento com 3 quartos e varanda para alugar na Serra. Opção confortável e prática para aluguel na região.R$ 6.975 aluguelR$ 8.823 total110 m² · 3 quartos · 2 vagasRua Níquel, Serra · Belo Horizonte Apartamento com 3 quartos e varanda para alugar na Serra. Opção confortável e prática para aluguel na região.R$ 6.975 aluguelR$ 8.823 total110 m² · 3 quartos · 2 vagasRua Níquel, Serra · Belo Horizonte",
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Cobertura- padre eustáquio-belo horizonte. Área: 158m² Sala ampla para dois ambientes, bem iluminada e com painel planejado; Cozinha montada com armários; Três quartos amplos e com excelente iluminação natural, sendo uma suíte com armários; Banho social com box, armários e espelho; diferenciais: Prédio individual com elevador; Apenas duas unidades por andar; Cobertura nova, primeiro morador; Localização estratégica para quem busca fácil acesso ao Centro, próximo a diversos polos comerciais, além de supermercados, farmácias e escolas! R$ 4.200R$ 530 Condominio170 m² tot.3 quartos2 ban.3 vagasRua Olinto Magalhães Padre Eustáquio, Belo HorizonteCobertura- padre eustáquio-belo horizonte. Área: 158m² Sala ampla para dois ambientes, bem iluminada e com painel planejado; Cozinha montada com armários; Três quartos amplos e com excelente iluminação natural, sendo uma suíte com armários; Banho social com box, armários e espelho; diferenciais: Prédio individual com elevador; Apenas duas unidades por andar; Cobertura nova, primeiro morador; Localização estratégica para quem busca fácil acesso ao Centro, próximo a diversos polos comerciais, além de supermercados, farmácias e escolas!",
       "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
       ]
@@ -222,7 +179,7 @@
       "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-3-quartos-funcionarios-belo-horizonte-com-garagem-110m2-aluguel-rs4500-id-353363924",
       "title": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Maranhão, Funcionários, Belo Horizonte, MG Código: 1292 Apartamento 3 quartos 2 vagas Funcionár",
       "transaction": "rent",
-      "neighborhood": "Funcionários",
+      "neighborhood": "Funcionarios",
       "address": "Rua Maranhão",
       "coordinates": {
         "lat": -19.9322,
@@ -241,8 +198,41 @@
         "monthlyTotal": 4500,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:08.038Z",
+      "collectedAt": "2026-06-16T13:24:34.511Z",
       "rawText": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Maranhão, Funcionários, Belo Horizonte, MG Código: 1292 Apartamento 3 quartos 2 vagas Funcionários Belo Horizonte/MG. Apartamento com 110 m², 3 quartos sendo 1 suites, quartos com armários piso dos quartos laminado, sala para 2 ambientes com piso em granito rebaixamento em gesso e um espelho na sala, cozinha montada com armários, com bancada em granito e piso em granito, área de serviço com DCE, 2 vagas de garagem. CARACTERISTICAS:3Quartos com armários - 2 Banheiros com armários - 3 Banhos com blindex - D.C.E. - Despensa - Área de lazer - Salão de jogos - Porteiro físico - Interfone - Sol da manhã - Closet - Esquadrias alumínio - Janela com venezianas - Gás Canalizado - Banho empregada - Elevador social - Elevador serviço - Hall Social Decorado - Portão Eletrônico - Circuito de TV ÁREA 110 QUARTO(S) 3 VAGA(S) 2 BANHEIRO(S) 3 R$ 4.500,00 Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Maranhão, Funcionários, Belo Horizonte, MG Código: 1292 Apartamento 3 quartos 2 vagas Funcionários Belo Horizonte/MG. Apartamento com 110 m², 3 quartos sendo 1 suites, quartos com armários piso dos quartos laminado, sala para 2 ambientes com piso em granito reb",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "ba64a86b93e04762",
+      "source": "QuintoAndar",
+      "sourceListingId": "892910425",
+      "url": "https://www.quintoandar.com.br/imovel/892910425/alugar/apartamento-4-quartos-sao-pedro-belo-horizonte?from_route=%22search_results%22&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A8%2C%22personalization%22%3Afalse%7D",
+      "title": "Apartamento para alugar em São Pedro de 260 m² com varanda gourmet.",
+      "transaction": "rent",
+      "neighborhood": "Sao Pedro",
+      "coordinates": {
+        "lat": -19.9398,
+        "lon": -43.9352
+      },
+      "distanceKm": 0.9,
+      "distanceConfidence": "estimated",
+      "bedrooms": 4,
+      "parkingSpaces": 3,
+      "areaM2": 260,
+      "isNewOrRenovated": false,
+      "images": [
+        "https://www.quintoandar.com.br/img/med/892910425-785.4269508264341IMG3807.jpg"
+      ],
+      "costs": {
+        "rent": 6000,
+        "monthlyTotal": 6000,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "Apartamento para alugar em São Pedro de 260 m² com varanda gourmet.R$ 6.000 aluguelR$ 7.256 total260 m² · 4 quartos · 3 vagasRua São Domingos do Prata, São Pedro · Belo Horizonte Apartamento para alugar em São Pedro de 260 m² com varanda gourmet.R$ 6.000 aluguelR$ 7.256 total260 m² · 4 quartos · 3 vagasRua São Domingos do Prata, São Pedro · Belo Horizonte",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
@@ -274,7 +264,7 @@
         "monthlyTotal": 6000,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:08.038Z",
+      "collectedAt": "2026-06-16T13:24:34.511Z",
       "rawText": "Apartamento, 3 Quartos, 2 Vagas, 3 Suites Rua Bernardo Figueiredo, Serra, Belo Horizonte, MG APARTAMENTO COM 3 SUITES, MAIS UM QUARTO PARA ESCRITÓRIO, DUAS SALAS, COPA, DEPENDENCIA DE EMPREGADA, ARMARIOS EM MADEIRA, AREA DE SERVIÇO, 250M², SALÃO DE FESTAS MONTADO, ACADEMIA, EXCELENTE ÁREA EXTERNA, CONTROLE DE ENTRADA COM RECONHECIMENTO FACIAL, 2 VAGAS DE GARAGEM PARALELAS, OTIMA LOCALIZAÇÃO, PROXIMO A ESCOLAS, FARMACIAS, SUPERMERCADO CLUBE OLYMPICO. ÁREA 250 QUARTO(S) 3 VAGA(S) 2 BANHEIRO(S) 5 R$ 6.000,00 Apartamento, 3 Quartos, 2 Vagas, 3 Suites Rua Bernardo Figueiredo, Serra, Belo Horizonte, MG APARTAMENTO COM 3 SUITES, MAIS UM QUARTO PARA ESCRITÓRIO, DUAS SALAS, COPA, DEPENDENCIA DE EMPREGADA, ARMARIOS EM MADEIRA, AREA DE SERVIÇO, 250M², SALÃO DE FESTAS MONTADO, ACADEMIA, EXCELENTE ÁREA EXTERNA, CONTROLE DE ENTRADA COM RECONHECIMENTO FACIAL, 2 VAGAS DE GARAGEM PARALELAS, OTIMA LOCALIZAÇÃO, PROXIMO A ESCOLAS, FARMACIAS, SUPERMERCADO CLUBE OLYMPICO. ÁREA 250 QUARTO(S) 3 VAGA(S) 2 BANHEIRO(S) 5 R$ 6.000,00 Ver detalhes",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
@@ -282,1119 +272,43 @@
       ]
     },
     {
-      "id": "160d565cf15f930d",
+      "id": "eabf6ba4d7d3e0e6",
       "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-2-quartos-para-aluguel-bairro-lourdes-3033291732.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=5",
-      "title": "Alugo este apartamento de 77m² (mobiliado) Sala 2 ambientes. 2 quartos, 1 suíte com ar condicionado, armários. Banheiro social e suíte com b",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-no-savassi-para-para-aluguel-na-ariane-3027731909.html?duplicated=true&n_src=Listado&n_pills=Piscina&n_pg=1&n_pos=5",
+      "title": "More na melhor localização de bh com um lazer de resort! Apartamento de 02 quartos com cerca de 72 m², com sala para 02 ambientes com cozinh",
       "transaction": "rent",
-      "neighborhood": "Lourdes",
-      "address": "Praça da Liberdade e o Varanda Urbana",
-      "coordinates": {
-        "lat": -19.9278,
-        "lon": -43.9437
-      },
-      "distanceKm": 1.1,
-      "distanceConfidence": "estimated",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 77,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "reformado, trocado toda a instalaçao elétrica e hidráulica",
-      "images": [],
-      "costs": {
-        "rent": 4200,
-        "monthlyTotal": 4200,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Alugo este apartamento de 77m² (mobiliado) Sala 2 ambientes. 2 quartos, 1 suíte com ar condicionado, armários. Banheiro social e suíte com box blindex e arrmários. Cozinha americana com a opção de deixar fechada ou não. área de serviço clara com excelente ventilação. banheiro de serviço. Box de despejo. 01 vaga de garagem livre, coberta e demarcada. O imóvel foi recentemente reformado, trocado toda a instalaçao elétrica e hidráulica do apartamento. Os tacos foram raspados e sintecados. A pintura é nova. Localizado no charmoso bairro de Lourdes, em Belo Horizonte. Oferece uma combinação perfeita de conforto e conveniência. Ideal para quem busca um espaço acolhedor e funcional. O condomínio oferece salão de festas e portaria 24hs. Limpeza diariamente. Para os amantes da natureza e atividades ao ar livre, o bairro oferece várias opções de parques, incluindo o Parque Rosinha Cadar, a Praça da Liberdade e o Varanda Urbana, mercado central, todos a uma curta distância. R$ 4.200R$ 905 Condominio77 m² tot.2 quartos3 ban.1 vagaRua dos Timbiras 1941Lourdes, Belo HorizonteAlugo este apartamento de 77m² (mobiliado) Sala 2 ambientes. 2 quartos, 1 suíte com ar condicionado, armários. Banheiro so",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "0e14e075d802eb4d",
-      "source": "QuintoAndar",
-      "sourceListingId": "895495154",
-      "url": "https://www.quintoandar.com.br/imovel/895495154/comprar/apartamento-1-quarto-lourdes-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A5%2C%22personalization%22%3Afalse%7D",
-      "title": "Anúncio novoApartamento à venda em Lourdes de 58 m².",
-      "transaction": "sale",
-      "neighborhood": "Lourdes",
-      "coordinates": {
-        "lat": -19.9278,
-        "lon": -43.9437
-      },
-      "distanceKm": 1.1,
-      "distanceConfidence": "estimated",
-      "bedrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 58,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novoApartamento à venda em Lourdes de 58 m².R$ 990.000",
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895495154-70.2938392037943982eaaf90-03e7-4b27-8f94-dcd34355def7-LEAD3P-b65a3da9-c453-4677-9d59-ce38eb791aea.jpeg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 990000,
-        "pricePerSquareMeter": 17069
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "Anúncio novoApartamento à venda em Lourdes de 58 m².R$ 990.000 R$ 869 Condo. + IPTU58 m² · 1 quarto · 1 vagaRua dos Aimorés, Lourdes · Belo Horizonte Anúncio novoApartamento à venda em Lourdes de 58 m².R$ 990.000 R$ 869 Condo. + IPTU58 m² · 1 quarto · 1 vagaRua dos Aimorés, Lourdes · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "612f569261d05d60",
-      "source": "Lugar Certo",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-funcionarios-belo-horizonte-com-garagem-189m2-compra-e-venda-rs1548000-id-353543014",
-      "title": "Apartamento, 4 Quartos, 3 Vagas, 1 Suite Piauí, Funcionários, Belo Horizonte, MG PRÉDIO: 100% revestido em Cerâmica, Guarita, Portaria Virtu",
-      "transaction": "sale",
-      "neighborhood": "Funcionários",
-      "coordinates": {
-        "lat": -19.9322,
-        "lon": -43.9298
-      },
-      "distanceKm": 0.5,
-      "distanceConfidence": "estimated",
-      "bedrooms": 4,
-      "bathrooms": 1,
-      "parkingSpaces": 3,
-      "areaM2": 189,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1548000,
-        "pricePerSquareMeter": 8190
-      },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
-      "rawText": "Apartamento, 4 Quartos, 3 Vagas, 1 Suite Piauí, Funcionários, Belo Horizonte, MG PRÉDIO: 100% revestido em Cerâmica, Guarita, Portaria Virtual com sistema de Zelador durante o dia, Gás canalizado, área de lazer com salão de festa, área de churrasco, academia, box na Garagem e três vagas, sendo duas livres e uma presa pelo próprio carro. Apto amplo com 189 m2, duas salas, sendo a sala de star com dois ambientes, lavabo, jardineira, sala de jantar, quatro quartos, todos com armários em bom estado de conservação, sendo uma suíte com closet, todas as janelas em estrutura de alumínio com veneziana, banho social, cozinha ampla planejada com muito armário, área de serviço grande, com tanque com dois bojos, quarto e banho de serviço. Excelente apto no melhor ponto do do Bairro, com ótimo custo benefício, próximo de tudo; supermercado, sacolão, açougue, ônibus, Colégio, faculdade e padaria. Visitar e Comprar!! ÁREA 189 QUARTO(S) 4 VAGA(S) 3 BANHEIRO(S) 4 R$ 1.548.000,00 Apartamento, 4 Quartos, 3 Vagas, 1 Suite Piauí, Funcionários, Belo Horizonte, MG PRÉDIO: 100% revestido em Cerâmica, Guarita, Portaria Virtual com sistema de Zelador durante o dia, Gás canalizado, área de lazer com salão de ",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "1bf419d2f3be8c7a",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-com-03-quartos-para-locacao-no-lourdes-3037727552.html?n_src=Listado&n_pills=Ar+condicionado&n_pg=1&n_pos=1",
-      "title": "Excelente apartamento para locação no bairro Lourdes, com 97 m² muito bem distribuídos, oferecendo conforto, praticidade e uma localização p",
-      "transaction": "rent",
-      "neighborhood": "Lourdes",
-      "coordinates": {
-        "lat": -19.9278,
-        "lon": -43.9437
-      },
-      "distanceKm": 1.1,
-      "distanceConfidence": "estimated",
-      "bedrooms": 3,
-      "parkingSpaces": 3,
-      "areaM2": 97,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 6790,
-        "monthlyTotal": 6790,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Excelente apartamento para locação no bairro Lourdes, com 97 m² muito bem distribuídos, oferecendo conforto, praticidade e uma localização privilegiada. O imóvel conta com ampla sala para dois ambientes, lavabo, cozinha planejada com armários, área de serviço independente e três quartos com armários, sendo uma suíte. Possui ainda banheiro social com armário e box, ar-condicionado e três vagas de garagem, sendo duas livres e uma presa, além de box de despejo. O condomínio oferece uma estrutura de lazer completa, com piscina, academia, salão de festas, espaço gourmet, salão de jogos e espaço kids, além de portaria 24 horas, proporcionando mais segurança e comodidade para toda a família. R$ 6.790R$ 1.495 Condominio800 m² tot.3 quartos2 ban.3 vagasRua São Paulo 1905Lourdes, Belo HorizonteExcelente apartamento para locação no bairro Lourdes, com 97 m² muito bem distribuídos, oferecendo conforto, praticidade e uma localização privilegiada. O imóvel conta com ampla sala para dois ambientes, lavabo, cozinha planejada com armários, área de serviço independente e três quartos com armários, sendo uma suíte. Possui ainda banheiro social com armário e box, ar-condicionado e três vagas de garage",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "0710e15367c78545",
-      "source": "QuintoAndar",
-      "sourceListingId": "895448439",
-      "url": "https://www.quintoandar.com.br/imovel/895448439/comprar/apartamento-3-quartos-santo-antonio-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A4%2C%22personalization%22%3Afalse%7D",
-      "title": "ExclusivoComprar apartamento com 3 quartos.",
-      "transaction": "sale",
-      "neighborhood": "Santo Antônio",
-      "coordinates": {
-        "lat": -19.9398,
-        "lon": -43.9464
-      },
-      "distanceKm": 1.6,
-      "distanceConfidence": "estimated",
-      "bedrooms": 3,
-      "parkingSpaces": 2,
-      "areaM2": 95,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895448439-479.75124697383911.jpg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1100000,
-        "pricePerSquareMeter": 11579
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "ExclusivoComprar apartamento com 3 quartos.R$ 1.100.000 R$ 1.975 Condo. + IPTU95 m² · 3 quartos · 2 vagasRua Leopoldina, Santo Antônio · Belo Horizonte ExclusivoComprar apartamento com 3 quartos.R$ 1.100.000 R$ 1.975 Condo. + IPTU95 m² · 3 quartos · 2 vagasRua Leopoldina, Santo Antônio · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "28457eefe670111e",
-      "source": "QuintoAndar",
-      "sourceListingId": "895358187",
-      "url": "https://www.quintoandar.com.br/imovel/895358187/comprar/apartamento-3-quartos-sion-belo-horizonte?from_route=%22search_results%22&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A3%2C%22personalization%22%3Afalse%7D",
-      "title": "Apartamento de 3 quartos mobiliado à venda. Com 3 vagas na garagem, piscina e churrasqueira.",
-      "transaction": "sale",
-      "neighborhood": "Sion",
-      "coordinates": {
-        "lat": -19.9522,
-        "lon": -43.9317
-      },
-      "distanceKm": 2.3,
-      "distanceConfidence": "estimated",
-      "bedrooms": 3,
-      "parkingSpaces": 3,
-      "areaM2": 173,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895358187-597.37957472534145dc67b0c-e75a-4f9d-ba4c-cc2a9142b950-LEAD3P-d8083a74-53d2-4b21-8427-9f3fe53d5f0f.jpg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 2650000,
-        "pricePerSquareMeter": 15318
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "Apartamento de 3 quartos mobiliado à venda. Com 3 vagas na garagem, piscina e churrasqueira.R$ 2.650.000 R$ 1.668 Condo. + IPTU173 m² · 3 quartos · 3 vagasRua Rubim, Sion · Belo Horizonte Apartamento de 3 quartos mobiliado à venda. Com 3 vagas na garagem, piscina e churrasqueira.R$ 2.650.000 R$ 1.668 Condo. + IPTU173 m² · 3 quartos · 3 vagasRua Rubim, Sion · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "108dff8d5bc42626",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-a-venda-3-quartos-com-garagem-mg-belo-horizonte-savassi-85m2-RS980000/id-34104223/",
-      "title": "Apartamento À venda com 85m², 3 quartos, 1 suíte ,1 semi suítes, 2 vagas de garagem na Savassi.Rua AlagoasSavassi, Belo Horizonte/MG85m²321",
-      "transaction": "sale",
-      "neighborhood": "Savassi",
-      "address": "Rua AlagoasSavassi",
-      "coordinates": {
-        "lat": -19.9367,
-        "lon": -43.9342
-      },
-      "distanceKm": 0.6,
-      "distanceConfidence": "estimated",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parkingSpaces": 2,
-      "areaM2": 85,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/958470/34104223/mg-belo-horizonte-savassi-rua-alagoas-apartamento-a-venda-3-quartos-69c7efee-1.jpg"
-      ],
-      "costs": {
-        "condominium": 700,
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 980000,
-        "pricePerSquareMeter": 11529
-      },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Apartamento À venda com 85m², 3 quartos, 1 suíte ,1 semi suítes, 2 vagas de garagem na Savassi.Rua AlagoasSavassi, Belo Horizonte/MG85m²321R$ 980.000CondomínioR$ 700 Apartamento À venda com 85m², 3 quartos, 1 suíte ,1 semi suítes, 2 vagas de garagem na Savassi.Rua AlagoasSavassi, Belo Horizonte/MG85m²321R$ 980.000CondomínioR$ 700Contatar",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "a5b09171cc57e8b6",
-      "source": "Lugar Certo",
-      "sourceListingId": "1286",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-serra-belo-horizonte-com-garagem-140m2-compra-e-venda-rs1770000-id-353362095",
-      "title": "Apartamento, 4 Quartos, 4 Vagas, 2 Suites Rua Níquel, Serra, Belo Horizonte, MG Código: 1286 Apartamento 4 quartos 4 vagas Serra Belo Horizo",
-      "transaction": "sale",
-      "neighborhood": "Serra",
-      "address": "Rua Níquel",
-      "coordinates": {
-        "lat": -19.9442,
-        "lon": -43.9224
-      },
-      "distanceKm": 1.9,
-      "distanceConfidence": "estimated",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parkingSpaces": 4,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1770000
-      },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
-      "rawText": "Apartamento, 4 Quartos, 4 Vagas, 2 Suites Rua Níquel, Serra, Belo Horizonte, MG Código: 1286 Apartamento 4 quartos 4 vagas Serra Belo Horizonte MG Apartamento com área total de 140,26m próximo ao Minas ténis clube II. 4 quartos sendo 2 suites e 2 semi suite,sala ampla para 2 ambientes,cozinha,lavabo e DCE,4 vagas de garagem. observação, fotos do imóvel decorado. Área de lazer area gourmet ampla,salao de festa,academia,Hall decorado,fechadura electrónica com acesso a porta social,e acesso ao apartamento por biométrica ou senha CARACTERISTICAS: Banhos com blindex - Rebaixamento em gesso - D.C.E. - Lavabo - Área privativa - Área de lazer - Piscina - Salão de festas - Interfone - Sala Ginástica - Sol da manhã - Janela com venezianas - Aquecimento Solar - Gás Canalizado - Banho empregada - Jardins - Ar Condicionado Central - Elevador social - Hall Social Decorado - Portão Eletrônico - Circuito de TV ÁREA 140 QUARTO(S) 4 VAGA(S) 4 BANHEIRO(S) 1 R$ 1.770.000,00 Apartamento, 4 Quartos, 4 Vagas, 2 Suites Rua Níquel, Serra, Belo Horizonte, MG Código: 1286 Apartamento 4 quartos 4 vagas Serra Belo Horizonte MG Apartamento com área total de 140,26m próximo ao Minas ténis clube II. 4 quartos sen",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "24f94249195dad48",
-      "source": "QuintoAndar",
-      "sourceListingId": "895460216",
-      "url": "https://www.quintoandar.com.br/imovel/895460216/alugar/apartamento-3-quartos-cidade-nova-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&house_tags=newAd&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A5%2C%22personalization%22%3Afalse%7D",
-      "title": "ExclusivoAnúncio novoApartamento para alugar em Cidade Nova de 132 m².",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "parkingSpaces": 3,
-      "areaM2": 132,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novoApartamento para alugar em Cidade Nova de 132 m².R",
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895460216-516.4042072862013Fotos.jpg"
-      ],
-      "costs": {
-        "rent": 3460,
-        "monthlyTotal": 3460,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
-      "rawText": "ExclusivoAnúncio novoApartamento para alugar em Cidade Nova de 132 m².R$ 3.460 aluguelR$ 4.587 total132 m² · 3 quartos · 3 vagasRua Júlio Pereira da Silva, Cidade Nova · Belo Horizonte ExclusivoAnúncio novoApartamento para alugar em Cidade Nova de 132 m².R$ 3.460 aluguelR$ 4.587 total132 m² · 3 quartos · 3 vagasRua Júlio Pereira da Silva, Cidade Nova · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "b70d2591f33817d9",
-      "source": "QuintoAndar",
-      "sourceListingId": "895258644",
-      "url": "https://www.quintoandar.com.br/imovel/895258644/alugar/apartamento-3-quartos-monsenhor-messias-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&house_tags=newAd&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A2%2C%22personalization%22%3Afalse%7D",
-      "title": "ExclusivoAnúncio novoApartamento para alugar com 3 quartos.",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "parkingSpaces": 2,
-      "areaM2": 110,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novoApartamento para alugar com 3 quartos.R$ 3.700 alu",
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895258644-321.39084552105976DSC08680.jpeg"
-      ],
-      "costs": {
-        "rent": 3700,
-        "monthlyTotal": 3700,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
-      "rawText": "ExclusivoAnúncio novoApartamento para alugar com 3 quartos.R$ 3.700 aluguelR$ 4.679 total110 m² · 3 quartos · 2 vagasRua Desembargador Tinoco, Monsenhor Messias · Belo Horizonte ExclusivoAnúncio novoApartamento para alugar com 3 quartos.R$ 3.700 aluguelR$ 4.679 total110 m² · 3 quartos · 2 vagasRua Desembargador Tinoco, Monsenhor Messias · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "02415505f0cd682a",
-      "source": "QuintoAndar",
-      "sourceListingId": "895518101",
-      "url": "https://www.quintoandar.com.br/imovel/895518101/comprar/apartamento-4-quartos-coracao-eucaristico-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&house_tags=newAd&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A0%2C%22personalization%22%3Afalse%7D",
-      "title": "ExclusivoAnúncio novoComprar apartamento no Coração Eucarístico com 4 quartos.",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 4,
-      "parkingSpaces": 2,
-      "areaM2": 115,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novoComprar apartamento no Coração Eucarístico com 4 q",
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895518101-391.27364938000827.jpg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 920000,
-        "pricePerSquareMeter": 8000
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "ExclusivoAnúncio novoComprar apartamento no Coração Eucarístico com 4 quartos.R$ 920.000 R$ 1.109 Condo. + IPTU115 m² · 4 quartos · 2 vagasRua Dom Lúcio Antunes, Coração Eucarístico · Belo Horizonte ExclusivoAnúncio novoComprar apartamento no Coração Eucarístico com 4 quartos.R$ 920.000 R$ 1.109 Condo. + IPTU115 m² · 4 quartos · 2 vagasRua Dom Lúcio Antunes, Coração Eucarístico · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "12ce8a38f687c46b",
-      "source": "Lugar Certo",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-2-quartos-serra-belo-horizonte-com-garagem-70m2-compra-e-venda-rs720000-id-353657604",
-      "title": "Apartamento, 2 Quartos, 2 Vagas, 1 Suite Pouso Alto, Serra, Belo Horizonte, MG Prédio 100% revestido, guarita, recuado, ajardinado, medidor ",
-      "transaction": "sale",
-      "neighborhood": "Serra",
-      "address": "Avenida do Contorno",
-      "coordinates": {
-        "lat": -19.9442,
-        "lon": -43.9224
-      },
-      "distanceKm": 1.9,
-      "distanceConfidence": "estimated",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parkingSpaces": 2,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 720000
-      },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
-      "rawText": "Apartamento, 2 Quartos, 2 Vagas, 1 Suite Pouso Alto, Serra, Belo Horizonte, MG Prédio 100% revestido, guarita, recuado, ajardinado, medidor de água individual, gás canalizado, elevador, Condomínio baixo, Região Hospitalar. Lindo Apto com sala para dois ambientes, com piso em porcelanato, dois qtos com armários e ar condicionado, sendo um com suite, banho social, box, armários nos banheiros, cozinha com armários e área de serviço separada. Possui uma área externa coberta. Excelente localização, próxima a Avenida do Contorno. ÁREA 70 QUARTO(S) 2 VAGA(S) 2 BANHEIRO(S) 2 R$ 720.000,00 Apartamento, 2 Quartos, 2 Vagas, 1 Suite Pouso Alto, Serra, Belo Horizonte, MG Prédio 100% revestido, guarita, recuado, ajardinado, medidor de água individual, gás canalizado, elevador, Condomínio baixo, Região Hospitalar. Lindo Apto com sala para dois ambientes, com piso em porcelanato, dois qtos com armários e ar condicionado, sendo um com suite, banho social, box, armários nos banheiros, cozinha com armários e área de serviço separada. Possui uma área externa coberta. Excelente localização, próxima a Avenida do Contorno. ÁREA 70 QUARTO(S) 2 VAGA(S) 2 BANHEIRO(S) 2 R$ 720.000,00 Ver detalhes",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "e98969b76dbd17a4",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/cobertura-a-venda-4-quartos-com-garagem-mg-belo-horizonte-cruzeiro-340m2-RS2632000/id-41128155/",
-      "title": "Cobertura à venda, 4 quartos, 2 suítes, 3 vagas, Cruzeiro - Belo Horizonte/MGEndereço indisponívelCruzeiro, Belo Horizonte/MG40m²433",
-      "transaction": "sale",
-      "neighborhood": "Cruzeiro",
-      "coordinates": {
-        "lat": -19.9451,
-        "lon": -43.9305
-      },
-      "distanceKm": 1.6,
-      "distanceConfidence": "estimated",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parkingSpaces": 3,
-      "areaM2": 40,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "condominium": 1400,
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 2632000,
-        "pricePerSquareMeter": 65800
-      },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Cobertura à venda, 4 quartos, 2 suítes, 3 vagas, Cruzeiro - Belo Horizonte/MGEndereço indisponívelCruzeiro, Belo Horizonte/MG40m²433R$ 2.632.000CondomínioR$ 1.400 Cobertura à venda, 4 quartos, 2 suítes, 3 vagas, Cruzeiro - Belo Horizonte/MGEndereço indisponívelCruzeiro, Belo Horizonte/MG40m²433R$ 2.632.000CondomínioR$ 1.400",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "ed353e4da6c9b947",
-      "source": "Lugar Certo",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-serra-belo-horizonte-com-garagem-248m2-compra-rs3317000-id-10289900722",
-      "title": "Pronto Para Morar Apartamento, 4 Quartos, 5 Vagas, 4 Suites Serra, Belo Horizonte, MG Aptos de 248,69m² com 4 suítes, sendo 1 por andar. Arm",
-      "transaction": "sale",
-      "neighborhood": "Serra",
-      "address": "praça Milton Campos",
-      "coordinates": {
-        "lat": -19.9442,
-        "lon": -43.9224
-      },
-      "distanceKm": 1.9,
-      "distanceConfidence": "estimated",
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "parkingSpaces": 5,
-      "areaM2": 69,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 3317000,
-        "pricePerSquareMeter": 48072
-      },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
-      "rawText": "Pronto Para Morar Apartamento, 4 Quartos, 5 Vagas, 4 Suites Serra, Belo Horizonte, MG Aptos de 248,69m² com 4 suítes, sendo 1 por andar. Armários nos quartos. Suíte máster com hidro e closet. Salas e varanda com piso de mármore. Torre revestida com granito. 5 vagas de garagem. Elevadores codificados. Lazer. Informações complementares: Aquecimento central solar/gás. Lazer com piscina aquecida, fitness, grill gourmet e salão de festas. Informações sobre o local do empreendimento: Localização privilegiada, próximo a praça Milton Campos. Rua Carolina Figueiredo, esquina com Rua Palmira. ÁREA 248 QUARTO(S) 4 VAGA(S) 5 BANHEIRO(S) 4 Previsão de entrega: null/ R$ 3.317.000,00 Pronto Para Morar Apartamento, 4 Quartos, 5 Vagas, 4 Suites Serra, Belo Horizonte, MG Aptos de 248,69m² com 4 suítes, sendo 1 por andar. Armários nos quartos. Suíte máster com hidro e closet. Salas e varanda com piso de mármore. Torre revestida com granito. 5 vagas de garagem. Elevadores codificados. Lazer. Informações complementares: Aquecimento central solar/gás. Lazer com piscina aquecida, fitness, grill gourmet e salão de festas. Informações sobre o local do empreendimento: Localização privilegiada, próximo a pra",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "7ce9e79380a944c5",
-      "source": "Lugar Certo",
-      "sourceListingId": "353715524",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-2-quartos-grajau-belo-horizonte-com-garagem-63m2-aluguel-rs4450-id-353715524",
-      "title": "Apartamento, 2 Quartos, 2 Vagas, 1 Suite Viamão, Grajaú, Belo Horizonte, MG Prédio: Novo, recuado, ajardinado, Usina Foto Votaica, Condomíni",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parkingSpaces": 2,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "Novo, recuado, ajardinado, Usina Foto Votaica, Condomí",
-      "images": [],
-      "costs": {
-        "rent": 4450,
-        "monthlyTotal": 4450,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:58:08.038Z",
-      "rawText": "Apartamento, 2 Quartos, 2 Vagas, 1 Suite Viamão, Grajaú, Belo Horizonte, MG Prédio: Novo, recuado, ajardinado, Usina Foto Votaica, Condomínio Baixo, Excelente área de lazer, com piscina, salão de festas, academia, Espaço Gourmet, Pet Spa, Locker, Elevador codificado, Fechadura inteligente, portaria moderna Intelbràs, com acesso pelo Celular. Apartamento: Lindo apto, novo, primeira moradia, com sala para dois ambientes, piso em porcelanato, dois quartos, armários, sendo uma uma suíte, piso em laminado Duraflor, janelas em alumínio anodizado, com cortina integrada com controle remoto, Banheiros todos montados com box, espelho e acessórios, cozinha conjugada com a sala, com fogão Cooktop, forno, coifa, armários e área de serviço também com armários. Irresistível! conhecer e Locar. ÁREA 63 QUARTO(S) 2 VAGA(S) 2 BANHEIRO(S) 2 R$ 4.450,00 Apartamento, 2 Quartos, 2 Vagas, 1 Suite Viamão, Grajaú, Belo Horizonte, MG Prédio: Novo, recuado, ajardinado, Usina Foto Votaica, Condomínio Baixo, Excelente área de lazer, com piscina, salão de festas, academia, Espaço Gourmet, Pet Spa, Locker, Elevador codificado, Fechadura inteligente, portaria moderna Intelbràs, com acesso pelo Celular. Apartamento",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "49e6722c006e4f9d",
-      "source": "Chaves na Mao",
-      "sourceListingId": "32407720",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-4-quartos-com-garagem-mg-belo-horizonte-serra-140m2-RS4400/id-32407720/",
-      "title": "Apartamento com 4 quartos para alugar na Rua Desembargador Mário Mattos, Serra, Belo HorizonteRua Desembargador Mário MattosSerra, Belo Hori",
-      "transaction": "rent",
-      "neighborhood": "Serra",
-      "address": "Rua Desembargador Mário Mattos",
-      "coordinates": {
-        "lat": -19.9442,
-        "lon": -43.9224
-      },
-      "distanceKm": 1.9,
-      "distanceConfidence": "estimated",
-      "bedrooms": 4,
-      "areaM2": 121,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/462060/32407720/mg-belo-horizonte-serra-rua-desembargador-mario-mattos-apartamento-para-alugar-4-quartos-6867b5f1-2.jpg"
-      ],
-      "costs": {
-        "rent": 4400,
-        "condominium": 2145,
-        "monthlyTotal": 6545,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Apartamento com 4 quartos para alugar na Rua Desembargador Mário Mattos, Serra, Belo HorizonteRua Desembargador Mário MattosSerra, Belo Horizonte/MG121m²442R$ 4.400CondomínioR$ 2.145 Apartamento com 4 quartos para alugar na Rua Desembargador Mário Mattos, Serra, Belo HorizonteRua Desembargador Mário MattosSerra, Belo Horizonte/MG121m²442R$ 4.400CondomínioR$ 2.145Contatar",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "3576d1fe06265f4b",
-      "source": "OLX",
-      "sourceListingId": "1510763619",
-      "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/imoveis/apartamento-com-2-dormitorios-para-alugar-61-m-por-r-4-939-00-mes-funcionarios-belo-1510763619",
-      "title": "Apartamento com 2 dormitórios para alugar, 61 m² por",
-      "transaction": "rent",
-      "neighborhood": "Funcionários",
-      "coordinates": {
-        "lat": -19.9322,
-        "lon": -43.9298
-      },
-      "distanceKm": 0.5,
-      "distanceConfidence": "estimated",
-      "bedrooms": 2,
-      "areaM2": 61,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 4939,
-        "monthlyTotal": 4939,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:33.014Z",
-      "rawText": "Apartamento com 2 dormitórios para alugar, 61 m² por R$ 4.939,00/mês - Funcionários - Belo Apartamento com 2 dormitórios para alugar, 61 m² por R$ 4.939,00/mês - Funcionários - Belo 2 61m² 2 2",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "ce7d39e619b55201",
-      "source": "Chaves na Mao",
-      "sourceListingId": "42762984",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-3-quartos-com-garagem-mg-belo-horizonte-lourdes-110m2-RS5600/id-42762984/",
-      "title": "Apartamento com 3 quartos para alugar em Lourdes, Belo Horizonte por",
-      "transaction": "rent",
-      "neighborhood": "Lourdes",
-      "coordinates": {
-        "lat": -19.9278,
-        "lon": -43.9437
-      },
-      "distanceKm": 1.1,
-      "distanceConfidence": "estimated",
-      "bedrooms": 3,
-      "areaM2": 110,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 5600,
-        "condominium": 1850,
-        "monthlyTotal": 7450,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Apartamento com 3 quartos para alugar em Lourdes, Belo Horizonte por R$ 5.600Endereço indisponívelLourdes, Belo Horizonte/MG110m²322R$ 5.600CondomínioR$ 1.850 Apartamento com 3 quartos para alugar em Lourdes, Belo Horizonte por R$ 5.600Endereço indisponívelLourdes, Belo Horizonte/MG110m²322R$ 5.600CondomínioR$ 1.850",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "aa9b4c660cd7c414",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/cobertura-para-alugar-3-quartos-com-garagem-mg-belo-horizonte-anchieta-491m2-RS19000/id-41341571/",
-      "title": "Cobertura com 3 quartos para alugar na Rua Eugênio Murilo Rubião, 33, Anchieta, Belo Horizonte por",
-      "transaction": "rent",
-      "neighborhood": "Anchieta",
-      "address": "Rua Eugênio Murilo Rubião",
-      "coordinates": {
-        "lat": -19.9465,
-        "lon": -43.9265
-      },
-      "distanceKm": 1.9,
-      "distanceConfidence": "estimated",
-      "bedrooms": 3,
-      "areaM2": 491,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/1135042/41341571/mg-belo-horizonte-anchieta-rua-eugenio-murilo-rubiao-cobertura-para-alugar-3-quartos-69d6ee6c-3.jpg"
-      ],
-      "costs": {
-        "rent": 19000,
-        "condominium": 4131,
-        "monthlyTotal": 23131,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Cobertura com 3 quartos para alugar na Rua Eugênio Murilo Rubião, 33, Anchieta, Belo Horizonte por R$ 19.000Rua Eugênio Murilo Rubião, 33Anchieta, Belo Horizonte/MG491m²375R$ 19.000CondomínioR$ 4.131 Cobertura com 3 quartos para alugar na Rua Eugênio Murilo Rubião, 33, Anchieta, Belo Horizonte por R$ 19.000Rua Eugênio Murilo Rubião, 33Anchieta, Belo Horizonte/MG491m²375R$ 19.000CondomínioR$ 4.131Contatar",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "32b68a5f97c777bd",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-a-venda-2-quartos-com-garagem-mg-belo-horizonte-barro-preto-55m2-RS578000/id-36362845/",
-      "title": "Apartamento à venda, 2 quartos, 1 suíte, 1 vaga, Barro Preto - Belo Horizonte/MGRua Dos TupisBarro Preto, Belo Horizonte/MG55m²221",
-      "transaction": "sale",
-      "neighborhood": "Barro Preto",
-      "coordinates": {
-        "lat": -19.9188,
-        "lon": -43.9503
-      },
-      "distanceKm": 2.2,
-      "distanceConfidence": "estimated",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 55,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/639992/36362845/mg-belo-horizonte-barro-preto-rua-dos-tupis-apartamento-a-venda-2-quartos-690539e4-1.jpg"
-      ],
-      "costs": {
-        "condominium": 338,
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 578000,
-        "pricePerSquareMeter": 10509
-      },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Apartamento à venda, 2 quartos, 1 suíte, 1 vaga, Barro Preto - Belo Horizonte/MGRua Dos TupisBarro Preto, Belo Horizonte/MG55m²221R$ 578.000CondomínioR$ 338 Apartamento à venda, 2 quartos, 1 suíte, 1 vaga, Barro Preto - Belo Horizonte/MGRua Dos TupisBarro Preto, Belo Horizonte/MG55m²221R$ 578.000CondomínioR$ 338Contatar",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "b374f966423ad654",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/lindos-apartamentos-novos-sao-pedro-savassi-3005411666.html?n_src=Listado&n_pg=1&n_pos=3",
-      "title": "Residencial Oslo, prédio novo, já com moradores, apartamento com 2 quartos, área útil de 66m² com áreas privativa, com previsão de instalaçã",
-      "transaction": "sale",
-      "address": "Rua Viçosa",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "parkingSpaces": 2,
-      "areaM2": 66,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novo, já com moradores, apartamento com 2 quartos, áre",
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1595000,
-        "pricePerSquareMeter": 24167
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Residencial Oslo, prédio novo, já com moradores, apartamento com 2 quartos, área útil de 66m² com áreas privativa, com previsão de instalação de Spa. Acabamento dos quartos em laminado de madeira, portas com veneziana; banhos com piso em porcelanato, bancadas em granito, aquecimento solar; salas com piso em porcelanato, bancadas em granito; cozinhas com piso em porcelanato, bancadas em granito; área de serviço com acabamento idêntico ao da cozinha. Prédio revestido, 13 andares de apartamentos, 2 andares com garagem, entrada social pela Rua Viçosa, entrada de garagem pela Rua Raul Pompeia; portaria recuada, decorada; salão de festas com espaço gourmet; espaço fitness. R$ 1.595.000R$ 1.000 Condominio66 m² tot.2 quartos2 ban.2 vagasEndereço não informadoSão Pedro, Belo HorizonteResidencial Oslo, prédio novo, já com moradores, apartamento com 2 quartos, área útil de 66m² com áreas privativa, com previsão de instalação de Spa. Acabamento dos quartos em laminado de madeira, portas com veneziana; banhos com piso em porcelanato, bancadas em granito, aquecimento solar; salas com piso em porcelanato, bancadas em granito; cozinhas com piso em porcelanato, bancadas em granito; área de serviço ",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "4f25d86c64074dd8",
-      "source": "QuintoAndar",
-      "sourceListingId": "895480428",
-      "url": "https://www.quintoandar.com.br/imovel/895480428/alugar/apartamento-2-quartos-trevo-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A0%2C%22personalization%22%3Afalse%7D",
-      "title": "Anúncio novoApartamento para aluguel com 2 quartos.",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "parkingSpaces": 1,
-      "areaM2": 52,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novoApartamento para aluguel com 2 quartos.R$ 1.400 al",
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895480428-491.5158840780796aIMG7992.JPG"
-      ],
-      "costs": {
-        "rent": 1400,
-        "monthlyTotal": 1400,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
-      "rawText": "Anúncio novoApartamento para aluguel com 2 quartos.R$ 1.400 aluguelR$ 2.119 total52 m² · 2 quartos · 1 vagaRua Aloísio Aragão Villar, Trevo · Belo Horizonte Anúncio novoApartamento para aluguel com 2 quartos.R$ 1.400 aluguelR$ 2.119 total52 m² · 2 quartos · 1 vagaRua Aloísio Aragão Villar, Trevo · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "eb186e045a19efdd",
-      "source": "QuintoAndar",
-      "sourceListingId": "895491986",
-      "url": "https://www.quintoandar.com.br/imovel/895491986/comprar/apartamento-3-quartos-alto-barroca-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A1%2C%22personalization%22%3Afalse%7D",
-      "title": "Anúncio novoApartamento à venda em Alto Barroca de 85 m² com quintal.",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "parkingSpaces": 1,
-      "areaM2": 85,
-      "isNewOrRenovated": true,
-      "newOrRenovatedEvidence": "novoApartamento à venda em Alto Barroca de 85 m² com q",
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895491986-281.3749240686373195776fa-6d6a-4530-9a64-1496c94dfbdc-LEAD3P-45ae795a-9488-4576-beb9-a91834ba887e.jpg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 720000,
-        "pricePerSquareMeter": 8471
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "Anúncio novoApartamento à venda em Alto Barroca de 85 m² com quintal.R$ 720.000 R$ 291 Condo. + IPTU85 m² · 3 quartos · 1 vagaRua Conselheiro Saraíva, Alto Barroca · Belo Horizonte Anúncio novoApartamento à venda em Alto Barroca de 85 m² com quintal.R$ 720.000 R$ 291 Condo. + IPTU85 m² · 3 quartos · 1 vagaRua Conselheiro Saraíva, Alto Barroca · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "c077f3735ef48265",
-      "source": "VivaReal",
-      "sourceListingId": "2891544488",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-planalto-belo-horizonte-com-garagem-87m2-aluguel-RS3200-id-2891544488/?source=ranking%2Crp",
-      "title": "+20 fotosSilvio Ximenes ImobiliáriaApartamento para alugar com 87 m², 3 quartos, 2 banheiros, 2 vagas em Planalto, Belo HorizonteRua Francis",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parkingSpaces": 2,
-      "areaM2": 87,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/0d4fff9e92efc69ac455386571bb3ae8/apartamento-com-3-quartos-para-alugar-87m-no-planalto-belo-horizonte.webp?action=fit-in&dimension=614x297"
-      ],
-      "costs": {
-        "rent": 3200,
-        "condominium": 538,
-        "iptu": 194,
-        "monthlyTotal": 3932,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "+20 fotosSilvio Ximenes ImobiliáriaApartamento para alugar com 87 m², 3 quartos, 2 banheiros, 2 vagas em Planalto, Belo HorizonteRua Francisco Augusto RochaTamanho do imóvel 87 m²Quantidade de quartos 3Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 3.200/mêsCond. R$ 538 • IPTU R$ 194Contatar +20 fotosSilvio Ximenes ImobiliáriaApartamento para alugar com 87 m², 3 quartos, 2 banheiros, 2 vagas em Planalto, Belo HorizonteRua Francisco Augusto RochaTamanho do imóvel 87 m²Quantidade de quartos 3Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 3.200/mêsCond. R$ 538 • IPTU R$ 194Contatar",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "e5ef7ac30b4ab50d",
-      "source": "VivaReal",
-      "sourceListingId": "2892837075",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-buritis-belo-horizonte-com-garagem-120m2-aluguel-RS3500-id-2892837075/?source=ranking%2Crp",
-      "title": "+25 fotosVia NobreApartamento para alugar com 120 m², 3 quartos, 3 banheiros, 2 vagas em Buritis, Belo HorizonteRua Ulisses Marcondes Escoba",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "parkingSpaces": 2,
-      "areaM2": 120,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/0aef68874d41657b74f06f3e3e1ebfd0/apartamento-com-3-quartos-para-alugar-120m-no-buritis-belo-horizonte.webp?action=fit-in&dimension=614x297"
-      ],
-      "costs": {
-        "rent": 3500,
-        "condominium": 450,
-        "iptu": 216,
-        "monthlyTotal": 4166,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "+25 fotosVia NobreApartamento para alugar com 120 m², 3 quartos, 3 banheiros, 2 vagas em Buritis, Belo HorizonteRua Ulisses Marcondes EscobarTamanho do imóvel 120 m²Quantidade de quartos 3Quantidade de banheiros 3Quantidade de vagas de garagem 2R$ 3.500/mêsCond. R$ 450 • IPTU R$ 216Contatar +25 fotosVia NobreApartamento para alugar com 120 m², 3 quartos, 3 banheiros, 2 vagas em Buritis, Belo HorizonteRua Ulisses Marcondes EscobarTamanho do imóvel 120 m²Quantidade de quartos 3Quantidade de banheiros 3Quantidade de vagas de garagem 2R$ 3.500/mêsCond. R$ 450 • IPTU R$ 216Contatar",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "f4a6794e63f30b34",
-      "source": "VivaReal",
-      "sourceListingId": "2892788279",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-buritis-belo-horizonte-com-garagem-61m2-aluguel-RS3700-id-2892788279/?source=ranking%2Crp",
-      "title": "+9 fotosGrupo Imóvel NetApartamento para alugar com 61 m², 2 quartos, 2 banheiros, 2 vagas em Buritis, Belo HorizonteRua Geraldo Lúcio Vasco",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parkingSpaces": 2,
-      "areaM2": 61,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/283b35ef34a186072093a9b2bb2e129d/apartamento-com-2-quartos-para-alugar-61m-no-buritis-belo-horizonte.webp?action=fit-in&dimension=614x297"
-      ],
-      "costs": {
-        "rent": 3700,
-        "condominium": 520,
-        "monthlyTotal": 4220,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "+9 fotosGrupo Imóvel NetApartamento para alugar com 61 m², 2 quartos, 2 banheiros, 2 vagas em Buritis, Belo HorizonteRua Geraldo Lúcio VasconcelosTamanho do imóvel 61 m²Quantidade de quartos 2Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 3.700/mêsCond. R$ 520 • IPTU isentoContatar +9 fotosGrupo Imóvel NetApartamento para alugar com 61 m², 2 quartos, 2 banheiros, 2 vagas em Buritis, Belo HorizonteRua Geraldo Lúcio VasconcelosTamanho do imóvel 61 m²Quantidade de quartos 2Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 3.700/mêsCond. R$ 520 • IPTU isentoContatar",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "76f5d40d729540e9",
-      "source": "VivaReal",
-      "sourceListingId": "2892836976",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-buritis-belo-horizonte-com-garagem-95m2-aluguel-RS4500-id-2892836976/?source=ranking%2Crp",
-      "title": "+19 fotosVia NobreApartamento para alugar com 95 m², 3 quartos, 3 banheiros, 2 vagas em Buritis, Belo HorizonteAvenida Professor Mário Werne",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "parkingSpaces": 2,
-      "areaM2": 95,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/d51d51d85c55e8ce8694751925478341/apartamento-com-3-quartos-para-alugar-95m-no-buritis-belo-horizonte.webp?action=fit-in&dimension=614x297"
-      ],
-      "costs": {
-        "rent": 4500,
-        "condominium": 790,
-        "iptu": 271,
-        "monthlyTotal": 5561,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "+19 fotosVia NobreApartamento para alugar com 95 m², 3 quartos, 3 banheiros, 2 vagas em Buritis, Belo HorizonteAvenida Professor Mário WerneckTamanho do imóvel 95 m²Quantidade de quartos 3Quantidade de banheiros 3Quantidade de vagas de garagem 2R$ 4.500/mêsCond. R$ 790 • IPTU R$ 271Contatar +19 fotosVia NobreApartamento para alugar com 95 m², 3 quartos, 3 banheiros, 2 vagas em Buritis, Belo HorizonteAvenida Professor Mário WerneckTamanho do imóvel 95 m²Quantidade de quartos 3Quantidade de banheiros 3Quantidade de vagas de garagem 2R$ 4.500/mêsCond. R$ 790 • IPTU R$ 271Contatar",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "4784349b702fe148",
-      "source": "VivaReal",
-      "sourceListingId": "2892787589",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-buritis-belo-horizonte-com-garagem-80m2-aluguel-RS4990-id-2892787589/?source=ranking%2Crp",
-      "title": "+14 fotosGrupo Imóvel NetApartamento para alugar com 80 m², 3 quartos, 2 banheiros, 2 vagas em Buritis, Belo HorizonteAvenida Deputado Crist",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parkingSpaces": 2,
-      "areaM2": 80,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/9b8576f4c45b78653267e4e4d0fb1a1b/apartamento-com-3-quartos-para-alugar-80m-no-buritis-belo-horizonte.webp?action=fit-in&dimension=614x297"
-      ],
-      "costs": {
-        "rent": 4990,
-        "condominium": 945,
-        "iptu": 220,
-        "monthlyTotal": 6155,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "+14 fotosGrupo Imóvel NetApartamento para alugar com 80 m², 3 quartos, 2 banheiros, 2 vagas em Buritis, Belo HorizonteAvenida Deputado Cristóvam ChiaradiaTamanho do imóvel 80 m²Quantidade de quartos 3Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 4.990/mêsCond. R$ 945 • IPTU R$ 220Contatar +14 fotosGrupo Imóvel NetApartamento para alugar com 80 m², 3 quartos, 2 banheiros, 2 vagas em Buritis, Belo HorizonteAvenida Deputado Cristóvam ChiaradiaTamanho do imóvel 80 m²Quantidade de quartos 3Quantidade de banheiros 2Quantidade de vagas de garagem 2R$ 4.990/mêsCond. R$ 945 • IPTU R$ 220Contatar",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "f03b458d145e9030",
-      "source": "QuintoAndar",
-      "sourceListingId": "893590656",
-      "url": "https://www.quintoandar.com.br/imovel/893590656/comprar/apartamento-3-quartos-belvedere-belo-horizonte?from_route=%22search_results%22&house_tags=isSaleGoodPrice&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A7%2C%22personalization%22%3Afalse%7D",
-      "title": "Ótimo preçoCompra apartamento com 3 suítes e permite animais de estimação. Venda especial.",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "parkingSpaces": 6,
-      "areaM2": 587,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/893590656-830.88739928955941.jpg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 5175000,
-        "pricePerSquareMeter": 8816
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "Ótimo preçoCompra apartamento com 3 suítes e permite animais de estimação. Venda especial.R$ 5.175.000 R$ 0 Condo. + IPTU587 m² · 3 quartos · 6 vagasRua Maestro Arthur Bosmans, Belvedere · Belo Horizonte Ótimo preçoCompra apartamento com 3 suítes e permite animais de estimação. Venda especial.R$ 5.175.000 R$ 0 Condo. + IPTU587 m² · 3 quartos · 6 vagasRua Maestro Arthur Bosmans, Belvedere · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "fd45213eb20a5e10",
-      "source": "Lugar Certo",
-      "sourceListingId": "1351",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-3-quartos-barroca-belo-horizonte-com-garagem-92m2-compra-e-venda-rs540000-id-353386666",
-      "title": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Aristóteles Caldeira, Barroca, Belo Horizonte, MG Código: 1351 Apartamento 3 quartos 2 vagas Ba",
-      "transaction": "sale",
-      "address": "Rua Aristóteles Caldeira",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parkingSpaces": 2,
-      "areaM2": 82,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 540000,
-        "pricePerSquareMeter": 6585
-      },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
-      "rawText": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Aristóteles Caldeira, Barroca, Belo Horizonte, MG Código: 1351 Apartamento 3 quartos 2 vagas Barroca Belo Horizonte/MG. Apartamento com área de 82 m², 3 quartos com armários com piso em porcelanato, sendo 1 suite com armários piso em granito, banho social com armário, cozinha com armário com bancada e piso em granito,2 vagas de garagem. CARACTERISTICAS:Cozinha com armários - Banheiros com armários - Banhos com blindex - Salão de festas - Interfone - Churrasqueira - Gás Canalizado - Jardins - Elevador social - Hall Social Decorado - Portão Eletrônico - Circuito de TV ÁREA 92 QUARTO(S) 3 VAGA(S) 2 BANHEIRO(S) 2 R$ 540.000,00 Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Aristóteles Caldeira, Barroca, Belo Horizonte, MG Código: 1351 Apartamento 3 quartos 2 vagas Barroca Belo Horizonte/MG. Apartamento com área de 82 m², 3 quartos com armários com piso em porcelanato, sendo 1 suite com armários piso em granito, banho social com armário, cozinha com armário com bancada e piso em granito,2 vagas de garagem. CARACTERISTICAS:Cozinha com armários - Banheiros com armários - Banhos com blindex - Salão de festas - Interfone - Churrasqueira - Gás Canal",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "ff79f874e5d46f2d",
-      "source": "Lugar Certo",
-      "sourceListingId": "1355",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-3-quartos-buritis-belo-horizonte-com-garagem-105m2-compra-e-venda-rs795000-id-353388047",
-      "title": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Esmeraldo Botelho, Buritis, Belo Horizonte, MG Código: 1355 Apartamento 3 Quartos 1 Suíte 2 vag",
-      "transaction": "sale",
-      "address": "Rua Esmeraldo Botelho",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parkingSpaces": 2,
-      "areaM2": 105,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 795000,
-        "pricePerSquareMeter": 7571
-      },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
-      "rawText": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Esmeraldo Botelho, Buritis, Belo Horizonte, MG Código: 1355 Apartamento 3 Quartos 1 Suíte 2 vagas Buritis Belo Horizonte-Mg Apartamento proximo ao supermercado super nosso, com 105 m², 3 quartos com armários planejados;, 1 Suíte com closet, 3 Banheiros, sala ampla para dois ambientes com cristaleira e painel de TV, lavabo; cozinha americana com armários, fogão cooktop de indução, forno de microondas, forno elétrico e churrasqueira elétrica; área de serviço independente com armário Banheiros com armários,2 vagas de garagem. CARACTERISTICAS:Cozinha com armários - 3Quartos com armários - Banheiros com armários - 2 Banhos com blindex - Salão de festas - Aquecimento Solar - Gás Canalizado - 1 Elevador social - Elevador serviço ÁREA 105 QUARTO(S) 3 VAGA(S) 2 BANHEIRO(S) 3 R$ 795.000,00 Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Esmeraldo Botelho, Buritis, Belo Horizonte, MG Código: 1355 Apartamento 3 Quartos 1 Suíte 2 vagas Buritis Belo Horizonte-Mg Apartamento proximo ao supermercado super nosso, com 105 m², 3 quartos com armários planejados;, 1 Suíte com closet, 3 Banheiros, sala ampla para dois ambientes com cristaleira e painel de TV, la",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "a1fc7492a7e68dcb",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-luxemburgo-2-quartos-62-3007610615.html?n_src=Listado&n_pills=Ar+condicionado&n_pg=1&n_pos=2",
-      "title": "Apartamento para alugar com 2 quartos.",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "parkingSpaces": 2,
-      "areaM2": 62,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 3515,
-        "monthlyTotal": 3515,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Apartamento para alugar com 2 quartos. R$ 3.515R$ 900 Condominio62 m² tot.2 quartos2 ban.2 vagasRua Doutor Helvécio ArantesLuxemburgo, Belo HorizonteApartamento para alugar com 2 quartos.",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "fbe3ac14a6c4b2c3",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-itapoa-3-quartos-84-m2-3001071504.html?n_src=Listado&n_pills=Mobiliado&n_pg=1&n_pos=9",
-      "title": "Apartamento mobiliado com 3 quartos à venda no bairro Itapoã. Não perca esta oportunidade única de compra!",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "parkingSpaces": 2,
-      "areaM2": 84,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 5520,
-        "monthlyTotal": 5520,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Apartamento mobiliado com 3 quartos à venda no bairro Itapoã. Não perca esta oportunidade única de compra! R$ 5.520R$ 300 Condominio84 m² tot.3 quartos2 ban.2 vagasRua Dona QueridinhaItapoã, Belo HorizonteApartamento mobiliado com 3 quartos à venda no bairro Itapoã. Não perca esta oportunidade única de compra!",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "71f787076fe4b3c4",
-      "source": "Lugar Certo",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-1-quarto-centro-belo-horizonte-41m2-compra-e-venda-rs324350-id-342276176",
-      "title": "Apartamento, 1 Quarto, 1 Suite Rua Espírito Santo, Centro, Belo Horizonte, MG Código: 562 Apartamento 1 quarto Centro Belo Horizonte/MG. Pré",
-      "transaction": "sale",
       "neighborhood": "Centro",
-      "address": "Rua Espírito Santo",
       "coordinates": {
         "lat": -19.9191,
         "lon": -43.9386
       },
       "distanceKm": 1.4,
       "distanceConfidence": "estimated",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 324350
-      },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
-      "rawText": "Apartamento, 1 Quarto, 1 Suite Rua Espírito Santo, Centro, Belo Horizonte, MG Código: 562 Apartamento 1 quarto Centro Belo Horizonte/MG. Prédio em reforma com apartamentos Retrofit. Sendo apartamentos de 1 e 2 quartos com plantas diversas e metragens diferentes. Lazer do prédio na cobertura,salão de festas,academia,espaço gourmet . Para mais informações consulte nossos corretores. (Fotos Ilustrativas) CARACTERISTICAS:Salão de festas - Porteiro físico - Interfone - Churrasqueira - Sala Ginástica - Esquadrias alumínio - 1 Elevador social - Hall Social Decorado - Circuito de TV ÁREA 41 QUARTO(S) 1 BANHEIRO(S) 1 R$ 324.350,00 Apartamento, 1 Quarto, 1 Suite Rua Espírito Santo, Centro, Belo Horizonte, MG Código: 562 Apartamento 1 quarto Centro Belo Horizonte/MG. Prédio em reforma com apartamentos Retrofit. Sendo apartamentos de 1 e 2 quartos com plantas diversas e metragens diferentes. Lazer do prédio na cobertura,salão de festas,academia,espaço gourmet . Para mais informações consulte nossos corretores. (Fotos Ilustrativas) CARACTERISTICAS:Salão de festas - Porteiro físico - Interfone - Churrasqueira - Sala Ginástica - Esquadrias alumínio - 1 Elevador social - Hall Social Decorado - Cir",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "b31fdab7e678ce9c",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-a-venda-2-quartos-com-garagem-mg-belo-horizonte-santa-monica-50m2-RS340000/id-34268261/",
-      "title": "Apartamento 2 Quartos com Elevador e 2 Vagas à Venda Próximo ao Shopping Estação BHEndereço indisponívelSanta Mônica, Belo Horizonte/MG50m²2",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
       "bedrooms": 2,
       "parkingSpaces": 2,
-      "areaM2": 50,
+      "areaM2": 72,
       "isNewOrRenovated": false,
       "images": [],
       "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 340000,
-        "pricePerSquareMeter": 6800
+        "rent": 6200,
+        "monthlyTotal": 6200,
+        "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Apartamento 2 Quartos com Elevador e 2 Vagas à Venda Próximo ao Shopping Estação BHEndereço indisponívelSanta Mônica, Belo Horizonte/MG50m²212R$ 340.000 Apartamento 2 Quartos com Elevador e 2 Vagas à Venda Próximo ao Shopping Estação BHEndereço indisponívelSanta Mônica, Belo Horizonte/MG50m²212R$ 340.000",
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "More na melhor localização de bh com um lazer de resort! Apartamento de 02 quartos com cerca de 72 m², com sala para 02 ambientes com cozinha integrada e uma vista excepcional para a Serra do Curral e toda região Centro -Sul de bh. Suíte master muito espaçosa, com armários e banheiro espaçoso com 02 chuveiros. 2º quarto e banheiro social também com armários. Diferenciais do prédio com portaria 24h, home office, lavanderia, mercadinho, 02 áreas gourmet, piscina coberta e descoberta, sala de massagem e academia super bem equipada. R$ 6.200R$ 1.550 Condominio72 m² tot.2 quartos2 ban.2 vagasRua Antônio de Albuquerque Savassi, Belo HorizonteMore na melhor localização de bh com um lazer de resort! Apartamento de 02 quartos com cerca de 72 m², com sala para 02 ambientes com cozinha integrada e uma vista excepcional para a Serra do Curral e toda região Centro -Sul de bh. Suíte master muito espaçosa, com armários e banheiro espaçoso com 02 chuveiros. 2º quarto e banheiro social também com armários. Diferenciais do prédio com portaria 24h, home office, lavanderia, mercadinho, 02 áreas gourmet, piscina coberta e descoberta, sala de massagem e academia super bem equipada.",
       "warnings": [
         "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "f65cf7c07acdae49",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-a-venda-santo-antonio-6-quartos-330-3032349196.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=9",
-      "title": "Comprar apartamento com varanda e 6 quartos.",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 6,
-      "parkingSpaces": 4,
-      "areaM2": 330,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1200000,
-        "pricePerSquareMeter": 3636
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Comprar apartamento com varanda e 6 quartos. R$ 1.200.000R$ 700 Condominio330 m² tot.6 quartos3 ban.4 vagasRua Carlos GomesSanto Antônio, Belo HorizonteComprar apartamento com varanda e 6 quartos.",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "da5c57eaf663e28c",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-a-venda-grajau-5-quartos-413-m-3022431736.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=6",
-      "title": "Apartamento com 5 quartos, varanda e aceita pets. Oportunidades para comprar.",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 5,
-      "parkingSpaces": 2,
-      "areaM2": 413,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1600000,
-        "pricePerSquareMeter": 3874
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Apartamento com 5 quartos, varanda e aceita pets. Oportunidades para comprar. R$ 1.600.000R$ 1.200 Condominio413 m² tot.5 quartos4 ban.2 vagasRua Barbosa de RezendeGrajaú, Belo HorizonteApartamento com 5 quartos, varanda e aceita pets. Oportunidades para comprar.",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "c87d5558c7f306d8",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-a-venda-liberdade-4-quartos-360-m-2973408821.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=2",
-      "title": "Venda de apartamento na Liberdade com 4 quartos. Animais de estimação permitidos.",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 4,
-      "parkingSpaces": 3,
-      "areaM2": 360,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 2200000,
-        "pricePerSquareMeter": 6111
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Venda de apartamento na Liberdade com 4 quartos. Animais de estimação permitidos. R$ 2.200.000R$ 550 Condominio360 m² tot.4 quartos6 ban.3 vagasRua Vital BrasilLiberdade, Belo HorizonteVenda de apartamento na Liberdade com 4 quartos. Animais de estimação permitidos.",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "204f9b18d217db81",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-luxemburgo-one-view-3036714254.html?n_src=Listado&n_pg=1&n_pos=8",
-      "title": "Apartamento à vendas Luxemburgo, com 2 e 3 quartos. Em construção! One View Luxemburgo. Um empreendimento pensado para quem busca qualidade ",
-      "transaction": "sale",
+      "id": "67fc551e5d1c2cd3",
+      "source": "QuintoAndar",
+      "sourceListingId": "894498211",
+      "url": "https://www.quintoandar.com.br/imovel/894498211/alugar/apartamento-3-quartos-serra-belo-horizonte?from_route=%22search_results%22&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A7%2C%22personalization%22%3Afalse%7D",
+      "title": "Apartamento com 3 quartos e varanda para alugar na Serra. Opção confortável e prática para aluguel na região.",
+      "transaction": "rent",
       "neighborhood": "Serra",
       "coordinates": {
         "lat": -19.9442,
@@ -1403,210 +317,75 @@
       "distanceKm": 1.9,
       "distanceConfidence": "estimated",
       "bedrooms": 3,
-      "areaM2": 143,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 9868682,
-        "pricePerSquareMeter": 69012
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Apartamento à vendas Luxemburgo, com 2 e 3 quartos. Em construção! One View Luxemburgo. Um empreendimento pensado para quem busca qualidade de vida, sofisticação e uma nova forma de aproveitar o dia a dia. 2 e 3 quartos | 62 a 143m² | Lazer no Rooftop. Opções com garden, varanda e terraço descoberto. Um encontro entre localização estratégica, design contemporâneo e vista privilegiada para o maior ícone da cidade, a Serra do Curral. Sua vida sob uma nova perspectiva. Apartamentos a partir deR$ 986.8682 plan.2 a 3 quartosAv. Raja Gabáglia, 1203Luxemburgo, Belo HorizonteFitnessPiscinaApartamento à vendas Luxemburgo, com 2 e 3 quartos. Em construção! One View Luxemburgo. Um empreendimento pensado para quem busca qualidade de vida, sofisticação e uma nova forma de aproveitar o dia a dia. 2 e 3 quartos | 62 a 143m² | Lazer no Rooftop. Opções com garden, varanda e terraço descoberto. Um encontro entre localização estratégica, design contemporâneo e vista privilegiada para o maior ícone da cidade, a Serra do Curral. Sua vida sob uma nova perspectiva.",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "980db546795e7928",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-carmo-sion-anima-3034726908.html?n_src=Listado&n_pg=1&n_pos=4",
-      "title": "Apartamento à venda Carmo Sion, Belo horizonte com 1 e 2 quartos, suítes. Pronto para morar! Um projeto especial, uma experiência sensorial ",
-      "transaction": "sale",
-      "neighborhood": "Sion",
-      "coordinates": {
-        "lat": -19.9522,
-        "lon": -43.9317
-      },
-      "distanceKm": 2.3,
-      "distanceConfidence": "estimated",
-      "bedrooms": 2,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 12024534
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Apartamento à venda Carmo Sion, Belo horizonte com 1 e 2 quartos, suítes. Pronto para morar! Um projeto especial, uma experiência sensorial para quem busca bem-estar, exclusividade e viver de alma leve. Assim é o Ânima. O lifestyle que você sempre sonhou e que a Concreto vai dar vida. O Ânima é um empreendimento misto com design moderno, arquitetura contemporânea e alinhado com as tendências mundiais que privilegiam o convívio, paisagismo, integração com o espaço urbano e lazer premium. Espaços projetados especialmente para cuidar do corpo e da mente, respeitando a individualidade e a necessidade de cada morador. No Ânima, cada conexão é única! E o projeto de cada apartamento também. Projetos exclusivos que transformam o morar em uma experiência de viver exclusiva. Nas áreas comuns também contamos com office. Apartamentos a partir deR$ 1.202.4534 plan.1 a 2 quartosR. Grão Mogol, 535 Carmo, Belo HorizonteFitnessPiscinaPlaygroundApartamento à venda Carmo Sion, Belo horizonte com 1 e 2 quartos, suítes. Pronto para morar! Um projeto especial, uma experiência sensorial para quem busca bem-estar, exclusividade e viver de alma leve. Assim é o Ânima. O lifestyle que você sempre sonhou e qu",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "7a4268aa2e4c3afb",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-a-venda-no-castelo-3035473511.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=5",
-      "title": "Cobertura excelente distribuição, apartamento todo montado com armários laqueados, painéis em madeira ripada, lindo. 1º Pavimento: 2 quartos",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "bathrooms": 1,
       "parkingSpaces": 2,
-      "areaM2": 104,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 830000104,
-        "pricePerSquareMeter": 7980770
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Cobertura excelente distribuição, apartamento todo montado com armários laqueados, painéis em madeira ripada, lindo. 1º Pavimento: 2 quartos, sendo 1 suíte, Banho social, Sala para 2 ambientes, Cozinha. 2º Pavimento: Sala ampla, Área gourmet completa, Jacuzzi, Churrasqueira., Lavabo, Sala de jantar, 2 vagas de garagem. Descubra esta incrível cobertura à venda no bairro Castelo, em Belo Horizonte. Com 104 m² de área privativa, o imóvel dispõe de 2 dormitórios, sendo 1 suíte, e 3 banheiros, garantindo conforto e privacidade. Além disso, conta com 2 vagas de garagem. Situada em um edifício moderno, essa cobertura é perfeita para quem busca qualidade de vida e um lar aconchegante. Não perca a oportunidade de viver em um dos melhores bairros da cidade! R$ 830.000104 m² tot.2 quartosCastelo SetúbalCastelo, Belo HorizonteCobertura excelente distribuição, apartamento todo montado com armários laqueados, painéis em madeira ripada, lindo. 1º Pavimento: 2 quartos, sendo 1 suíte, Banho social, Sala para 2 ambientes, Cozinha. 2º Pavimento: Sala ampla, Área gourmet completa, Jacuzzi, Churrasqueira., Lavabo, Sala de jantar, 2 vagas de garagem. Descubra esta incrível cobertura à venda no bairro Ca",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "a21fe089e1709bd6",
-      "source": "VivaReal",
-      "sourceListingId": "2892836280",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-4-quartos-buritis-belo-horizonte-com-garagem-85m2-aluguel-RS2700-id-2892836280/?source=ranking%2Crp",
-      "title": "+16 fotosVia NobreApartamento para alugar com 85 m², 4 quartos, 2 banheiros, 1 vaga em Buritis, Belo HorizonteRua Tereza Mota ValadaresTaman",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parkingSpaces": 1,
-      "areaM2": 85,
+      "areaM2": 110,
       "isNewOrRenovated": false,
       "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/8ff948ae1d4c539033431b8cf3ddfff4/apartamento-com-4-quartos-para-alugar-85m-no-buritis-belo-horizonte.webp?action=fit-in&dimension=614x297"
+        "https://www.quintoandar.com.br/img/med/894498211-983.0489547638142GAB139023.jpg"
       ],
       "costs": {
-        "rent": 2700,
-        "condominium": 411,
-        "iptu": 166,
-        "monthlyTotal": 3277,
+        "rent": 6975,
+        "monthlyTotal": 6975,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "+16 fotosVia NobreApartamento para alugar com 85 m², 4 quartos, 2 banheiros, 1 vaga em Buritis, Belo HorizonteRua Tereza Mota ValadaresTamanho do imóvel 85 m²Quantidade de quartos 4Quantidade de banheiros 2Quantidade de vagas de garagem 1R$ 2.700/mêsCond. R$ 411 • IPTU R$ 166Preço abaixo do mercadoContatar +16 fotosVia NobreApartamento para alugar com 85 m², 4 quartos, 2 banheiros, 1 vaga em Buritis, Belo HorizonteRua Tereza Mota ValadaresTamanho do imóvel 85 m²Quantidade de quartos 4Quantidade de banheiros 2Quantidade de vagas de garagem 1R$ 2.700/mêsCond. R$ 411 • IPTU R$ 166Preço abaixo do mercadoContatar",
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "Apartamento com 3 quartos e varanda para alugar na Serra. Opção confortável e prática para aluguel na região.R$ 6.975 aluguelR$ 8.823 total110 m² · 3 quartos · 2 vagasRua Níquel, Serra · Belo Horizonte Apartamento com 3 quartos e varanda para alugar na Serra. Opção confortável e prática para aluguel na região.R$ 6.975 aluguelR$ 8.823 total110 m² · 3 quartos · 2 vagasRua Níquel, Serra · Belo Horizonte",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "c7f3c905df8a1691",
-      "source": "VivaReal",
-      "sourceListingId": "2892836377",
-      "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-palmeiras-belo-horizonte-com-garagem-55m2-aluguel-RS3070-id-2892836377/?source=ranking%2Crp",
-      "title": "+4 fotosVia NobreApartamento para alugar com 55 m², 3 quartos, 1 banheiro, 1 vaga em Palmeiras, Belo HorizonteRua Senhora do PortoTamanho do",
+      "id": "0dcd2833030ebe85",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-com-3-dormitorios-1-suite-2-3028207557.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=22",
+      "title": "Aproveite um amplo 3 dormitórios (1 suíte) com 110 m² no Belvedere, Belo Horizonte. Imóvel de fundo, em andar alto, com 2 vagas, 2 elevadore",
       "transaction": "rent",
       "distanceConfidence": "missing",
       "bedrooms": 3,
       "bathrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 55,
+      "parkingSpaces": 2,
+      "areaM2": 110,
       "isNewOrRenovated": false,
-      "images": [
-        "https://resizedimgs.vivareal.com/img/vr-listing/c9527f2368590fb5664e3c85e7228f5a/apartamento-com-3-quartos-para-alugar-55m-no-palmeiras-belo-horizonte.webp?action=fit-in&dimension=614x297"
-      ],
+      "images": [],
       "costs": {
-        "rent": 3070,
-        "condominium": 268,
-        "monthlyTotal": 3338,
+        "rent": 7,
+        "iptu": 657,
+        "monthlyTotal": 664,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:57:26.918Z",
-      "rawText": "+4 fotosVia NobreApartamento para alugar com 55 m², 3 quartos, 1 banheiro, 1 vaga em Palmeiras, Belo HorizonteRua Senhora do PortoTamanho do imóvel 55 m²Quantidade de quartos 3Quantidade de banheiros 1Quantidade de vagas de garagem 1R$ 3.070/mêsCond. R$ 268 • IPTU não informadoContatar +4 fotosVia NobreApartamento para alugar com 55 m², 3 quartos, 1 banheiro, 1 vaga em Palmeiras, Belo HorizonteRua Senhora do PortoTamanho do imóvel 55 m²Quantidade de quartos 3Quantidade de banheiros 1Quantidade de vagas de garagem 1R$ 3.070/mêsCond. R$ 268 • IPTU não informadoContatar",
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Aproveite um amplo 3 dormitórios (1 suíte) com 110 m² no Belvedere, Belo Horizonte. Imóvel de fundo, em andar alto, com 2 vagas, 2 elevadores e varanda. Perfeito para família, com sala, área de serviço, armários embutidos, dce, alarme, gás canalizado e interfone. Lazer completo no condomínio: academia, piscina, quadra poliesportiva, sala de jogos, espaço gourmet, churrasqueira, playground, salão de festas, sauna e jardim. Portaria 24h, portão eletrônico e vagas cobertas garantindo segurança e comodidade. Valor de aluguel R$ 7. 000, condomínio R$ 1. 575, 64 e iptu mensal R$ 657, 05. Localização privilegiada no Belvedere, próximo a comodidades locais. R$ 7.000R$ 1.576 Condominio110 m² tot.3 quartos2 ban.2 vagasRua Desembargador Jorge Fontana Belvedere, Belo HorizonteAproveite um amplo 3 dormitórios (1 suíte) com 110 m² no Belvedere, Belo Horizonte. Imóvel de fundo, em andar alto, com 2 vagas, 2 elevadores e varanda. Perfeito para família, com sala, área de serviço, armários embutidos, dce, alarme, gás canalizado e interfone. Lazer completo no condomínio: academia, piscina, quadra poliesportiva, sala de jogos, espaço gourmet, churrasqueira, playground, salão de festas, sauna e jardim.",
       "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "522d71bce29c7068",
-      "source": "QuintoAndar",
-      "sourceListingId": "895260808",
-      "url": "https://www.quintoandar.com.br/imovel/895260808/alugar/apartamento-1-quarto-santa-tereza-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&search_id=%22fa155d28-c294-4538-88a9-93e0afc70d8b%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A4%2C%22personalization%22%3Afalse%7D",
-      "title": "ExclusivoAluguel de apartamento em Santa Tereza com 1 quarto.",
+      "id": "7104568cca963130",
+      "source": "Lugar Certo",
+      "sourceListingId": "353324294",
+      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-1-quarto-barreiro-belo-horizonte-48m2-aluguel-rs1100-id-353324294",
+      "title": "Apartamento, 1 Quarto Avenida Sinfrônio Brochado, Barreiro, Belo Horizonte, MG (CHAVE 290) APARTAMENTO COM 1 QUARTO, SALA CONJUGADA COM COZI",
       "transaction": "rent",
+      "address": "Avenida Sinfrônio Brochado",
       "distanceConfidence": "missing",
       "bedrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 49,
+      "bathrooms": 1,
       "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original895260808-927.2507045418042IMG5362.jpg"
-      ],
+      "images": [],
       "costs": {
-        "rent": 4700,
-        "monthlyTotal": 4700,
+        "rent": 1100,
+        "condominium": 1,
+        "monthlyTotal": 1101,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:57:44.783Z",
-      "rawText": "ExclusivoAluguel de apartamento em Santa Tereza com 1 quarto.R$ 4.700 aluguelR$ 5.614 total49 m² · 1 quarto · 1 vagaRua Silvianópolis, Santa Tereza · Belo Horizonte ExclusivoAluguel de apartamento em Santa Tereza com 1 quarto.R$ 4.700 aluguelR$ 5.614 total49 m² · 1 quarto · 1 vagaRua Silvianópolis, Santa Tereza · Belo Horizonte",
+      "collectedAt": "2026-06-16T13:24:34.511Z",
+      "rawText": "Apartamento, 1 Quarto Avenida Sinfrônio Brochado, Barreiro, Belo Horizonte, MG (CHAVE 290) APARTAMENTO COM 1 QUARTO, SALA CONJUGADA COM COZINHA, BANHEIRO AZULEJADO, ÁREA DE SERVIÇO, VARANDA, PISO CERÂMICA, DE FRENTE, ÁGUA E LUZ DIVIDIDAS. *OS VALORES ANUNCIADOS DE IPTU E CONDOMÍNIO SÃO REFERENCIAIS E PODEM SOFRER ALTERAÇÕES. WHATSAPP: (31) 98386-8716. ÁREA 48 QUARTO(S) 1 BANHEIRO(S) 1 R$ 1.100,00 Apartamento, 1 Quarto Avenida Sinfrônio Brochado, Barreiro, Belo Horizonte, MG (CHAVE 290) APARTAMENTO COM 1 QUARTO, SALA CONJUGADA COM COZINHA, BANHEIRO AZULEJADO, ÁREA DE SERVIÇO, VARANDA, PISO CERÂMICA, DE FRENTE, ÁGUA E LUZ DIVIDIDAS. *OS VALORES ANUNCIADOS DE IPTU E CONDOMÍNIO SÃO REFERENCIAIS E PODEM SOFRER ALTERAÇÕES. WHATSAPP: (31) 98386-8716. ÁREA 48 QUARTO(S) 1 BANHEIRO(S) 1 R$ 1.100,00 Ver detalhes",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "51009f736a4936fc",
-      "source": "QuintoAndar",
-      "sourceListingId": "894956218",
-      "url": "https://www.quintoandar.com.br/imovel/894956218/comprar/apartamento-2-quartos-santa-lucia-belo-horizonte?from_route=%22search_results%22&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A6%2C%22personalization%22%3Afalse%7D",
-      "title": "Comprar apartamento mobiliado com 2 quartos, 1 suíte e aceita animais.",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 80,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/original894956218-315.1460832038056cc4a6d62-0d7d-4166-adfb-a0f12897fb68-LEAD3P-65d8e255-fa1e-431c-a6b4-86fef38ad504.jpg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 490000,
-        "pricePerSquareMeter": 6125
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "Comprar apartamento mobiliado com 2 quartos, 1 suíte e aceita animais.R$ 490.000 R$ 950 Condo. + IPTU80 m² · 2 quartos · 1 vagaRua Via Láctea, Santa Lúcia · Belo Horizonte Comprar apartamento mobiliado com 2 quartos, 1 suíte e aceita animais.R$ 490.000 R$ 950 Condo. + IPTU80 m² · 2 quartos · 1 vagaRua Via Láctea, Santa Lúcia · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "8fc0d9fb9ed0dffe",
-      "source": "QuintoAndar",
-      "sourceListingId": "893448126",
-      "url": "https://www.quintoandar.com.br/imovel/893448126/comprar/apartamento-4-quartos-manacas-belo-horizonte?from_route=%22search_results%22&search_id=%222c2f4e9a-d5f2-4b83-9bc8-beb3c0820779%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A2%2C%22personalization%22%3Afalse%7D",
-      "title": "Apartamento mobiliado com 4 quartos à venda em Manacás. Permite animais de estimação. Oportunidade imperdível!",
-      "transaction": "sale",
-      "distanceConfidence": "missing",
-      "bedrooms": 4,
-      "parkingSpaces": 1,
-      "areaM2": 157,
-      "isNewOrRenovated": false,
-      "images": [
-        "https://www.quintoandar.com.br/img/med/893448126-562.0813497723838dd63ad2d4a044f6095b3be7fc11ed579.jpg"
-      ],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 840000,
-        "pricePerSquareMeter": 5350
-      },
-      "collectedAt": "2026-06-15T23:57:38.870Z",
-      "rawText": "Apartamento mobiliado com 4 quartos à venda em Manacás. Permite animais de estimação. Oportunidade imperdível!R$ 840.000 R$ 109 Condo. + IPTU157 m² · 4 quartos · 1 vagaRua Maestro George Marinuzi, Manacás · Belo Horizonte Apartamento mobiliado com 4 quartos à venda em Manacás. Permite animais de estimação. Oportunidade imperdível!R$ 840.000 R$ 109 Condo. + IPTU157 m² · 4 quartos · 1 vagaRua Maestro George Marinuzi, Manacás · Belo Horizonte",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente."
       ]
     },
     {
@@ -1628,8 +407,34 @@
         "monthlyTotal": 1200,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:08.038Z",
+      "collectedAt": "2026-06-16T13:24:34.511Z",
       "rawText": "Apartamento, 3 Quartos, 1 Vaga Av. Ministro Oliveira Salazar, Santa Mônica, Belo Horizonte, MG APARTAMENTO BEM LOCALIZADO NA AV. PRINCIPAL DO SANTA MONICA, PROXIMO A COMERCIO, POSTO DE GASOLINA. ÁREA 70 QUARTO(S) 3 VAGA(S) 1 BANHEIRO(S) 1 R$ 1.200,00 Apartamento, 3 Quartos, 1 Vaga Av. Ministro Oliveira Salazar, Santa Mônica, Belo Horizonte, MG APARTAMENTO BEM LOCALIZADO NA AV. PRINCIPAL DO SANTA MONICA, PROXIMO A COMERCIO, POSTO DE GASOLINA. ÁREA 70 QUARTO(S) 3 VAGA(S) 1 BANHEIRO(S) 1 R$ 1.200,00 Ver detalhes",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "e8af8e1477a3cb1a",
+      "source": "QuintoAndar",
+      "sourceListingId": "895331593",
+      "url": "https://www.quintoandar.com.br/imovel/895331593/alugar/apartamento-1-quarto-canaa-belo-horizonte?from_route=%22search_results%22&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A4%2C%22personalization%22%3Afalse%7D",
+      "title": "Apartamento para alugar em Canaa, 1 quarto suíte.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 1,
+      "areaM2": 18,
+      "isNewOrRenovated": false,
+      "images": [
+        "https://www.quintoandar.com.br/img/med/895331593-223.38146365205924WhatsAppImage20260430at18.09.241.jpeg"
+      ],
+      "costs": {
+        "rent": 1400,
+        "monthlyTotal": 1400,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "Apartamento para alugar em Canaa, 1 quarto suíte.R$ 1.400 aluguelR$ 1.476 total18 m² · 1 quartoRua Quênia, Canaa · Belo Horizonte Apartamento para alugar em Canaa, 1 quarto suíte.R$ 1.400 aluguelR$ 1.476 total18 m² · 1 quartoRua Quênia, Canaa · Belo Horizonte",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
@@ -1654,7 +459,7 @@
         "monthlyTotal": 1650,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:08.038Z",
+      "collectedAt": "2026-06-16T13:24:34.511Z",
       "rawText": "Apartamento, 2 Quartos, 1 Vaga Rua Adelina Maria de Oliveira, Diamante, Belo Horizonte, MG (CHAVE 282) EXCELENTE APARTAMENTO DE 2 QUARTOS, SENDO 1 COM ARMÁRIO E MESA DE ESCRITÓRIO PLANEJADA, BANHO COM BOX BLINDEX TODO REVESTIDO, ARMÁRIO DEBAIXO DA PIA E ESPELHO, SALA AMPLA, COZINHA COM ARMÁRIOS CONJUGADA COM ÁREA DE SERVIÇO. 1 VAGA DE GARAGEM. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES. WHATSAPP 31 98386 8716* ÁREA 49 QUARTO(S) 2 VAGA(S) 1 BANHEIRO(S) 1 R$ 1.650,00 Apartamento, 2 Quartos, 1 Vaga Rua Adelina Maria de Oliveira, Diamante, Belo Horizonte, MG (CHAVE 282) EXCELENTE APARTAMENTO DE 2 QUARTOS, SENDO 1 COM ARMÁRIO E MESA DE ESCRITÓRIO PLANEJADA, BANHO COM BOX BLINDEX TODO REVESTIDO, ARMÁRIO DEBAIXO DA PIA E ESPELHO, SALA AMPLA, COZINHA COM ARMÁRIOS CONJUGADA COM ÁREA DE SERVIÇO. 1 VAGA DE GARAGEM. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES. WHATSAPP 31 98386 8716* ÁREA 49 QUARTO(S) 2 VAGA(S) 1 BANHEIRO(S) 1 R$ 1.650,00 Ver detalhes",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
@@ -1662,214 +467,129 @@
       ]
     },
     {
-      "id": "bd530b01d7a8a1f6",
+      "id": "652c1d0c7ae1e1ce",
       "source": "Lugar Certo",
-      "sourceListingId": "353723494",
-      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-2-quartos-estoril-belo-horizonte-com-garagem-54m2-aluguel-rs3700-id-353723494",
-      "title": "Apartamento, 2 Quartos, 1 Vaga, 1 Suite Rua Paulo Piedade Campos, Estoril, Belo Horizonte, MG Apartamento residencial à venda, localizado no",
+      "sourceListingId": "353208238",
+      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-3-quartos-milionarios-belo-horizonte-com-garagem-62m2-aluguel-rs2250-id-353208238",
+      "title": "Apartamento, 3 Quartos, 1 Vaga, 1 Suite Rua João Alexandre Pires, Milionários, Belo Horizonte, MG (CHAVE 295) APARTAMENTO COM 3 QUARTOS SEND",
       "transaction": "rent",
-      "address": "Rua Paulo Piedade Campos",
+      "address": "Rua João Alexandre Pires",
       "distanceConfidence": "missing",
-      "bedrooms": 2,
+      "bedrooms": 3,
       "bathrooms": 1,
       "parkingSpaces": 1,
-      "areaM2": 0,
       "isNewOrRenovated": false,
       "images": [],
       "costs": {
-        "rent": 3700,
-        "monthlyTotal": 3700,
+        "rent": 2250,
+        "monthlyTotal": 2250,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:08.038Z",
-      "rawText": "Apartamento, 2 Quartos, 1 Vaga, 1 Suite Rua Paulo Piedade Campos, Estoril, Belo Horizonte, MG Apartamento residencial à venda, localizado no Estoril, Belo Horizonte. Área interna de 54,00 m², 2 quartos (sendo 1 suíte), sala, varanda, 1 banho social e 1 vaga na garagem. Prédio com infraestrutura completa: portaria 24h, segurança 24h, alarme, cerca elétrica, água individual, interfone, portão eletrônico e cabeamento estruturado. Lazer incluso: academia, piscina, espaço gourmet, churrasqueira, play, salão de festas e wifi. Agende já sua visita! ÁREA 54 QUARTO(S) 2 VAGA(S) 1 BANHEIRO(S) 2 R$ 3.700,00 Apartamento, 2 Quartos, 1 Vaga, 1 Suite Rua Paulo Piedade Campos, Estoril, Belo Horizonte, MG Apartamento residencial à venda, localizado no Estoril, Belo Horizonte. Área interna de 54,00 m², 2 quartos (sendo 1 suíte), sala, varanda, 1 banho social e 1 vaga na garagem. Prédio com infraestrutura completa: portaria 24h, segurança 24h, alarme, cerca elétrica, água individual, interfone, portão eletrônico e cabeamento estruturado. Lazer incluso: academia, piscina, espaço gourmet, churrasqueira, play, salão de festas e wifi. Agende já sua visita! ÁREA 54 QUARTO(S) 2 VAGA(S) 1 BANHEIRO(S) 2 R$ 3",
+      "collectedAt": "2026-06-16T13:24:34.511Z",
+      "rawText": "Apartamento, 3 Quartos, 1 Vaga, 1 Suite Rua João Alexandre Pires, Milionários, Belo Horizonte, MG (CHAVE 295) APARTAMENTO COM 3 QUARTOS SENDO 1 SUITE, SALA, COZINHA AZULEJADA COM ARMÁRIO, BANHEIRO AZULEJADO COM BOX, ÁREA PRIVATIVA, PISO PORCELANATO, 1 VAGA DE ESTACIONAMENTO PARA CARRO PEQUENO (APENAS CARRO HATCH), 2 APTO POR ANDAR, RESTRIÇÃO A ANIMAIS, ÁGUA E LUZ INDIVIDUAIS. *OS VALORES ANUNCIADOS DE IPTU E CONDOMÍNIO SÃO REFERENCIAIS E PODEM SOFRER ALTERAÇÕES. WHATSAPP: (31) 98386-8716. ÁREA 62 QUARTO(S) 3 VAGA(S) 1 BANHEIRO(S) 1 R$ 2.250,00 Apartamento, 3 Quartos, 1 Vaga, 1 Suite Rua João Alexandre Pires, Milionários, Belo Horizonte, MG (CHAVE 295) APARTAMENTO COM 3 QUARTOS SENDO 1 SUITE, SALA, COZINHA AZULEJADA COM ARMÁRIO, BANHEIRO AZULEJADO COM BOX, ÁREA PRIVATIVA, PISO PORCELANATO, 1 VAGA DE ESTACIONAMENTO PARA CARRO PEQUENO (APENAS CARRO HATCH), 2 APTO POR ANDAR, RESTRIÇÃO A ANIMAIS, ÁGUA E LUZ INDIVIDUAIS. *OS VALORES ANUNCIADOS DE IPTU E CONDOMÍNIO SÃO REFERENCIAIS E PODEM SOFRER ALTERAÇÕES. WHATSAPP: (31) 98386-8716. ÁREA 62 QUARTO(S) 3 VAGA(S) 1 BANHEIRO(S) 1 R$ 2.250,00 Ver detalhes",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "6c1383b130887ae4",
-      "source": "Chaves na Mao",
-      "sourceListingId": "39744879",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-2-quartos-com-garagem-mg-belo-horizonte-estoril-80m2-RS2000/id-39744879/",
-      "title": "Apartamento com 2 quartos para alugar na Engenheiro Gdofredo Santps, 104, Estoril, Belo Horizonte por",
+      "id": "9e457f11fca45870",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-gameleira-2-quartos-90-3005339834.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=10",
+      "title": "Apartamento para alugar na Nova Gameleira, 2 quartos, aceita pets.",
       "transaction": "rent",
       "distanceConfidence": "missing",
       "bedrooms": 2,
-      "areaM2": 80,
+      "parkingSpaces": 1,
+      "areaM2": 90,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 2500,
+        "monthlyTotal": 2500,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Apartamento para alugar na Nova Gameleira, 2 quartos, aceita pets. R$ 2.500R$ 300 Condominio90 m² tot.2 quartos2 ban.1 vagaRua Maria Amélia Fonte BoaNova Gameleira, Belo HorizonteApartamento para alugar na Nova Gameleira, 2 quartos, aceita pets.",
+      "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "a43c420e42d30631",
+      "source": "Lugar Certo",
+      "sourceListingId": "353415613",
+      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-3-quartos-manacas-belo-horizonte-com-garagem-125m2-aluguel-rs2600-id-353415613",
+      "title": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Raul Seixas, Manacás, Belo Horizonte, MG EXCELENTE APARTAMENTO DE 3 QUARTOS SENDO 1 COM ARMÁRIO",
+      "transaction": "rent",
+      "address": "Rua Raul Seixas",
+      "distanceConfidence": "missing",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parkingSpaces": 2,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 2600,
+        "monthlyTotal": 2600,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:34.511Z",
+      "rawText": "Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Raul Seixas, Manacás, Belo Horizonte, MG EXCELENTE APARTAMENTO DE 3 QUARTOS SENDO 1 COM ARMÁRIO E SUITE COM BOX E ARMÁRIO, SALA AMPLA COM REBAIXAMENTO E SACADA AMPLA, COZINHA COM ACABAMENTO EM GRANITO E ARMÁRIO, BANHO SOCIAL COM BOX E ARMÁRIO, ÁREA DE SERVIÇO, 2 VAGAS EM LINHA, PISO EM PORCELANATO, PRÉDIO INDIVIDUAL. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP 31 983 867 630 ÁREA 125 QUARTO(S) 3 VAGA(S) 2 BANHEIRO(S) 1 R$ 2.600,00 Apartamento, 3 Quartos, 2 Vagas, 1 Suite Rua Raul Seixas, Manacás, Belo Horizonte, MG EXCELENTE APARTAMENTO DE 3 QUARTOS SENDO 1 COM ARMÁRIO E SUITE COM BOX E ARMÁRIO, SALA AMPLA COM REBAIXAMENTO E SACADA AMPLA, COZINHA COM ACABAMENTO EM GRANITO E ARMÁRIO, BANHO SOCIAL COM BOX E ARMÁRIO, ÁREA DE SERVIÇO, 2 VAGAS EM LINHA, PISO EM PORCELANATO, PRÉDIO INDIVIDUAL. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP 31 983 867 630 ÁREA 125 QUARTO(S) 3 VAGA(S) 2 BANHEIRO(S) 1 R$ 2.600,00 Ver detalhes",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "1151c931997ab063",
+      "source": "QuintoAndar",
+      "sourceListingId": "893746461",
+      "url": "https://www.quintoandar.com.br/imovel/893746461/alugar/apartamento-2-quartos-castelo-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&house_tags=rentPriceDecreased&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A10%2C%22personalization%22%3Afalse%7D",
+      "title": "ExclusivoBaixou o preçoAluguel de apartamento, de 65 m² com 2 quartos, 1 banheiro e 1 vaga na garagem em Castelo.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parkingSpaces": 1,
+      "areaM2": 65,
       "isNewOrRenovated": false,
       "images": [
-        "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/208925/39744879/mg-belo-horizonte-estoril-nao-encontrado-apartamento-para-alugar-2-quartos-69998483-1.jpg"
+        "https://www.quintoandar.com.br/img/med/893746461-211.20305357165037IMG5763.jpg"
       ],
       "costs": {
-        "rent": 2000,
-        "condominium": 984,
-        "monthlyTotal": 2984,
+        "rent": 2600,
+        "monthlyTotal": 2600,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Apartamento com 2 quartos para alugar na Engenheiro Gdofredo Santps, 104, Estoril, Belo Horizonte por R$ 2.000Engenheiro Gdofredo Santps, 104Estoril, Belo Horizonte/MG80m²221R$ 2.000CondomínioR$ 984 Apartamento com 2 quartos para alugar na Engenheiro Gdofredo Santps, 104, Estoril, Belo Horizonte por R$ 2.000Engenheiro Gdofredo Santps, 104Estoril, Belo Horizonte/MG80m²221R$ 2.000CondomínioR$ 984Contatar",
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "ExclusivoBaixou o preçoAluguel de apartamento, de 65 m² com 2 quartos, 1 banheiro e 1 vaga na garagem em Castelo.R$ 2.600 aluguelR$ 3.234 total65 m² · 2 quartos · 1 vagaRua Romualdo Lopes Cançado, Castelo · Belo Horizonte ExclusivoBaixou o preçoAluguel de apartamento, de 65 m² com 2 quartos, 1 banheiro e 1 vaga na garagem em Castelo.R$ 2.600 aluguelR$ 3.234 total65 m² · 2 quartos · 1 vagaRua Romualdo Lopes Cançado, Castelo · Belo Horizonte",
       "warnings": [
         "Distancia estimada por bairro ou ausente.",
         "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "f61e09572179cdfc",
+      "id": "5e0765d419e838bf",
       "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-serra-2-quartos-89-m2-3001780306.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=6",
-      "title": "Apartamento para aluguel com 2 quartos, ambos suítes. Ideal para quem busca conforto e praticidades.",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "parkingSpaces": 1,
-      "areaM2": 89,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 6000,
-        "monthlyTotal": 6000,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Apartamento para aluguel com 2 quartos, ambos suítes. Ideal para quem busca conforto e praticidades. R$ 6.000R$ 320 Condominio89 m² tot.2 quartos3 ban.1 vagaRua CorintoSerra, Belo HorizonteApartamento para aluguel com 2 quartos, ambos suítes. Ideal para quem busca conforto e praticidades.",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "2f5f0e40697eee07",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-prado-3-quartos-150-m2-3027177238.html?n_src=Listado&n_pills=Mobiliado&n_pg=1&n_pos=10",
-      "title": "Sobre o imóvel: Valores: - Aluguel:",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 150,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 2900,
-        "condominium": 350,
-        "iptu": 73,
-        "other": 2900,
-        "monthlyTotal": 6223,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Sobre o imóvel: Valores: - Aluguel: R$ 2900. - Condomínio: R$ 350. - iptu: R$ 73. Seu imóvel sem burocracia. O QuintoAndar revolucionou o jeito de alugar e comprar imóveis: rápido, fácil, online, sem fiador e o melhor, sem burocracia. Conheça esse e outros imóveis no site do QuintoAndar. Creci-mg J5851 R$ 2.900R$ 350 Condominio150 m² tot.3 quartos1 banheiro1 vagaRua EsmeraldaPrado, Belo HorizonteSobre o imóvel: Valores: - Aluguel: R$ 2900. - Condomínio: R$ 350. - iptu: R$ 73. Seu imóvel sem burocracia. O QuintoAndar revolucionou o jeito de alugar e comprar imóveis: rápido, fácil, online, sem fiador e o melhor, sem burocracia. Conheça esse e outros imóveis no site do QuintoAndar. Creci-mg J5851",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "1f4a2810a2b0ef49",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-ouro-preto-1-quarto-33-3021537259.html?n_src=Listado&n_pg=1&n_pos=4",
-      "title": "Sobre o imóvel: Valores: - Aluguel:",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 33,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 3300,
-        "condominium": 330,
-        "iptu": 130,
-        "other": 3300,
-        "monthlyTotal": 7060,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Sobre o imóvel: Valores: - Aluguel: R$ 3300. - Condomínio: R$ 330. - iptu: R$ 130. Seu imóvel sem burocracia. O QuintoAndar revolucionou o jeito de alugar e comprar imóveis: rápido, fácil, online, sem fiador e o melhor, sem burocracia. Conheça esse e outros imóveis no site do QuintoAndar. Creci-mg J5851 R$ 3.300R$ 330 Condominio33 m² tot.1 quarto1 banheiro1 vagaRua Wadi José AlauPaquetá, Belo HorizonteSobre o imóvel: Valores: - Aluguel: R$ 3300. - Condomínio: R$ 330. - iptu: R$ 130. Seu imóvel sem burocracia. O QuintoAndar revolucionou o jeito de alugar e comprar imóveis: rápido, fácil, online, sem fiador e o melhor, sem burocracia. Conheça esse e outros imóveis no site do QuintoAndar. Creci-mg J5851",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "ee1cee9980cf9f8c",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-garden-com-3-dormitorios-a-venda-97-m-3033116109.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=1",
-      "title": "Apartamento com área externa no Planalto! Já chamou a sua atenção, né? Então confere só esse imóvel que tem tudo para ser seu. Em uma locali",
-      "transaction": "sale",
-      "address": "praça da paz",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parkingSpaces": 1,
-      "areaM2": 98,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 549999,
-        "pricePerSquareMeter": 5612
-      },
-      "collectedAt": "2026-06-15T23:57:51.078Z",
-      "rawText": "Apartamento com área externa no Planalto! Já chamou a sua atenção, né? Então confere só esse imóvel que tem tudo para ser seu. Em uma localização privilegiada, no bairro mais procurado e desejado da região, o bairro Planalto! Coladinho no Parque Lagoa do nado, vila olímpica, e rápido acesso a Pedro 1. Ela também fica a poucos metros da famosa praça da paz, restaurante via férrea e av. Olímpio Mourão Filho. Em um prédio torre única o apartamento se divide em sala para dois ambientes com painel para tv, e acesso a uma varanda externa, 3 quartos com armários sendo 1 suíte, banheiro social, cozinha com armários, área externa com armário, passadeira, e telhado retrátil, excelente não é? Você ainda tem direito a 01 vaga de garagem. Entre em contato e agende a sua visita! Seu sonho, nosso objetivo! - 07/06/2026 R$ 549.999R$ 195 Condominio98 m² tot.3 quartos2 ban.1 vagaRua Aloízio Nogueira Machado Planalto, Belo HorizonteApartamento com área externa no Planalto! Já chamou a sua atenção, né? Então confere só esse imóvel que tem tudo para ser seu. Em uma localização privilegiada, no bairro mais procurado e desejado da região, o bairro Planalto! Coladinho no Parque Lagoa do nado, vila olímpic",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
-      ]
-    },
-    {
-      "id": "07cb2a3d34497379",
-      "source": "Imovelweb",
-      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-juliana-3-quartos-122-m2-3025242211.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=7",
-      "title": "Comprar apartamento em Juliana com 3 quartos.",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "parkingSpaces": 1,
-      "areaM2": 122,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 4600122,
-        "monthlyTotal": 4600122,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:57:57.002Z",
-      "rawText": "Comprar apartamento em Juliana com 3 quartos. R$ 4.600122 m² tot.3 quartos2 ban.1 vagaRua TamarixJuliana, Belo HorizonteComprar apartamento em Juliana com 3 quartos.",
-      "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "239a52a9ebaca148",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-4-quartos-com-garagem-mg-belo-horizonte-belvedere-RS11900/id-19803998/",
-      "title": "Apartamento com 4 quartos para alugar no Belvedere, Belo Horizonte Endereço indisponívelBelvedere, Belo Horizonte/MG176m²443",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-aeroporto-4-quartos-110-3030154733.html?n_src=Listado&n_pills=Mobiliado&n_pg=1&n_pos=25",
+      "title": "Alugar apartamento mobiliado com 4 quartos.",
       "transaction": "rent",
       "distanceConfidence": "missing",
       "bedrooms": 4,
-      "areaM2": 176,
+      "parkingSpaces": 1,
+      "areaM2": 110,
       "isNewOrRenovated": false,
-      "images": [
-        "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/504760/19803998/mg-belo-horizonte-belvedere-apartamento-para-alugar-4-quartos-65f53fb2-1.jpg"
-      ],
+      "images": [],
       "costs": {
-        "rent": 11900,
-        "condominium": 2200,
-        "monthlyTotal": 14100,
+        "rent": 2970,
+        "monthlyTotal": 2970,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Apartamento com 4 quartos para alugar no Belvedere, Belo Horizonte Endereço indisponívelBelvedere, Belo Horizonte/MG176m²443R$ 11.900CondomínioR$ 2.200 Apartamento com 4 quartos para alugar no Belvedere, Belo Horizonte Endereço indisponívelBelvedere, Belo Horizonte/MG176m²443R$ 11.900CondomínioR$ 2.200Contatar",
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Alugar apartamento mobiliado com 4 quartos. R$ 2.970R$ 270 Condominio110 m² tot.4 quartos2 ban.1 vagaRua Noraldino de LimaPampulha, Belo HorizonteAlugar apartamento mobiliado com 4 quartos.",
       "warnings": [
         "Numero do anuncio nao ficou visivel no resumo.",
         "Distancia estimada por bairro ou ausente.",
@@ -1877,28 +597,31 @@
       ]
     },
     {
-      "id": "82e8a4154becdd46",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/cobertura-a-venda-2-quartos-com-garagem-mg-belo-horizonte-copacabana-100m2-RS425000/id-43301482/",
-      "title": "Cobertura de 2 quartos, 100m² no bairro Copacabana, em Belo HorizonteEndereço indisponívelCopacabana, Belo Horizonte/MG100m²211",
-      "transaction": "sale",
+      "id": "d483fd8d059b9ea3",
+      "source": "QuintoAndar",
+      "sourceListingId": "895460216",
+      "url": "https://www.quintoandar.com.br/imovel/895460216/alugar/apartamento-3-quartos-cidade-nova-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&house_tags=newAd&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A5%2C%22personalization%22%3Afalse%7D",
+      "title": "ExclusivoAnúncio novoApartamento para alugar em Cidade Nova de 132 m².",
+      "transaction": "rent",
       "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "areaM2": 100,
-      "isNewOrRenovated": false,
+      "bedrooms": 3,
+      "parkingSpaces": 3,
+      "areaM2": 132,
+      "isNewOrRenovated": true,
+      "newOrRenovatedEvidence": "novoApartamento para alugar em Cidade Nova de 132 m².R",
       "images": [
-        "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/1219499/43301482/mg-belo-horizonte-copacabana-nao-encontrado-cobertura-a-venda-2-quartos-6a20139c-1.jpg"
+        "https://www.quintoandar.com.br/img/med/original895460216-516.4042072862013Fotos.jpg"
       ],
       "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 425000,
-        "pricePerSquareMeter": 4250
+        "rent": 3460,
+        "monthlyTotal": 3460,
+        "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Cobertura de 2 quartos, 100m² no bairro Copacabana, em Belo HorizonteEndereço indisponívelCopacabana, Belo Horizonte/MG100m²211R$ 425.000 Cobertura de 2 quartos, 100m² no bairro Copacabana, em Belo HorizonteEndereço indisponívelCopacabana, Belo Horizonte/MG100m²211R$ 425.000Contatar",
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "ExclusivoAnúncio novoApartamento para alugar em Cidade Nova de 132 m².R$ 3.460 aluguelR$ 4.587 total132 m² · 3 quartos · 3 vagasRua Júlio Pereira da Silva, Cidade Nova · Belo Horizonte ExclusivoAnúncio novoApartamento para alugar em Cidade Nova de 132 m².R$ 3.460 aluguelR$ 4.587 total132 m² · 3 quartos · 3 vagasRua Júlio Pereira da Silva, Cidade Nova · Belo Horizonte",
       "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
@@ -1907,7 +630,7 @@
       "sourceListingId": "350996867",
       "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-3-quartos-jaragua-belo-horizonte-com-garagem-100m2-aluguel-rs1200-id-350996867",
       "title": "Apartamento, 3 Quartos, 1 Vaga Rua Isabel Bueno, Jaraguá, Belo Horizonte, MG APARTAMENTO COM EXCELENTE LOCALIZAÇÃO, EM FRENTE AO SUPERMERCAD",
-      "transaction": "sale",
+      "transaction": "rent",
       "address": "Rua Isabel Bueno",
       "distanceConfidence": "missing",
       "bedrooms": 3,
@@ -1916,190 +639,366 @@
       "isNewOrRenovated": false,
       "images": [],
       "costs": {
+        "rent": 1200,
         "condominium": 1200,
         "iptu": 1200,
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1200
+        "monthlyTotal": 3600,
+        "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:02.466Z",
+      "collectedAt": "2026-06-16T13:24:34.511Z",
       "rawText": "Apartamento, 3 Quartos, 1 Vaga Rua Isabel Bueno, Jaraguá, Belo Horizonte, MG APARTAMENTO COM EXCELENTE LOCALIZAÇÃO, EM FRENTE AO SUPERMERCADO, PROXIMO A FACULDADE UNIFENAS. INCLUSO NO VALOR: CONDOMINIO, AGUA, IPTU. ÁREA 100 QUARTO(S) 3 VAGA(S) 1 BANHEIRO(S) 2 R$ 1.200,00 Apartamento, 3 Quartos, 1 Vaga Rua Isabel Bueno, Jaraguá, Belo Horizonte, MG APARTAMENTO COM EXCELENTE LOCALIZAÇÃO, EM FRENTE AO SUPERMERCADO, PROXIMO A FACULDADE UNIFENAS. INCLUSO NO VALOR: CONDOMINIO, AGUA, IPTU. ÁREA 100 QUARTO(S) 3 VAGA(S) 1 BANHEIRO(S) 2 R$ 1.200,00 Ver detalhes",
       "warnings": [
-        "Distancia estimada por bairro ou ausente."
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "2807d3337e8ac887",
-      "source": "OLX",
-      "sourceListingId": "1510763719",
-      "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/imoveis/kitnet-studio-com-1-quarto-s-e-1-banheiro-s-para-alugar-20-m-por-r-2111-mes-1510763719",
-      "title": "Kitnet/ Studio com 1 Quarto(s) e 1 banheiro(s) para Alugar, 20 m² por",
+      "id": "3cf3d96613ee17ef",
+      "source": "QuintoAndar",
+      "sourceListingId": "895258644",
+      "url": "https://www.quintoandar.com.br/imovel/895258644/alugar/apartamento-3-quartos-monsenhor-messias-belo-horizonte?from_route=%22search_results%22&house_tags=exclusivity&house_tags=newAd&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A0%2C%22personalization%22%3Afalse%7D",
+      "title": "ExclusivoAnúncio novoApartamento para alugar com 3 quartos.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 3,
+      "parkingSpaces": 2,
+      "areaM2": 110,
+      "isNewOrRenovated": true,
+      "newOrRenovatedEvidence": "novoApartamento para alugar com 3 quartos.R$ 3.700 alu",
+      "images": [
+        "https://www.quintoandar.com.br/img/med/original895258644-321.39084552105976DSC08680.jpeg"
+      ],
+      "costs": {
+        "rent": 3700,
+        "monthlyTotal": 3700,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "ExclusivoAnúncio novoApartamento para alugar com 3 quartos.R$ 3.700 aluguelR$ 4.679 total110 m² · 3 quartos · 2 vagasRua Desembargador Tinoco, Monsenhor Messias · Belo Horizonte ExclusivoAnúncio novoApartamento para alugar com 3 quartos.R$ 3.700 aluguelR$ 4.679 total110 m² · 3 quartos · 2 vagasRua Desembargador Tinoco, Monsenhor Messias · Belo Horizonte",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "c1efe73da1f08c27",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-dona-clara-3-quartos-147-3035935733.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=21",
+      "title": "Alugar apartamento em Dona Clara com 3 quartos.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 3,
+      "parkingSpaces": 2,
+      "areaM2": 147,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 3700,
+        "monthlyTotal": 3700,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Alugar apartamento em Dona Clara com 3 quartos. R$ 3.700R$ 450 Condominio147 m² tot.3 quartos2 ban.2 vagasRua Bolivar MineiroDona Clara, Belo HorizonteAlugar apartamento em Dona Clara com 3 quartos.",
+      "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "2e00faeb19648e59",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-teixeira-dias-3-quartos-3033806121.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=26",
+      "title": "Alugar apartamento em Santa Cruz (barreiro) com 3 quartos e jardim.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parkingSpaces": 2,
+      "areaM2": 100,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 3700,
+        "monthlyTotal": 3700,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Alugar apartamento em Santa Cruz (barreiro) com 3 quartos e jardim. R$ 3.700R$ 973 Condominio100 m² tot.3 quartos1 banheiro2 vagasRua Francisco Duarte MendonçaSanta Cruz (Barreiro), Belo HorizonteAlugar apartamento em Santa Cruz (barreiro) com 3 quartos e jardim.",
+      "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "08a273a4807dcb95",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-2-quartos-1-suite-1-vaga-3035189626.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=19",
+      "title": "Alugue pelo cartão de crédito e sem fiador, só com o cpf e comprovante de residência! Apartamento 2 quartos 1 vaga para locação no Estoril -",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parkingSpaces": 1,
+      "areaM2": 54,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 3700,
+        "monthlyTotal": 3700,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Alugue pelo cartão de crédito e sem fiador, só com o cpf e comprovante de residência! Apartamento 2 quartos 1 vaga para locação no Estoril - Belo Horizonte. apartamento com aproximadamente 54 M² *prédio possui elevador* - Sala para 2 ambientes. - Vista definitiva. - Varanda. - 2 quartos com armários. Sendo 1 suíte piso em laminado. - 2 Banheiros com box e espelhos. - Cozinha com armários planejados, - Área de serviço. condomínio: - Elevador. - Portaria 24 H. - Academia. - Playground. - Piscina. - Espaço Gourmet. - Salão de Festas. - Porteiro diurno segunda a sábado. - 1 Vaga de garagem descoberta e demarcada. - Valor de condomínio, aluguel e iptu Sujeitos a alteração sem aviso prévio. localização: Localização privilegiada em região nobre e central, próximo a supermercados, academias, escolas e universidades R$ 3.700R$ 450 Condominio54 m² tot.2 quartos2 ban.1 vagaRua Paulo Piedade Campos 500Estoril, Belo HorizonteAlugue pelo cartão de crédito e sem fiador, só com o cpf e comprovante de residência! Apartamento 2 quartos 1 vaga para locação no Estoril - Belo Horizonte. apartamento com aproximadamente 54 M² *prédio possui elevador* - Sala para 2 ambientes. - Vista definitiva. - Varanda",
+      "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "51d73081acdc7c2e",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-fernao-dias-3-quartos-3036947204.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=16",
+      "title": "Apartamento com 3 quartos, 1 suíte e varanda para alugar.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parkingSpaces": 3,
+      "areaM2": 164,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 3750,
+        "monthlyTotal": 3750,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Apartamento com 3 quartos, 1 suíte e varanda para alugar. R$ 3.750R$ 450 Condominio164 m² tot.3 quartos2 ban.3 vagasRua Cirá de SouzaFernão Dias, Belo HorizonteApartamento com 3 quartos, 1 suíte e varanda para alugar.",
+      "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "7109dcc61c4aa9b0",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-itapoa-3-quartos-79-m2-3012816177.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=14",
+      "title": "Aluguel de apartamento em Itapoã com 3 quartos, 1 suíte e varanda.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parkingSpaces": 2,
+      "areaM2": 79,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 3774,
+        "monthlyTotal": 3774,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Aluguel de apartamento em Itapoã com 3 quartos, 1 suíte e varanda. R$ 3.774R$ 450 Condominio79 m² tot.3 quartos2 ban.2 vagasRua Professor Hermínio GuerraItapoã, Belo HorizonteAluguel de apartamento em Itapoã com 3 quartos, 1 suíte e varanda.",
+      "warnings": [
+        "Numero do anuncio nao ficou visivel no resumo.",
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "ba46200752e227ac",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-savassi-1-quarto-65-m2-3029510843.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=4",
+      "title": "Apartamento para alugar: 1 quarto, ideal para você.",
       "transaction": "rent",
       "distanceConfidence": "missing",
       "bedrooms": 1,
       "bathrooms": 1,
-      "areaM2": 20,
+      "parkingSpaces": 1,
+      "areaM2": 65,
       "isNewOrRenovated": false,
       "images": [],
       "costs": {
-        "rent": 2111,
-        "monthlyTotal": 2111,
+        "rent": 4120,
+        "monthlyTotal": 4120,
         "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:57:33.014Z",
-      "rawText": "Kitnet/ Studio com 1 Quarto(s) e 1 banheiro(s) para Alugar, 20 m² por R$ 2111 / Mês Kitnet/ Studio com 1 Quarto(s) e 1 banheiro(s) para Alugar, 20 m² por R$ 2111 / Mês 1 20m² 1",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "9d250861d3e22310",
-      "source": "Chaves na Mao",
-      "sourceListingId": "41366993",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-3-quartos-com-garagem-mg-belo-horizonte-rio-branco-70m2-RS2150/id-41366993/",
-      "title": "Apartamento com 3 quartos para alugar na Rua Tenente Ricardo Guimarães, 36, Rio Branco, Belo Horizonte por",
-      "transaction": "rent",
-      "address": "Rua Tenente Ricardo Guimarães",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "areaM2": 70,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 2150,
-        "condominium": 420,
-        "monthlyTotal": 2570,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Apartamento com 3 quartos para alugar na Rua Tenente Ricardo Guimarães, 36, Rio Branco, Belo Horizonte por R$ 2.150Rua Tenente Ricardo Guimarães, 36Rio Branco, Belo Horizonte/MG70m²321R$ 2.150CondomínioR$ 420 Apartamento com 3 quartos para alugar na Rua Tenente Ricardo Guimarães, 36, Rio Branco, Belo Horizonte por R$ 2.150Rua Tenente Ricardo Guimarães, 36Rio Branco, Belo Horizonte/MG70m²321R$ 2.150CondomínioR$ 420",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "7e6601e04eaff722",
-      "source": "Chaves na Mao",
-      "sourceListingId": "30102081",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-2-quartos-com-garagem-mg-belo-horizonte-pompeia-RS2500/id-30102081/",
-      "title": "Apartamento com 2 quartos para alugar na Rua Belém, Pompéia, Belo HorizonteRua BelémPompéia, Belo Horizonte/MG66m²221",
-      "transaction": "rent",
-      "address": "Rua Belém",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "areaM2": 66,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 2500,
-        "condominium": 474,
-        "monthlyTotal": 2974,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Apartamento com 2 quartos para alugar na Rua Belém, Pompéia, Belo HorizonteRua BelémPompéia, Belo Horizonte/MG66m²221R$ 2.500CondomínioR$ 474 Apartamento com 2 quartos para alugar na Rua Belém, Pompéia, Belo HorizonteRua BelémPompéia, Belo Horizonte/MG66m²221R$ 2.500CondomínioR$ 474",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "0d9211ba07a20b81",
-      "source": "Chaves na Mao",
-      "sourceListingId": "42606112",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-2-quartos-com-garagem-mg-belo-horizonte-liberdade-63m2-RS2650/id-42606112/",
-      "title": "Apartamento para locação no liberdade | 2 quartos com suíte | lazer completo | portaria 24hEndereço indisponívelLiberdade, Belo Horizonte/MG",
-      "transaction": "rent",
-      "distanceConfidence": "missing",
-      "bedrooms": 2,
-      "areaM2": 63,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "rent": 2650,
-        "condominium": 940,
-        "monthlyTotal": 3590,
-        "monthlyTotalConfidence": "estimated"
-      },
-      "collectedAt": "2026-06-15T23:58:20.187Z",
-      "rawText": "Apartamento para locação no liberdade | 2 quartos com suíte | lazer completo | portaria 24hEndereço indisponívelLiberdade, Belo Horizonte/MG63m²221R$ 2.650CondomínioR$ 940 Apartamento para locação no liberdade | 2 quartos com suíte | lazer completo | portaria 24hEndereço indisponívelLiberdade, Belo Horizonte/MG63m²221R$ 2.650CondomínioR$ 940",
-      "warnings": [
-        "Distancia estimada por bairro ou ausente.",
-        "Total mensal somado a partir dos custos visiveis."
-      ]
-    },
-    {
-      "id": "9006e1da92ede82d",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-a-venda-3-quartos-com-garagem-mg-belo-horizonte-santa-amelia-RS230049/id-43438882/",
-      "title": "Apartamento com 3 quartos à venda na Rua Fortunato Pinto Júnior, 144, Santa Amélia, Belo HorizonteRua Fortunato Pinto Júnior, 144Santa Améli",
-      "transaction": "sale",
-      "address": "Rua Fortunato Pinto Júnior",
-      "distanceConfidence": "missing",
-      "bedrooms": 3,
-      "areaM2": 75,
-      "isNewOrRenovated": false,
-      "images": [],
-      "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 230049,
-        "pricePerSquareMeter": 3067
-      },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Apartamento com 3 quartos à venda na Rua Fortunato Pinto Júnior, 144, Santa Amélia, Belo HorizonteRua Fortunato Pinto Júnior, 144Santa Amélia, Belo Horizonte/MG75m²321R$ 230.049 Apartamento com 3 quartos à venda na Rua Fortunato Pinto Júnior, 144, Santa Amélia, Belo HorizonteRua Fortunato Pinto Júnior, 144Santa Amélia, Belo Horizonte/MG75m²321R$ 230.049",
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Apartamento para alugar: 1 quarto, ideal para você. R$ 4.120R$ 879 Condominio65 m² tot.1 quarto1 banheiro1 vagaRua AlagoasFuncionários, Belo HorizonteApartamento para alugar: 1 quarto, ideal para você.",
       "warnings": [
         "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "533bd13a3c8f3e06",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/apartamento-a-venda-3-quartos-com-garagem-mg-belo-horizonte-santa-monica-68m2-RS480000/id-39962105/",
-      "title": "Maravilhoso apartamento 03 quartos, 01 suite em Belo Horizonte!Rua Visconde De Taunay, 44Santa Mônica, Belo Horizonte/MG68m²322",
-      "transaction": "sale",
-      "address": "Rua Visconde De Taunay",
+      "id": "0b896c0c778b9431",
+      "source": "QuintoAndar",
+      "sourceListingId": "895488922",
+      "url": "https://www.quintoandar.com.br/imovel/895488922/alugar/apartamento-2-quartos-buritis-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A1%2C%22personalization%22%3Afalse%7D",
+      "title": "Anúncio novoApartamento para alugar, 2 quartos, piscina no condomínio.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 2,
+      "parkingSpaces": 1,
+      "areaM2": 50,
+      "isNewOrRenovated": true,
+      "newOrRenovatedEvidence": "novoApartamento para alugar, 2 quartos, piscina no con",
+      "images": [
+        "https://www.quintoandar.com.br/img/med/original895488922-241.7414243225815IMG0328.jpg"
+      ],
+      "costs": {
+        "rent": 2200,
+        "condominium": 2200,
+        "monthlyTotal": 4400,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "Anúncio novoApartamento para alugar, 2 quartos, piscina no condomínio.R$ 2.200 aluguelR$ 3.020 total50 m² · 2 quartos · 1 vagaRua Antônio de Andrade Mendes, Buritis · Belo Horizonte Anúncio novoApartamento para alugar, 2 quartos, piscina no condomínio.R$ 2.200 aluguelR$ 3.020 total50 m² · 2 quartos · 1 vagaRua Antônio de Andrade Mendes, Buritis · Belo Horizonte",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "7ce9e79380a944c5",
+      "source": "Lugar Certo",
+      "sourceListingId": "353715524",
+      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-2-quartos-grajau-belo-horizonte-com-garagem-63m2-aluguel-rs4450-id-353715524",
+      "title": "Apartamento, 2 Quartos, 2 Vagas, 1 Suite Viamão, Grajaú, Belo Horizonte, MG Prédio: Novo, recuado, ajardinado, Usina Foto Votaica, Condomíni",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parkingSpaces": 2,
+      "isNewOrRenovated": true,
+      "newOrRenovatedEvidence": "Novo, recuado, ajardinado, Usina Foto Votaica, Condomí",
+      "images": [],
+      "costs": {
+        "rent": 4450,
+        "monthlyTotal": 4450,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:34.511Z",
+      "rawText": "Apartamento, 2 Quartos, 2 Vagas, 1 Suite Viamão, Grajaú, Belo Horizonte, MG Prédio: Novo, recuado, ajardinado, Usina Foto Votaica, Condomínio Baixo, Excelente área de lazer, com piscina, salão de festas, academia, Espaço Gourmet, Pet Spa, Locker, Elevador codificado, Fechadura inteligente, portaria moderna Intelbràs, com acesso pelo Celular. Apartamento: Lindo apto, novo, primeira moradia, com sala para dois ambientes, piso em porcelanato, dois quartos, armários, sendo uma uma suíte, piso em laminado Duraflor, janelas em alumínio anodizado, com cortina integrada com controle remoto, Banheiros todos montados com box, espelho e acessórios, cozinha conjugada com a sala, com fogão Cooktop, forno, coifa, armários e área de serviço também com armários. Irresistível! conhecer e Locar. ÁREA 63 QUARTO(S) 2 VAGA(S) 2 BANHEIRO(S) 2 R$ 4.450,00 Apartamento, 2 Quartos, 2 Vagas, 1 Suite Viamão, Grajaú, Belo Horizonte, MG Prédio: Novo, recuado, ajardinado, Usina Foto Votaica, Condomínio Baixo, Excelente área de lazer, com piscina, salão de festas, academia, Espaço Gourmet, Pet Spa, Locker, Elevador codificado, Fechadura inteligente, portaria moderna Intelbràs, com acesso pelo Celular. Apartamento",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "3e7762f5ff7b088b",
+      "source": "QuintoAndar",
+      "sourceListingId": "895038760",
+      "url": "https://www.quintoandar.com.br/imovel/895038760/alugar/apartamento-3-quartos-buritis-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A9%2C%22personalization%22%3Afalse%7D",
+      "title": "Anúncio novoAluguel de apartamento, de 78 m² com 3 quartos, 2 banheiros e 2 vagas na garagem em Buritis.",
+      "transaction": "rent",
+      "distanceConfidence": "missing",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parkingSpaces": 2,
+      "areaM2": 78,
+      "isNewOrRenovated": true,
+      "newOrRenovatedEvidence": "novoAluguel de apartamento, de 78 m² com 3 quartos, 2",
+      "images": [
+        "https://www.quintoandar.com.br/img/med/original895038760-501.69133968233837IMG2538.jpg"
+      ],
+      "costs": {
+        "rent": 4500,
+        "monthlyTotal": 4500,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "Anúncio novoAluguel de apartamento, de 78 m² com 3 quartos, 2 banheiros e 2 vagas na garagem em Buritis.R$ 4.500 aluguelR$ 6.043 total78 m² · 3 quartos · 2 vagasAvenida Deputado Cristovam Chiaradia, Buritis · Belo Horizonte Anúncio novoAluguel de apartamento, de 78 m² com 3 quartos, 2 banheiros e 2 vagas na garagem em Buritis.R$ 4.500 aluguelR$ 6.043 total78 m² · 3 quartos · 2 vagasAvenida Deputado Cristovam Chiaradia, Buritis · Belo Horizonte",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "20e94cea4b328ac6",
+      "source": "Lugar Certo",
+      "sourceListingId": "353597218",
+      "url": "https://estadodeminas.lugarcerto.com.br/imovel/apartamento-5-quartos-castelo-belo-horizonte-com-garagem-140m2-aluguel-rs4500-id-353597218",
+      "title": "Apartamento, 5 Quartos, 2 Vagas, 2 Suites Rua Cantor Luiz Gonzaga, Castelo, Belo Horizonte, MG EXCELENTE COBERTURA DE 5 QUARTOSCOM ARMÁRIOS ",
+      "transaction": "rent",
+      "address": "Rua Cantor Luiz Gonzaga",
+      "distanceConfidence": "missing",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "parkingSpaces": 2,
+      "isNewOrRenovated": false,
+      "images": [],
+      "costs": {
+        "rent": 4500,
+        "monthlyTotal": 4500,
+        "monthlyTotalConfidence": "estimated"
+      },
+      "collectedAt": "2026-06-16T13:24:34.511Z",
+      "rawText": "Apartamento, 5 Quartos, 2 Vagas, 2 Suites Rua Cantor Luiz Gonzaga, Castelo, Belo Horizonte, MG EXCELENTE COBERTURA DE 5 QUARTOSCOM ARMÁRIOS SENDO 2 SUÍTES UMA COM HIDROMASSAGEM E CLOSET, SALA, AMPLA, COZINHA COM ARMÁRIOS PLANEJADOS, BANHO SOCIAL COM BOX E ARMÁRIO, LAVABO, ÁREA DE SERVIÇO,. TERRAÇO COM ÁREA DE CHURRASQUEIRA COBERTA, 02 VAGAS COBERTAS. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP 31 983 867 630 ÁREA 140 QUARTO(S) 5 VAGA(S) 2 BANHEIRO(S) 4 R$ 4.500,00 Apartamento, 5 Quartos, 2 Vagas, 2 Suites Rua Cantor Luiz Gonzaga, Castelo, Belo Horizonte, MG EXCELENTE COBERTURA DE 5 QUARTOSCOM ARMÁRIOS SENDO 2 SUÍTES UMA COM HIDROMASSAGEM E CLOSET, SALA, AMPLA, COZINHA COM ARMÁRIOS PLANEJADOS, BANHO SOCIAL COM BOX E ARMÁRIO, LAVABO, ÁREA DE SERVIÇO,. TERRAÇO COM ÁREA DE CHURRASQUEIRA COBERTA, 02 VAGAS COBERTAS. *OS VALORES ANUNCIADOS DE CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP 31 983 867 630 ÁREA 140 QUARTO(S) 5 VAGA(S) 2 BANHEIRO(S) 4 R$ 4.500,00 Ver detalhes",
+      "warnings": [
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
+      ]
+    },
+    {
+      "id": "ed82e0fb93a9a56b",
+      "source": "Imovelweb",
+      "url": "https://www.imovelweb.com.br/propriedades/apartamento-para-aluguel-cidade-nova-3-quartos-3037171265.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=24",
+      "title": "Apartamento para aluguel na Cidade Nova com 3 quartos, 1 suíte, closet, varanda e jardim.",
+      "transaction": "rent",
       "distanceConfidence": "missing",
       "bedrooms": 3,
       "bathrooms": 1,
-      "areaM2": 68,
+      "parkingSpaces": 2,
+      "areaM2": 249,
       "isNewOrRenovated": false,
       "images": [],
       "costs": {
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 480000,
-        "pricePerSquareMeter": 7059
+        "rent": 4500,
+        "monthlyTotal": 4500,
+        "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Maravilhoso apartamento 03 quartos, 01 suite em Belo Horizonte!Rua Visconde De Taunay, 44Santa Mônica, Belo Horizonte/MG68m²322R$ 480.000 Maravilhoso apartamento 03 quartos, 01 suite em Belo Horizonte!Rua Visconde De Taunay, 44Santa Mônica, Belo Horizonte/MG68m²322R$ 480.000",
+      "collectedAt": "2026-06-16T13:24:29.557Z",
+      "rawText": "Apartamento para aluguel na Cidade Nova com 3 quartos, 1 suíte, closet, varanda e jardim. R$ 4.500R$ 500 Condominio249 m² tot.3 quartos2 ban.2 vagasRua Francisco de Paula CastroCidade Nova, Belo HorizonteApartamento para aluguel na Cidade Nova com 3 quartos, 1 suíte, closet, varanda e jardim.",
       "warnings": [
         "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
       ]
     },
     {
-      "id": "fbf673937e2726b7",
-      "source": "Chaves na Mao",
-      "url": "https://www.chavesnamao.com.br/imovel/cobertura-a-venda-3-quartos-com-garagem-mg-belo-horizonte-carlos-prates-210m2-RS1375994/id-35520694/",
-      "title": "Cobertura de Luxo, 03 quartos com kazer completo, no bairro Carlos Prates - BHEndereço indisponívelCarlos Prates, Belo Horizonte/MG210m²322",
-      "transaction": "sale",
+      "id": "8dc6743014f2128c",
+      "source": "QuintoAndar",
+      "sourceListingId": "895489555",
+      "url": "https://www.quintoandar.com.br/imovel/895489555/alugar/apartamento-3-quartos-manacas-belo-horizonte?from_route=%22search_results%22&house_tags=newAd&house_tags=rentPriceDecreased&search_id=%22d5be97b4-a566-42c8-a3e1-19c9a2e55fb3%22&search_rank=%7B%22sortMode%22%3A%22relevance%22%2C%22searchMode%22%3A%22list%22%2C%22resultsOrigin%22%3A%22search%22%2C%22rank%22%3A2%2C%22personalization%22%3Afalse%7D",
+      "title": "Anúncio novoBaixou o preçoApartamento para aluguel em Manacás com 3 quartos, 1 suíte e piscina no condomínio.",
+      "transaction": "rent",
       "distanceConfidence": "missing",
       "bedrooms": 3,
-      "areaM2": 210,
-      "isNewOrRenovated": false,
-      "images": [],
+      "bathrooms": 1,
+      "parkingSpaces": 2,
+      "areaM2": 74,
+      "isNewOrRenovated": true,
+      "newOrRenovatedEvidence": "novoBaixou o preçoApartamento para aluguel em Manacás",
+      "images": [
+        "https://www.quintoandar.com.br/img/med/original895489555-550.8247371128165IMG8152.jpg"
+      ],
       "costs": {
-        "condominium": 650,
-        "monthlyTotalConfidence": "missing",
-        "salePrice": 1375994,
-        "pricePerSquareMeter": 6552
+        "rent": 3000,
+        "condominium": 3000,
+        "monthlyTotal": 6000,
+        "monthlyTotalConfidence": "estimated"
       },
-      "collectedAt": "2026-06-15T23:58:14.035Z",
-      "rawText": "Cobertura de Luxo, 03 quartos com kazer completo, no bairro Carlos Prates - BHEndereço indisponívelCarlos Prates, Belo Horizonte/MG210m²322R$ 1.375.994CondomínioR$ 650 Cobertura de Luxo, 03 quartos com kazer completo, no bairro Carlos Prates - BHEndereço indisponívelCarlos Prates, Belo Horizonte/MG210m²322R$ 1.375.994CondomínioR$ 650",
+      "collectedAt": "2026-06-16T13:24:24.368Z",
+      "rawText": "Anúncio novoBaixou o preçoApartamento para aluguel em Manacás com 3 quartos, 1 suíte e piscina no condomínio.R$ 3.000 aluguelR$ 3.761 total74 m² · 3 quartos · 2 vagasRua Raul Seixas, Manacás · Belo Horizonte Anúncio novoBaixou o preçoApartamento para aluguel em Manacás com 3 quartos, 1 suíte e piscina no condomínio.R$ 3.000 aluguelR$ 3.761 total74 m² · 3 quartos · 2 vagasRua Raul Seixas, Manacás · Belo Horizonte",
       "warnings": [
-        "Numero do anuncio nao ficou visivel no resumo.",
-        "Distancia estimada por bairro ou ausente."
+        "Distancia estimada por bairro ou ausente.",
+        "Total mensal somado a partir dos custos visiveis."
       ]
     }
   ],
@@ -2107,132 +1006,70 @@
     {
       "source": "ZAP Imoveis",
       "status": "blocked-by-robots",
-      "url": "https://www.zapimoveis.com.br/venda/apartamentos/mg+belo-horizonte/",
-      "message": "robots.txt retornou HTTP 403",
-      "collected": 0,
-      "startedAt": "2026-06-15T23:57:20.050Z",
-      "finishedAt": "2026-06-15T23:57:20.721Z"
-    },
-    {
-      "source": "ZAP Imoveis",
-      "status": "blocked-by-robots",
       "url": "https://www.zapimoveis.com.br/aluguel/apartamentos/mg+belo-horizonte/",
-      "message": "robots.txt retornou HTTP 403",
+      "message": "Falha ao consultar robots.txt: fetch failed",
       "collected": 0,
-      "startedAt": "2026-06-15T23:57:20.721Z",
-      "finishedAt": "2026-06-15T23:57:20.799Z"
+      "startedAt": "2026-06-16T13:24:18.421Z",
+      "finishedAt": "2026-06-16T13:24:18.508Z"
     },
     {
       "source": "VivaReal",
       "status": "blocked-by-robots",
-      "url": "https://www.vivareal.com.br/venda/minas-gerais/belo-horizonte/apartamento_residencial/",
-      "message": "robots.txt retornou HTTP 403",
-      "collected": 0,
-      "startedAt": "2026-06-15T23:57:20.799Z",
-      "finishedAt": "2026-06-15T23:57:20.884Z"
-    },
-    {
-      "source": "VivaReal",
-      "status": "ok",
       "url": "https://www.vivareal.com.br/aluguel/minas-gerais/belo-horizonte/apartamento_residencial/",
-      "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:57:20.884Z",
-      "finishedAt": "2026-06-15T23:57:26.922Z"
+      "message": "robots.txt retornou HTTP 403",
+      "collected": 0,
+      "startedAt": "2026-06-16T13:24:18.508Z",
+      "finishedAt": "2026-06-16T13:24:18.596Z"
     },
     {
       "source": "OLX",
       "status": "blocked-by-robots",
-      "url": "https://www.olx.com.br/imoveis/venda/apartamentos/estado-mg/belo-horizonte-e-regiao/belo-horizonte",
+      "url": "https://www.olx.com.br/imoveis/aluguel/apartamentos/estado-mg/belo-horizonte-e-regiao/belo-horizonte",
       "message": "robots.txt retornou HTTP 403",
       "collected": 0,
-      "startedAt": "2026-06-15T23:57:26.941Z",
-      "finishedAt": "2026-06-15T23:57:27.057Z"
-    },
-    {
-      "source": "OLX",
-      "status": "ok",
-      "url": "https://www.olx.com.br/imoveis/aluguel/apartamentos/estado-mg/belo-horizonte-e-regiao/belo-horizonte",
-      "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 2,
-      "startedAt": "2026-06-15T23:57:27.057Z",
-      "finishedAt": "2026-06-15T23:57:33.018Z"
-    },
-    {
-      "source": "QuintoAndar",
-      "status": "ok",
-      "url": "https://www.quintoandar.com.br/comprar/imovel/belo-horizonte-mg-brasil/apartamento",
-      "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:57:33.050Z",
-      "finishedAt": "2026-06-15T23:57:38.872Z"
+      "startedAt": "2026-06-16T13:24:18.596Z",
+      "finishedAt": "2026-06-16T13:24:18.676Z"
     },
     {
       "source": "QuintoAndar",
       "status": "ok",
       "url": "https://www.quintoandar.com.br/alugar/imovel/belo-horizonte-mg-brasil/apartamento",
       "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:57:38.881Z",
-      "finishedAt": "2026-06-15T23:57:44.784Z"
-    },
-    {
-      "source": "Imovelweb",
-      "status": "ok",
-      "url": "https://www.imovelweb.com.br/apartamentos-venda-belo-horizonte-mg.html",
-      "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:57:44.801Z",
-      "finishedAt": "2026-06-15T23:57:51.079Z"
+      "collected": 11,
+      "startedAt": "2026-06-16T13:24:18.676Z",
+      "finishedAt": "2026-06-16T13:24:24.372Z"
     },
     {
       "source": "Imovelweb",
       "status": "ok",
       "url": "https://www.imovelweb.com.br/apartamentos-aluguel-belo-horizonte-mg.html",
       "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:57:51.115Z",
-      "finishedAt": "2026-06-15T23:57:57.002Z"
-    },
-    {
-      "source": "Lugar Certo",
-      "status": "ok",
-      "url": "https://estadodeminas.lugarcerto.com.br/busca/venda/mg/belo-horizonte/apartamento",
-      "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:57:57.012Z",
-      "finishedAt": "2026-06-15T23:58:02.467Z"
+      "collected": 21,
+      "startedAt": "2026-06-16T13:24:24.382Z",
+      "finishedAt": "2026-06-16T13:24:29.559Z"
     },
     {
       "source": "Lugar Certo",
       "status": "ok",
       "url": "https://estadodeminas.lugarcerto.com.br/busca/aluguel/mg/belo-horizonte/apartamento",
       "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:58:02.543Z",
-      "finishedAt": "2026-06-15T23:58:08.039Z"
+      "collected": 14,
+      "startedAt": "2026-06-16T13:24:29.589Z",
+      "finishedAt": "2026-06-16T13:24:34.513Z"
     },
     {
       "source": "Chaves na Mao",
-      "status": "ok",
-      "url": "https://www.chavesnamao.com.br/apartamentos-a-venda/mg-belo-horizonte/",
-      "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:58:08.047Z",
-      "finishedAt": "2026-06-15T23:58:14.036Z"
-    },
-    {
-      "source": "Chaves na Mao",
-      "status": "ok",
+      "status": "blocked-by-robots",
       "url": "https://www.chavesnamao.com.br/apartamentos-para-alugar/mg-belo-horizonte/",
-      "message": "Permitido por robots.txt. Pagina processada sem login, CAPTCHA ou bypass.",
-      "collected": 8,
-      "startedAt": "2026-06-15T23:58:14.045Z",
-      "finishedAt": "2026-06-15T23:58:20.187Z"
+      "message": "Falha ao consultar robots.txt: fetch failed",
+      "collected": 0,
+      "startedAt": "2026-06-16T13:24:34.525Z",
+      "finishedAt": "2026-06-16T13:24:34.599Z"
     }
   ],
   "notices": [
     "Scraper conservador: respeita robots.txt, nao usa login, nao resolve CAPTCHA e nao burla bloqueios.",
-    "Contato e numero do anuncio sao coletados somente quando ficam visiveis no HTML publico."
+    "Contato e numero do anuncio sao coletados somente quando ficam visiveis no HTML publico.",
+    "Fase inicial focada em aluguel; anuncios acima de R$ 8.000 sao descartados por padrao."
   ]
 }

@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto'
 import * as cheerio from 'cheerio'
 import { CENTRAL_BH_NEIGHBORHOODS } from '../../src/domain/config'
-import { distanceFromCenter, inferCoordinatesFromNeighborhood } from '../../src/domain/geo'
+import { distanceFromCenter, inferCoordinatesFromNeighborhood, normalizeNeighborhood } from '../../src/domain/geo'
 import { parseAllBrazilianCurrencies, sumKnown } from '../../src/domain/money'
 import type { Listing, ListingCosts, ListingSource, TransactionType } from '../../src/domain/types'
 
@@ -113,6 +113,10 @@ function parseCandidate({
     return undefined
   }
 
+  if (looksLikeCategoryPage(title, candidate.text) || looksLikeWrongTransaction(title, transaction)) {
+    return undefined
+  }
+
   const neighborhood = inferNeighborhood(candidate.text)
   const inferred = inferCoordinatesFromNeighborhood(neighborhood)
   const distanceKm = distanceFromCenter(inferred.coordinates)
@@ -198,7 +202,10 @@ function inferTitle(text: string): string | undefined {
 }
 
 function inferNeighborhood(text: string): string | undefined {
-  return CENTRAL_BH_NEIGHBORHOODS.find((neighborhood) => new RegExp(`\\b${escapeRegex(neighborhood)}\\b`, 'i').test(text))
+  const normalizedText = normalizeNeighborhood(text)
+  return CENTRAL_BH_NEIGHBORHOODS.find((neighborhood) =>
+    new RegExp(`\\b${escapeRegex(normalizeNeighborhood(neighborhood))}\\b`, 'i').test(normalizedText),
+  )
 }
 
 function inferAddress(text: string): string | undefined {
@@ -265,6 +272,22 @@ function looksLikeListingText(text: string): boolean {
   }
 
   return /R\$/.test(text) && /apartamento|quarto|vaga|m²|m2|aluguel|venda/i.test(text)
+}
+
+function looksLikeCategoryPage(title: string, text: string): boolean {
+  return (
+    /apartamentos?\s+at[eé]\s+[\d.]+/i.test(title) ||
+    /aluguel\s+de\s+apartamento\s+at[eé]/i.test(title) ||
+    /mais\s+de\s+\d+\s+apartamentos/i.test(text)
+  )
+}
+
+function looksLikeWrongTransaction(title: string, transaction: TransactionType): boolean {
+  if (transaction === 'rent') {
+    return /\b(?:a venda|venda|comprar|à venda)\b/i.test(title) && !/\balugar|aluguel|loca[cç][aã]o\b/i.test(title)
+  }
+
+  return false
 }
 
 function normalizeUrl(value: string | undefined, baseUrl: string): string | undefined {

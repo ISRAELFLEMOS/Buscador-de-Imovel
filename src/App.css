@@ -3,7 +3,7 @@
 }
 
 .app-shell {
-  width: min(1480px, 100%);
+  width: min(1680px, 100%);
   margin: 0 auto;
   padding: 24px;
 }
@@ -34,7 +34,7 @@
 }
 
 .toolbar h1 {
-  max-width: 820px;
+  max-width: 900px;
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1;
 }
@@ -135,7 +135,7 @@
 
 .workspace-grid {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
+  grid-template-columns: 290px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
 }
@@ -327,14 +327,14 @@ select {
 
 .listing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
 }
 
 .listing-card {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  min-height: 230px;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  min-height: 210px;
   border: 1px solid #d7e1e4;
   border-radius: 8px;
   overflow: hidden;
@@ -379,34 +379,54 @@ select {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 10px;
+  align-items: start;
 }
 
 .listing-heading h3 {
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.25;
+  font-size: clamp(1rem, 2vw, 1.22rem);
+  line-height: 1.24;
 }
 
-.listing-heading strong {
+.listing-kicker {
+  margin: 0 0 5px;
+  color: #27605c;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.score-box {
   display: grid;
-  width: 40px;
-  height: 32px;
+  width: 52px;
+  min-height: 48px;
   place-items: center;
   border-radius: 8px;
   color: #ffffff;
   background: #27605c;
 }
 
+.score-box strong {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.score-box span {
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
 .facts,
 .result-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 8px;
 }
 
 .facts div,
 .result-grid div {
-  min-height: 64px;
+  min-height: 58px;
   border: 1px solid #d7e1e4;
   border-radius: 8px;
   padding: 8px;
@@ -421,6 +441,7 @@ select {
 .facts dd {
   margin: 3px 0 0;
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .tag-row span,
@@ -473,6 +494,12 @@ select {
   display: grid;
   gap: 16px;
   padding: 16px;
+  cursor: default;
+}
+
+.simulator-section summary {
+  cursor: pointer;
+  font-weight: 800;
 }
 
 .financing-grid {
@@ -559,7 +586,6 @@ select {
 
   .summary-grid,
   .listing-card,
-  .facts,
   .result-grid,
   .financing-form,
   .report-row {

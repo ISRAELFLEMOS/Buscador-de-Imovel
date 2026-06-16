@@ -1,3 +1,4 @@
+import { DEFAULT_MAX_RENT_TOTAL } from './config'
 import { isInsideDefaultRadius } from './geo'
 import type { Listing } from './types'
 
@@ -26,6 +27,16 @@ export function scoreListing(listing: Listing): number {
     score += 7
   }
 
+  if (listing.transaction === 'rent') {
+    const rentTotal = listing.costs.monthlyTotal ?? listing.costs.rent
+    if (typeof rentTotal === 'number') {
+      if (rentTotal <= 4500) score += 22
+      else if (rentTotal <= 6000) score += 15
+      else if (rentTotal <= DEFAULT_MAX_RENT_TOTAL) score += 8
+      else score -= 45
+    }
+  }
+
   if (listing.costs.pricePerSquareMeter && listing.costs.pricePerSquareMeter < 9500) {
     score += 7
   }
@@ -51,6 +62,17 @@ export function scoreListing(listing: Listing): number {
 
 export function sortByCostBenefit(listings: Listing[]): Listing[] {
   return [...listings].sort((a, b) => {
+    if (a.transaction === 'rent' && b.transaction === 'rent') {
+      const radiusDiff = radiusBucket(a) - radiusBucket(b)
+      if (radiusDiff !== 0) {
+        return radiusDiff
+      }
+
+      const aRent = a.costs.monthlyTotal ?? a.costs.rent ?? Number.POSITIVE_INFINITY
+      const bRent = b.costs.monthlyTotal ?? b.costs.rent ?? Number.POSITIVE_INFINITY
+      if (aRent !== bRent) return aRent - bRent
+    }
+
     const scoreDiff = scoreListing(b) - scoreListing(a)
     if (scoreDiff !== 0) {
       return scoreDiff
@@ -65,6 +87,12 @@ export function sortByCostBenefit(listings: Listing[]): Listing[] {
 
     return (a.distanceKm ?? Number.POSITIVE_INFINITY) - (b.distanceKm ?? Number.POSITIVE_INFINITY)
   })
+}
+
+function radiusBucket(listing: Listing): number {
+  if (isInsideDefaultRadius(listing.distanceKm)) return 0
+  if (typeof listing.distanceKm === 'number') return 1
+  return 2
 }
 
 export function salePriceBand(listing: Listing): PriceBand {

@@ -26,24 +26,35 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
               </div>
               <div className="listing-body">
                 <div className="listing-heading">
-                  <h3>{listing.title}</h3>
-                  <strong>{scoreListing(listing)}</strong>
+                  <div>
+                    <p className="listing-kicker">
+                      {listing.neighborhood ?? 'Bairro nao informado'} -{' '}
+                      {typeof listing.distanceKm === 'number'
+                        ? `${listing.distanceKm.toFixed(1)} km`
+                        : 'distancia incerta'}
+                    </p>
+                    <h3>{listing.title}</h3>
+                  </div>
+                  <div className="score-box">
+                    <strong>{scoreListing(listing)}</strong>
+                    <span>score</span>
+                  </div>
                 </div>
-                <p className="muted">
-                  {listing.neighborhood ?? 'Bairro nao informado'} -{' '}
-                  {typeof listing.distanceKm === 'number'
-                    ? `${listing.distanceKm.toFixed(1)} km (${listing.distanceConfidence})`
-                    : 'distancia incerta'}
-                </p>
                 <dl className="facts">
                   <div>
-                    <dt>Preco</dt>
+                    <dt>{listing.transaction === 'rent' ? 'Custo total' : 'Preco'}</dt>
                     <dd>
                       {listing.transaction === 'rent'
                         ? formatCurrency(listing.costs.monthlyTotal ?? listing.costs.rent)
                         : formatCurrency(listing.costs.salePrice)}
                     </dd>
                   </div>
+                  {listing.transaction === 'rent' ? (
+                    <div>
+                      <dt>Aluguel base</dt>
+                      <dd>{formatCurrency(listing.costs.rent)}</dd>
+                    </div>
+                  ) : null}
                   <div>
                     <dt>Vagas</dt>
                     <dd>{listing.parkingSpaces ?? 'N/I'}</dd>
@@ -52,10 +63,12 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
                     <dt>Area</dt>
                     <dd>{listing.areaM2 ? `${listing.areaM2} m2` : 'N/I'}</dd>
                   </div>
-                  <div>
-                    <dt>Faixa</dt>
-                    <dd>{listing.transaction === 'sale' ? priceBandLabel(salePriceBand(listing)) : 'Aluguel'}</dd>
-                  </div>
+                  {listing.transaction === 'sale' ? (
+                    <div>
+                      <dt>Faixa</dt>
+                      <dd>{priceBandLabel(salePriceBand(listing))}</dd>
+                    </div>
+                  ) : null}
                 </dl>
 
                 {listing.transaction === 'rent' ? (
@@ -70,6 +83,7 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
                 <div className="tag-row">
                   <span>{listing.isNewOrRenovated ? 'Novo/reformado' : 'Sem evidencia de reforma'}</span>
                   <span>ID {listing.sourceListingId ?? 'nao visivel'}</span>
+                  <span>{listing.distanceConfidence === 'estimated' ? 'Distancia estimada' : listing.distanceConfidence}</span>
                 </div>
 
                 <div className="listing-actions">

@@ -1,4 +1,4 @@
-import { DEFAULT_RADIUS_KM } from './config'
+import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM } from './config'
 import type { Listing, TransactionType } from './types'
 
 export interface ListingFilters {
@@ -8,15 +8,17 @@ export interface ListingFilters {
   strictRadius: boolean
   neighborhoods: string[]
   query: string
+  maxRentTotal: number
 }
 
 export const DEFAULT_FILTERS: ListingFilters = {
-  transaction: 'all',
+  transaction: 'rent',
   minParkingSpaces: 0,
   onlyNewOrRenovated: false,
-  strictRadius: true,
+  strictRadius: false,
   neighborhoods: [],
   query: '',
+  maxRentTotal: DEFAULT_MAX_RENT_TOTAL,
 }
 
 export function filterListings(listings: Listing[], filters: ListingFilters): Listing[] {
@@ -25,6 +27,13 @@ export function filterListings(listings: Listing[], filters: ListingFilters): Li
   return listings.filter((listing) => {
     if (filters.transaction !== 'all' && listing.transaction !== filters.transaction) {
       return false
+    }
+
+    if (listing.transaction === 'rent' && filters.maxRentTotal > 0) {
+      const rentTotal = listing.costs.monthlyTotal ?? listing.costs.rent
+      if (typeof rentTotal !== 'number' || rentTotal > filters.maxRentTotal) {
+        return false
+      }
     }
 
     if ((listing.parkingSpaces ?? 0) < filters.minParkingSpaces) {

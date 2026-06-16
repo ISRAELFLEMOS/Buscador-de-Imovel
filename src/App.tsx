@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   BadgeCheck,
-  Calculator,
   Car,
   CircleDollarSign,
   ExternalLink,
@@ -17,7 +16,7 @@ import './App.css'
 import { FinancingPanel } from './components/FinancingPanel'
 import { ListingTable } from './components/ListingTable'
 import { MapPanel } from './components/MapPanel'
-import { DEFAULT_RADIUS_KM, SEARCH_CENTER } from './domain/config'
+import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from './domain/config'
 import { DEFAULT_FILTERS, filterListings, uniqueNeighborhoods } from './domain/filters'
 import type { ListingFilters } from './domain/filters'
 import { formatCurrency } from './domain/money'
@@ -56,25 +55,23 @@ function App() {
   const rentListings = visibleListings.filter((listing) => listing.transaction === 'rent')
   const saleListings = visibleListings.filter((listing) => listing.transaction === 'sale')
   const bestListing = visibleListings[0]
-  const confirmedInsideRadius = dataset.listings.filter(
+  const confirmedInsideRadius = visibleListings.filter(
     (listing) => typeof listing.distanceKm === 'number' && listing.distanceKm <= DEFAULT_RADIUS_KM,
   ).length
-  const rentListingsWithTotal = rentListings.filter((listing) => listing.costs.monthlyTotal)
-  const averageRent =
-    rentListingsWithTotal.length > 0
-      ? rentListingsWithTotal.reduce((total, listing) => total + (listing.costs.monthlyTotal ?? 0), 0) /
-        rentListingsWithTotal.length
-      : undefined
+  const rentalsUnderLimit = dataset.listings.filter((listing) => {
+    const rentTotal = listing.costs.monthlyTotal ?? listing.costs.rent
+    return listing.transaction === 'rent' && typeof rentTotal === 'number' && rentTotal <= DEFAULT_MAX_RENT_TOTAL
+  }).length
 
   return (
     <main className="app-shell">
       <section className="toolbar" aria-label="Painel principal">
         <div>
           <p className="eyebrow">Buscador de Imovel BH</p>
-          <h1>Apartamentos ate 3,5 km da Av. Brasil, 1666</h1>
+          <h1>Alugueis perto da Avenida Brasil, 1666</h1>
           <p className="subtitle">
-            Ranking por custo-beneficio, duas vagas, raio do CMU, imovel novo/reformado e custo
-            mensal total quando informado pelo portal.
+            Teste inicial focado em apartamentos para alugar, com teto padrao de R$ 8.000, raio
+            de ate 3,5 km, preferencia por duas vagas e custo mensal total quando informado.
           </p>
         </div>
         <div className="toolbar-actions">
@@ -92,10 +89,10 @@ function App() {
       </section>
 
       <section className="summary-grid" aria-label="Resumo da busca">
-        <Metric icon={<Home />} label="Imoveis visiveis" value={String(visibleListings.length)} />
-        <Metric icon={<MapPinned />} label="No raio configurado" value={String(confirmedInsideRadius)} />
-        <Metric icon={<Car />} label="Com 2+ vagas" value={String(dataset.listings.filter((listing) => (listing.parkingSpaces ?? 0) >= 2).length)} />
-        <Metric icon={<CircleDollarSign />} label="Aluguel medio filtrado" value={formatCurrency(averageRent)} />
+        <Metric icon={<Home />} label="Alugueis visiveis" value={String(rentListings.length)} />
+        <Metric icon={<MapPinned />} label="No raio filtrado" value={String(confirmedInsideRadius)} />
+        <Metric icon={<Car />} label="Com 2+ vagas" value={String(rentListings.filter((listing) => (listing.parkingSpaces ?? 0) >= 2).length)} />
+        <Metric icon={<CircleDollarSign />} label="Ate R$ 8 mil coletados" value={String(rentalsUnderLimit)} />
       </section>
 
       <section className="workspace-grid">
@@ -116,10 +113,26 @@ function App() {
                 }))
               }
             >
-              <option value="all">Alugar e comprar</option>
               <option value="rent">Aluguel</option>
+              <option value="all">Todas as operacoes</option>
               <option value="sale">Venda</option>
             </select>
+          </label>
+
+          <label>
+            Aluguel maximo
+            <input
+              type="number"
+              min={0}
+              step={500}
+              value={filters.maxRentTotal}
+              onChange={(event) =>
+                setFilters((current) => ({
+                  ...current,
+                  maxRentTotal: Number(event.target.value),
+                }))
+              }
+            />
           </label>
 
           <label>
@@ -158,7 +171,7 @@ function App() {
                 setFilters((current) => ({ ...current, strictRadius: event.target.checked }))
               }
             />
-            Somente raio conhecido/estimado ate {DEFAULT_RADIUS_KM} km
+            Restringir ao raio conhecido/estimado ate {DEFAULT_RADIUS_KM} km
           </label>
 
           <label className="checkbox-line">
@@ -215,11 +228,11 @@ function App() {
 
           <div className="best-strip">
             <div>
-              <p className="eyebrow">Melhor custo-beneficio filtrado</p>
+              <p className="eyebrow">Menor aluguel com bom encaixe</p>
               <h2>{bestListing ? bestListing.title : 'Nenhum anuncio no filtro atual'}</h2>
               <p>
                 {bestListing
-                  ? `${bestListing.source} - score ${scoreListing(bestListing)} - ${bestListing.neighborhood ?? 'bairro nao informado'}`
+                  ? `${bestListing.source} - ${formatCurrency(bestListing.costs.monthlyTotal ?? bestListing.costs.rent)} - score ${scoreListing(bestListing)} - ${bestListing.neighborhood ?? 'bairro nao informado'}`
                   : 'Ajuste filtros ou gere uma nova coleta.'}
               </p>
             </div>
@@ -228,8 +241,12 @@ function App() {
 
           <MapPanel listings={visibleListings} center={SEARCH_CENTER} />
 
-          <ListingTable title="Aluguel" listings={rentListings} />
-          <ListingTable title="Venda" listings={saleListings} />
+          <ListingTable
+            title={`Alugueis ate ${formatCurrency(filters.maxRentTotal)}`}
+            listings={rentListings}
+          />
+
+          {filters.transaction !== 'rent' ? <ListingTable title="Venda" listings={saleListings} /> : null}
 
           <section className="reports" aria-label="Relatorio das fontes">
             <div className="section-title">
@@ -253,16 +270,11 @@ function App() {
         </section>
       </section>
 
-      <section className="simulator-section" aria-label="Simulador de financiamento">
-        <div className="section-title">
-          <Calculator size={18} aria-hidden="true" />
-          <h2>Simulador de financiamento</h2>
-        </div>
-        <FinancingPanel
-          key={saleListings[0]?.costs.salePrice ?? 'default-financing'}
-          suggestedPrice={saleListings[0]?.costs.salePrice}
-        />
-      </section>
+      <details className="simulator-section" aria-label="Simulador de financiamento">
+        <summary>Simulador de financiamento para uma etapa futura</summary>
+        <h2>Simulador de financiamento</h2>
+        <FinancingPanel suggestedPrice={saleListings[0]?.costs.salePrice} />
+      </details>
     </main>
   )
 }

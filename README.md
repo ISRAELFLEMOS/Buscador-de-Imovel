@@ -1,14 +1,14 @@
 # Buscador de Imovel BH
 
-Aplicacao web estatica para apoiar a busca de apartamentos para venda ou aluguel em Belo Horizonte, priorizando imoveis em ate 3,5 km da Av. Brasil, 1666 (CMU).
+Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos para aluguel em Belo Horizonte, priorizando imoveis em ate 3,5 km da Av. Brasil, 1666 e com teto padrao de R$ 8.000 mensais.
 
 ## O que faz
 
 - Coleta conservadora de anuncios publicos, respeitando `robots.txt`.
-- Normalizacao de aluguel, condominio, IPTU, seguro, valor de venda, area, vagas, bairro, distancia e link.
-- Ranking por custo-beneficio: raio, duas vagas, novo/reformado, preco, distancia e completude.
-- Filtros por operacao, vagas, raio, reforma, busca livre e bairros preferidos.
-- Simulador educativo SAC/Price com entrada, FGTS, prazo, juros, renda, seguros e taxa administrativa.
+- Normalizacao de aluguel, condominio, IPTU, seguro, area, vagas, bairro, distancia e link.
+- Ranking por custo-beneficio: aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
+- Filtros por aluguel maximo, vagas, raio, reforma, busca livre e bairros preferidos.
+- Modo de venda e simulador educativo SAC/Price mantidos como apoio para uma etapa futura, sem ser o foco inicial.
 - Publicacao via GitHub Pages.
 
 ## Limites importantes

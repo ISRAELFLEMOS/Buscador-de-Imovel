@@ -26,7 +26,7 @@ export function MapPanel({ listings, center }: { listings: Listing[]; center: Se
       <div className="map-visual" role="img" aria-label="Mapa radial simplificado dos anuncios">
         <div className="radius radius-outer" />
         <div className="radius radius-inner" />
-        <div className="center-dot">CMU</div>
+        <div className="center-dot">1666</div>
         {plotted.map(({ listing, left, top }) => (
           <a
             key={listing.id}

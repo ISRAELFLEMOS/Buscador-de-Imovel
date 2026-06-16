@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { chromium, type Browser } from 'playwright'
-import { DEFAULT_RADIUS_KM, SEARCH_CENTER } from '../../src/domain/config'
+import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from '../../src/domain/config'
 import { sortByCostBenefit } from '../../src/domain/ranking'
 import type { Listing, ListingsDataset, SourceRunReport } from '../../src/domain/types'
 import { parseListingsFromHtml } from './parser'
@@ -109,12 +109,17 @@ async function main() {
     generatedAt: new Date().toISOString(),
     center: SEARCH_CENTER,
     radiusKm: DEFAULT_RADIUS_KM,
-    strictRadiusDefault: true,
-    listings: sortByCostBenefit(dedupeListings(listings)),
+    strictRadiusDefault: false,
+    listings: sortByCostBenefit(applyRentalPolicy(dedupeListings(listings))),
     reports,
     notices: [
       'Scraper conservador: respeita robots.txt, nao usa login, nao resolve CAPTCHA e nao burla bloqueios.',
       'Contato e numero do anuncio sao coletados somente quando ficam visiveis no HTML publico.',
+      `Fase inicial focada em aluguel; anuncios acima de ${DEFAULT_MAX_RENT_TOTAL.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        maximumFractionDigits: 0,
+      })} sao descartados por padrao.`,
     ],
   }
 
@@ -140,7 +145,7 @@ function parseArgs(args: string[]): CliOptions {
         ? args[outputIndex + 1]
         : path.join(process.cwd(), 'public', 'data', 'listings.json'),
     maxListingsPerSearch:
-      maxIndex >= 0 && args[maxIndex + 1] ? Number(args[maxIndex + 1]) : 12,
+      maxIndex >= 0 && args[maxIndex + 1] ? Number(args[maxIndex + 1]) : 24,
   }
 }
 
@@ -152,6 +157,17 @@ function dedupeListings(items: Listing[]): Listing[] {
     }
     seen.add(item.url)
     return true
+  })
+}
+
+function applyRentalPolicy(items: Listing[]): Listing[] {
+  return items.filter((item) => {
+    if (item.transaction !== 'rent') {
+      return false
+    }
+
+    const rentTotal = item.costs.monthlyTotal ?? item.costs.rent
+    return typeof rentTotal === 'number' && rentTotal <= DEFAULT_MAX_RENT_TOTAL
   })
 }
 

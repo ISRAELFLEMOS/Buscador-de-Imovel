@@ -34,7 +34,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Scrape listings
-        run: npm run scrape -- --max-listings 12
+        run: npm run scrape -- --max-listings 32
 
       - name: Lint
         run: npm run lint

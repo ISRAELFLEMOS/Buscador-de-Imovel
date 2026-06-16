@@ -49,8 +49,12 @@ export function roundDistance(distanceKm: number): number {
   return Math.round(distanceKm * 10) / 10
 }
 
-function normalizeNeighborhood(value: string): string {
-  return value.trim().toLowerCase()
+export function normalizeNeighborhood(value: string): string {
+  return value
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
 }
 
 function toRadians(value: number): number {

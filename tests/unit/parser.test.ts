@@ -17,7 +17,7 @@ describe('parser de anuncios', () => {
     assert.equal(listings.length, 1)
     assert.equal(listings[0].sourceListingId, 'AP1234')
     assert.equal(listings[0].parkingSpaces, 2)
-    assert.equal(listings[0].neighborhood, 'Funcionários')
+    assert.equal(listings[0].neighborhood, 'Funcionarios')
     assert.equal(listings[0].costs.monthlyTotal, 5700)
   })
 })

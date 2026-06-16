@@ -9,7 +9,7 @@ Criei um buscador online para acompanhar apartamentos para aluguel em Belo Horiz
 Link do app:
 https://israelflemos.github.io/Buscador-de-Imovel/
 
-O app permite filtrar por aluguel maximo, vagas, bairros preferidos, imovel novo ou reformado e custo-beneficio. O simulador de financiamento ficou recolhido no fim da tela apenas para uma etapa futura.
+O app permite filtrar por aluguel maximo, vagas, bairros preferidos, imovel novo ou reformado e custo-beneficio. Santa Teresa e Santa Efigenia entram como prioridade maxima; Savassi, Anchieta, Funcionarios e Sao Pedro entram como preferidos. O simulador de financiamento ficou recolhido no fim da tela apenas para uma etapa futura.
 
 Observacao: alguns portais nao mostram telefone ou numero do anuncio no HTML publico. Quando isso acontecer, o app mantem o link funcional do anuncio para abrir fotos, detalhes e contato diretamente no portal.
 

@@ -6,8 +6,9 @@ Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos para
 
 - Coleta conservadora de anuncios publicos, respeitando `robots.txt`.
 - Normalizacao de aluguel, condominio, IPTU, seguro, area, vagas, bairro, distancia e link.
-- Ranking por custo-beneficio: aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
+- Ranking por custo-beneficio: bairros preferidos, aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
 - Filtros por aluguel maximo, vagas, raio, reforma, busca livre e bairros preferidos.
+- Preferencias da Layza: Santa Teresa e Santa Efigenia como prioridade maxima; Savassi, Anchieta, Funcionarios e Sao Pedro como preferidos.
 - Modo de venda e simulador educativo SAC/Price mantidos como apoio para uma etapa futura, sem ser o foco inicial.
 - Publicacao via GitHub Pages.
 
@@ -44,7 +45,7 @@ Cada anuncio inclui `source`, `sourceListingId`, `url`, `transaction`, `neighbor
 
 ## Adicionar ou ajustar portais
 
-1. Edite `scripts/scraper/sourceConfig.ts`.
+1. Edite `scripts/scraper/sourceConfig.ts` para fontes e `src/domain/config.ts` para bairros preferidos.
 2. Inclua URLs de busca publicas e permitidas.
 3. Rode `npm run scrape:dry`.
 4. Rode `npm run scrape -- --max-listings 5`.

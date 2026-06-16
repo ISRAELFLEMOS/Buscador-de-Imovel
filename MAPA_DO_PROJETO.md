@@ -6,7 +6,7 @@ Atualizado em: 2026-06-16
 
 - Pasta: `99_OUTROS/BUSCADOR_DE_IMOVEL`
 - Tipo: app web estatico com scraper, ranking de aluguel e simulador financeiro auxiliar.
-- Objetivo: buscar e priorizar apartamentos para aluguel em Belo Horizonte, ate 3,5 km da Av. Brasil, 1666, com teto padrao de R$ 8.000 mensais.
+- Objetivo: buscar e priorizar apartamentos para aluguel em Belo Horizonte, ate 3,5 km da Av. Brasil, 1666, com teto padrao de R$ 8.000 mensais e preferencia por Santa Teresa, Santa Efigenia, Savassi, Anchieta, Funcionarios e Sao Pedro.
 - Publicacao: GitHub Pages em `https://israelflemos.github.io/Buscador-de-Imovel/`.
 - Controle Git: repositorio proprio dentro desta pasta.
 
@@ -15,7 +15,7 @@ Atualizado em: 2026-06-16
 1. `npm run scrape:dry` verifica `robots.txt` e URLs configuradas.
 2. `npm run scrape` coleta paginas permitidas, sem login, CAPTCHA ou bypass.
 3. O scraper gera `public/data/listings.json`.
-4. O app Vite/React carrega o JSON e apresenta filtros, ranking por aluguel, mapa radial e simulador recolhido para etapa futura.
+4. O app Vite/React carrega o JSON e apresenta filtros, ranking por bairro/aluguel, mapa radial e simulador recolhido para etapa futura.
 5. GitHub Actions executa coleta diaria e publica via Pages.
 
 ## Estrutura

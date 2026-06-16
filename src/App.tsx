@@ -20,6 +20,7 @@ import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from './doma
 import { DEFAULT_FILTERS, filterListings, uniqueNeighborhoods } from './domain/filters'
 import type { ListingFilters } from './domain/filters'
 import { formatCurrency } from './domain/money'
+import { neighborhoodPreferenceLabel } from './domain/neighborhoods'
 import { scoreListing, sortByCostBenefit } from './domain/ranking'
 import type { ListingsDataset } from './domain/types'
 import { emptyDataset } from './data/emptyDataset'
@@ -71,7 +72,8 @@ function App() {
           <h1>Alugueis perto da Avenida Brasil, 1666</h1>
           <p className="subtitle">
             Teste inicial focado em apartamentos para alugar, com teto padrao de R$ 8.000, raio
-            de ate 3,5 km, preferencia por duas vagas e custo mensal total quando informado.
+            de ate 3,5 km, preferencia por Santa Teresa e Santa Efigenia, duas vagas e custo
+            mensal total quando informado.
           </p>
         </div>
         <div className="toolbar-actions">
@@ -190,23 +192,29 @@ function App() {
             {neighborhoods.length === 0 ? (
               <p className="muted">Os bairros aparecem depois da coleta.</p>
             ) : (
-              neighborhoods.map((neighborhood) => (
-                <label className="checkbox-line" key={neighborhood}>
-                  <input
-                    type="checkbox"
-                    checked={filters.neighborhoods.includes(neighborhood)}
-                    onChange={(event) =>
-                      setFilters((current) => ({
-                        ...current,
-                        neighborhoods: event.target.checked
-                          ? [...current.neighborhoods, neighborhood]
-                          : current.neighborhoods.filter((item) => item !== neighborhood),
-                      }))
-                    }
-                  />
-                  {neighborhood}
-                </label>
-              ))
+              neighborhoods.map((neighborhood) => {
+                const preferenceLabel = neighborhoodPreferenceLabel(neighborhood)
+                return (
+                  <label className="checkbox-line" key={neighborhood}>
+                    <input
+                      type="checkbox"
+                      checked={filters.neighborhoods.includes(neighborhood)}
+                      onChange={(event) =>
+                        setFilters((current) => ({
+                          ...current,
+                          neighborhoods: event.target.checked
+                            ? [...current.neighborhoods, neighborhood]
+                            : current.neighborhoods.filter((item) => item !== neighborhood),
+                        }))
+                      }
+                    />
+                    <span>
+                      {neighborhood}
+                      {preferenceLabel ? <small> {preferenceLabel}</small> : null}
+                    </span>
+                  </label>
+                )
+              })
             )}
           </div>
         </aside>

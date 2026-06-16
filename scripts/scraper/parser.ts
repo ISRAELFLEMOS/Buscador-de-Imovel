@@ -203,6 +203,10 @@ function inferTitle(text: string): string | undefined {
 
 function inferNeighborhood(text: string): string | undefined {
   const normalizedText = normalizeNeighborhood(text)
+  if (/\bsanta tereza\b/i.test(normalizedText)) {
+    return 'Santa Teresa'
+  }
+
   return CENTRAL_BH_NEIGHBORHOODS.find((neighborhood) =>
     new RegExp(`\\b${escapeRegex(normalizeNeighborhood(neighborhood))}\\b`, 'i').test(normalizedText),
   )

@@ -1,4 +1,5 @@
-import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM } from './config'
+import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, PREFERRED_NEIGHBORHOODS } from './config'
+import { sortNeighborhoodNames } from './neighborhoods'
 import type { Listing, TransactionType } from './types'
 
 export interface ListingFilters {
@@ -72,9 +73,14 @@ export function filterListings(listings: Listing[], filters: ListingFilters): Li
 }
 
 export function uniqueNeighborhoods(listings: Listing[]): string[] {
-  return Array.from(
-    new Set(listings.map((listing) => listing.neighborhood).filter((item): item is string => Boolean(item))),
-  ).sort((a, b) => a.localeCompare(b, 'pt-BR'))
+  const neighborhoods = Array.from(
+    new Set([
+      ...PREFERRED_NEIGHBORHOODS,
+      ...listings.map((listing) => listing.neighborhood).filter((item): item is string => Boolean(item)),
+    ]),
+  )
+
+  return sortNeighborhoodNames(neighborhoods)
 }
 
 function normalize(value: string): string {

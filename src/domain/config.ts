@@ -14,6 +14,18 @@ export const SEARCH_CENTER: SearchCenter = {
 export const DEFAULT_RADIUS_KM = 3.5
 export const DEFAULT_MAX_RENT_TOTAL = 8000
 
+export const PRIMARY_PREFERRED_NEIGHBORHOODS = ['Santa Teresa', 'Santa Efigenia'] as const
+export const SECONDARY_PREFERRED_NEIGHBORHOODS = [
+  'Savassi',
+  'Anchieta',
+  'Funcionarios',
+  'Sao Pedro',
+] as const
+export const PREFERRED_NEIGHBORHOODS = [
+  ...PRIMARY_PREFERRED_NEIGHBORHOODS,
+  ...SECONDARY_PREFERRED_NEIGHBORHOODS,
+] as const
+
 export const CENTRAL_BH_NEIGHBORHOODS = [
   'Anchieta',
   'Barro Preto',
@@ -24,6 +36,7 @@ export const CENTRAL_BH_NEIGHBORHOODS = [
   'Floresta',
   'Lourdes',
   'Santa Efigenia',
+  'Santa Teresa',
   'Santo Agostinho',
   'Santo Antonio',
   'Sao Pedro',
@@ -42,6 +55,7 @@ export const NEIGHBORHOOD_COORDINATES: Record<string, { lat: number; lon: number
   floresta: { lat: -19.9186, lon: -43.9226 },
   lourdes: { lat: -19.9278, lon: -43.9437 },
   'santa efigenia': { lat: -19.9256, lon: -43.9207 },
+  'santa teresa': { lat: -19.9189, lon: -43.9156 },
   'santo agostinho': { lat: -19.9253, lon: -43.9536 },
   'santo antonio': { lat: -19.9398, lon: -43.9464 },
   'sao pedro': { lat: -19.9398, lon: -43.9352 },

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 import { SEARCH_CENTER } from '../../src/domain/config'
+import { uniqueNeighborhoods } from '../../src/domain/filters'
 import { distanceFromCenter, haversineDistanceKm } from '../../src/domain/geo'
 import { scoreListing, sortByCostBenefit } from '../../src/domain/ranking'
 import type { Listing } from '../../src/domain/types'
@@ -38,5 +39,25 @@ describe('geo e ranking', () => {
 
     assert.ok(scoreListing(listing) > scoreListing(weak))
     assert.equal(sortByCostBenefit([weak, listing])[0].id, 'a')
+  })
+
+  it('prioriza bairros preferidos da Layza no filtro e ranking', () => {
+    const centro: Listing = {
+      ...listing,
+      id: 'centro',
+      transaction: 'rent',
+      neighborhood: 'Centro',
+      costs: { rent: 1900, monthlyTotal: 1900, monthlyTotalConfidence: 'estimated' },
+    }
+    const santaTeresa: Listing = {
+      ...centro,
+      id: 'santa-teresa',
+      neighborhood: 'Santa Teresa',
+      costs: { rent: 3600, monthlyTotal: 3600, monthlyTotalConfidence: 'estimated' },
+    }
+
+    assert.equal(uniqueNeighborhoods([centro])[0], 'Santa Teresa')
+    assert.ok(scoreListing(santaTeresa) > scoreListing(centro))
+    assert.equal(sortByCostBenefit([centro, santaTeresa])[0].id, 'santa-teresa')
   })
 })

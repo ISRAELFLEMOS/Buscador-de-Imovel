@@ -55,6 +55,30 @@ export const SOURCE_CONFIGS: SourceConfig[] = [
         transaction: 'rent',
         url: 'https://www.quintoandar.com.br/alugar/imovel/belo-horizonte-mg-brasil/apartamento',
       },
+      {
+        transaction: 'rent',
+        url: 'https://www.quintoandar.com.br/alugar/imovel/santa-teresa-belo-horizonte-mg-brasil/apartamento',
+      },
+      {
+        transaction: 'rent',
+        url: 'https://www.quintoandar.com.br/alugar/imovel/santa-efigenia-belo-horizonte-mg-brasil/apartamento',
+      },
+      {
+        transaction: 'rent',
+        url: 'https://www.quintoandar.com.br/alugar/imovel/savassi-belo-horizonte-mg-brasil/apartamento',
+      },
+      {
+        transaction: 'rent',
+        url: 'https://www.quintoandar.com.br/alugar/imovel/anchieta-belo-horizonte-mg-brasil/apartamento',
+      },
+      {
+        transaction: 'rent',
+        url: 'https://www.quintoandar.com.br/alugar/imovel/funcionarios-belo-horizonte-mg-brasil/apartamento',
+      },
+      {
+        transaction: 'rent',
+        url: 'https://www.quintoandar.com.br/alugar/imovel/sao-pedro-belo-horizonte-mg-brasil/apartamento',
+      },
     ],
   },
   {

@@ -1,5 +1,6 @@
 import { DEFAULT_MAX_RENT_TOTAL } from './config'
 import { isInsideDefaultRadius } from './geo'
+import { neighborhoodPreferenceBonus, neighborhoodPreferenceTier } from './neighborhoods'
 import type { Listing } from './types'
 
 export type PriceBand = 'ate-500k' | '500k-800k' | '800k-1m2' | '1m2-1m8' | 'acima-1m8' | 'sem-preco'
@@ -20,6 +21,8 @@ export function scoreListing(listing: Listing): number {
   if (listing.isNewOrRenovated) {
     score += 16
   }
+
+  score += neighborhoodPreferenceBonus(listing.neighborhood)
 
   if (listing.costs.monthlyTotalConfidence === 'confirmed') {
     score += 12
@@ -66,6 +69,11 @@ export function sortByCostBenefit(listings: Listing[]): Listing[] {
       const radiusDiff = radiusBucket(a) - radiusBucket(b)
       if (radiusDiff !== 0) {
         return radiusDiff
+      }
+
+      const preferenceDiff = neighborhoodPreferenceTier(a.neighborhood) - neighborhoodPreferenceTier(b.neighborhood)
+      if (preferenceDiff !== 0) {
+        return preferenceDiff
       }
 
       const aRent = a.costs.monthlyTotal ?? a.costs.rent ?? Number.POSITIVE_INFINITY

@@ -188,11 +188,15 @@ function inferCosts(text: string, transaction: TransactionType): ListingCosts {
   const values = parseAllBrazilianCurrencies(text)
   const rent = transaction === 'rent' ? values[0] : undefined
   const salePrice = transaction === 'sale' ? values[0] : undefined
-  const condominium = inferCurrencyAfter(text, /condom[ií]nio|cond\./i)
-  const iptu = inferCurrencyAfter(text, /iptu/i)
-  const insurance = inferCurrencyAfter(text, /seguro/i)
-  const other = inferCurrencyAfter(text, /taxa|outr[oa]s/i)
   const explicitMonthlyTotal = transaction === 'rent' ? inferExplicitMonthlyTotal(text, rent) : undefined
+  const componentLimit =
+    typeof explicitMonthlyTotal === 'number' && typeof rent === 'number'
+      ? Math.max(explicitMonthlyTotal - rent, 0)
+      : undefined
+  const condominium = inferCurrencyAfter(text, /condom[ií]nio|cond\./i, componentLimit)
+  const iptu = inferCurrencyAfter(text, /iptu/i, componentLimit)
+  const insurance = inferCurrencyAfter(text, /seguro/i, componentLimit)
+  const other = inferCurrencyAfter(text, /taxa|outr[oa]s/i, componentLimit)
   const estimatedMonthlyTotal = transaction === 'rent' ? sumKnown([rent, condominium, iptu, insurance, other]) : undefined
   const monthlyTotal = explicitMonthlyTotal ?? estimatedMonthlyTotal
   const areaM2 = inferNumber(text, /(\d{2,4})\s*m(?:2|²)/i)
@@ -283,7 +287,7 @@ function strongestConfidence(left: ListingCosts['monthlyTotalConfidence'], right
   return weights[right] > weights[left] ? right : left
 }
 
-function inferCurrencyAfter(text: string, label: RegExp): number | undefined {
+function inferCurrencyAfter(text: string, label: RegExp, maxValue?: number): number | undefined {
   const flags = label.flags.includes('g') ? label.flags : `${label.flags}g`
   const pattern = new RegExp(label.source, flags)
 
@@ -294,7 +298,7 @@ function inferCurrencyAfter(text: string, label: RegExp): number | undefined {
     }
 
     const value = parseAllBrazilianCurrencies(text.slice(index, index + 160))[0]
-    if (typeof value === 'number') {
+    if (typeof value === 'number' && (typeof maxValue !== 'number' || value <= maxValue)) {
       return value
     }
   }

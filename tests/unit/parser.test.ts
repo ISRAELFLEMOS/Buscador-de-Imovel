@@ -98,6 +98,7 @@ describe('parser de anuncios', () => {
       `
         <main>
           <h1>Aluguel R$ 2.000</h1>
+          <nav>Condominio anunciado em outro bloco R$ 12.900</nav>
           <aside>
             Aluguel R$ 2.000
             Condominio R$ 330

@@ -6,6 +6,7 @@ Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos para
 
 - Coleta conservadora de anuncios publicos, respeitando `robots.txt`.
 - Normalizacao de aluguel, condominio, IPTU, seguro, area, vagas, bairro, distancia e link.
+- Custo mensal total usa o valor `total` informado pelo portal quando existir; quando nao existir, soma aluguel, condominio, IPTU, seguro e outros custos visiveis como estimativa.
 - Ranking por custo-beneficio: bairros preferidos, aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
 - Filtros por aluguel maximo, vagas, raio, reforma, busca livre e bairros preferidos.
 - Preferencias da Layza: Santa Teresa e Santa Efigenia como prioridade maxima; Savassi, Anchieta, Funcionarios e Sao Pedro como preferidos.
@@ -42,6 +43,8 @@ O app carrega `public/data/listings.json`. O formato principal e:
 - `listings`: anuncios normalizados.
 
 Cada anuncio inclui `source`, `sourceListingId`, `url`, `transaction`, `neighborhood`, `distanceKm`, `parkingSpaces`, `costs`, `images`, `warnings` e demais campos do modelo `Listing`.
+
+Em `costs`, `monthlyTotalConfidence` indica a origem do total mensal: `confirmed` quando o portal exibiu o total, `estimated` quando o app somou os custos visiveis e `missing` quando faltaram dados.
 
 ## Adicionar ou ajustar portais
 

@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto'
 import * as cheerio from 'cheerio'
 import { CENTRAL_BH_NEIGHBORHOODS } from '../../src/domain/config'
 import { distanceFromCenter, inferCoordinatesFromNeighborhood, normalizeNeighborhood } from '../../src/domain/geo'
-import { parseAllBrazilianCurrencies, sumKnown } from '../../src/domain/money'
+import { parseAllBrazilianCurrencies, parseBrazilianCurrency, sumKnown } from '../../src/domain/money'
 import type { Listing, ListingCosts, ListingSource, TransactionType } from '../../src/domain/types'
 
 interface ParseOptions {
@@ -167,7 +167,9 @@ function inferCosts(text: string, transaction: TransactionType): ListingCosts {
   const iptu = inferCurrencyAfter(text, /iptu/i)
   const insurance = inferCurrencyAfter(text, /seguro/i)
   const other = inferCurrencyAfter(text, /taxa|outr[oa]s/i)
-  const monthlyTotal = transaction === 'rent' ? sumKnown([rent, condominium, iptu, insurance, other]) : undefined
+  const explicitMonthlyTotal = transaction === 'rent' ? inferExplicitMonthlyTotal(text) : undefined
+  const estimatedMonthlyTotal = transaction === 'rent' ? sumKnown([rent, condominium, iptu, insurance, other]) : undefined
+  const monthlyTotal = explicitMonthlyTotal ?? estimatedMonthlyTotal
   const areaM2 = inferNumber(text, /(\d{2,4})\s*m(?:2|²)/i)
 
   return {
@@ -177,10 +179,22 @@ function inferCosts(text: string, transaction: TransactionType): ListingCosts {
     insurance,
     other,
     monthlyTotal,
-    monthlyTotalConfidence: transaction === 'rent' ? (monthlyTotal ? 'estimated' : 'missing') : 'missing',
+    monthlyTotalConfidence:
+      transaction === 'rent' ? (explicitMonthlyTotal ? 'confirmed' : monthlyTotal ? 'estimated' : 'missing') : 'missing',
     salePrice,
     pricePerSquareMeter: salePrice && areaM2 ? Math.round(salePrice / areaM2) : undefined,
   }
+}
+
+function inferExplicitMonthlyTotal(text: string): number | undefined {
+  for (const match of text.matchAll(/(R\$\s*[\d.,]+)\s*(?:total|valor\s+total|mensal)/gi)) {
+    const value = parseBrazilianCurrency(match[1])
+    if (typeof value === 'number') {
+      return value
+    }
+  }
+
+  return inferCurrencyAfter(text, /total\s+(?:mensal|do\s+aluguel)|valor\s+total/i)
 }
 
 function inferCurrencyAfter(text: string, label: RegExp): number | undefined {

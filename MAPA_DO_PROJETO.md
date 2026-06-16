@@ -16,7 +16,8 @@ Atualizado em: 2026-06-16
 2. `npm run scrape` coleta paginas permitidas, sem login, CAPTCHA ou bypass.
 3. O scraper gera `public/data/listings.json`.
 4. O app Vite/React carrega o JSON e apresenta filtros, ranking por bairro/aluguel, mapa radial e simulador recolhido para etapa futura.
-5. GitHub Actions executa coleta diaria e publica via Pages.
+5. Para aluguel, o custo total exibido pelo portal tem prioridade; na ausencia dele, o app usa soma estimada de aluguel, condominio, IPTU, seguro e outros custos visiveis.
+6. GitHub Actions executa coleta diaria e publica via Pages.
 
 ## Estrutura
 

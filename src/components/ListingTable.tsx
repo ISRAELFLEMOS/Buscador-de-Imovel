@@ -82,6 +82,13 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
 
                 <div className="tag-row">
                   <span>{listing.isNewOrRenovated ? 'Novo/reformado' : 'Sem evidencia de reforma'}</span>
+                  {listing.transaction === 'rent' ? (
+                    <span>
+                      {listing.costs.monthlyTotalConfidence === 'confirmed'
+                        ? 'Total informado pelo portal'
+                        : 'Total estimado'}
+                    </span>
+                  ) : null}
                   <span>ID {listing.sourceListingId ?? 'nao visivel'}</span>
                   <span>{listing.distanceConfidence === 'estimated' ? 'Distancia estimada' : listing.distanceConfidence}</span>
                 </div>

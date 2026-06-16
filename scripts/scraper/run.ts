@@ -1,10 +1,10 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { chromium, type Browser } from 'playwright'
+import { chromium, type Browser, type Page } from 'playwright'
 import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from '../../src/domain/config'
 import { sortByCostBenefit } from '../../src/domain/ranking'
 import type { Listing, ListingsDataset, SourceRunReport } from '../../src/domain/types'
-import { parseListingsFromHtml } from './parser'
+import { mergeListingWithDetailHtml, parseListingsFromHtml } from './parser'
 import { checkRobots } from './robots'
 import { SOURCE_CONFIGS } from './sourceConfig'
 
@@ -17,11 +17,13 @@ interface CliOptions {
 const options = parseArgs(process.argv.slice(2))
 const reports: SourceRunReport[] = []
 const listings: Listing[] = []
+const DETAIL_ENRICHMENT_LIMIT = 60
 
 await main()
 
 async function main() {
   let browser: Browser | undefined
+  let normalizedListings: Listing[]
 
   try {
     if (!options.dryRun) {
@@ -101,6 +103,11 @@ async function main() {
         }
       }
     }
+
+    normalizedListings = dedupeListings(listings)
+    if (browser && !options.dryRun) {
+      normalizedListings = await enrichListingsWithDetailPages(browser, normalizedListings)
+    }
   } finally {
     await browser?.close()
   }
@@ -110,7 +117,7 @@ async function main() {
     center: SEARCH_CENTER,
     radiusKm: DEFAULT_RADIUS_KM,
     strictRadiusDefault: false,
-    listings: sortByCostBenefit(applyRentalPolicy(dedupeListings(listings))),
+    listings: sortByCostBenefit(applyRentalPolicy(normalizedListings)),
     reports,
     notices: [
       'Scraper conservador: respeita robots.txt, nao usa login, nao resolve CAPTCHA e nao burla bloqueios.',
@@ -169,6 +176,99 @@ function applyRentalPolicy(items: Listing[]): Listing[] {
     const rentTotal = item.costs.monthlyTotal ?? item.costs.rent
     return typeof rentTotal === 'number' && rentTotal <= DEFAULT_MAX_RENT_TOTAL
   })
+}
+
+async function enrichListingsWithDetailPages(browser: Browser, items: Listing[]): Promise<Listing[]> {
+  const sourceConfig = SOURCE_CONFIGS.find((source) => source.source === 'QuintoAndar')
+  if (!sourceConfig) {
+    return items
+  }
+
+  const startedAt = new Date().toISOString()
+  let enriched = 0
+  let blocked = 0
+  let failed = 0
+  let skippedByPrice = 0
+
+  const enrichedItems: Listing[] = []
+
+  for (const item of items) {
+    if (item.source !== 'QuintoAndar' || item.transaction !== 'rent' || enriched >= DETAIL_ENRICHMENT_LIMIT) {
+      enrichedItems.push(item)
+      continue
+    }
+
+    const rentTotal = item.costs.monthlyTotal ?? item.costs.rent
+    if (typeof rentTotal === 'number' && rentTotal > DEFAULT_MAX_RENT_TOTAL) {
+      skippedByPrice += 1
+      enrichedItems.push(item)
+      continue
+    }
+
+    const robots = await checkRobots(sourceConfig, item.url)
+    if (!robots.allowed) {
+      blocked += 1
+      enrichedItems.push(item)
+      continue
+    }
+
+    await sleep(robots.crawlDelayMs)
+    const page = await browser.newPage({
+      userAgent:
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome Safari BuscadorDeImovelBH/1.0',
+    })
+
+    try {
+      await page.goto(item.url, { waitUntil: 'domcontentloaded', timeout: 30000 })
+      await page.waitForTimeout(2500)
+      const html = await collectDetailHtml(page)
+      enrichedItems.push(mergeListingWithDetailHtml(item, html))
+      enriched += 1
+    } catch {
+      failed += 1
+      enrichedItems.push(item)
+    } finally {
+      await page.close()
+    }
+  }
+
+  reports.push({
+    source: 'QuintoAndar',
+    status: failed > 0 && enriched === 0 ? 'failed' : 'ok',
+    url: sourceConfig.baseUrl,
+    message: `Detalhes consultados para custos completos: ${enriched}. Bloqueados por robots: ${blocked}. Ignorados por teto: ${skippedByPrice}. Falhas: ${failed}.`,
+    collected: enriched,
+    startedAt,
+    finishedAt: new Date().toISOString(),
+  })
+
+  return enrichedItems
+}
+
+async function collectDetailHtml(page: Page): Promise<string> {
+  for (const y of [0, 600, 1200, 1800]) {
+    await page.evaluate((scrollY) => {
+      ;(globalThis as unknown as { scrollTo: (x: number, y: number) => void }).scrollTo(0, scrollY)
+    }, y)
+    await page.waitForTimeout(600)
+  }
+
+  const html = await page.content()
+  const bodyText = await page
+    .locator('body')
+    .innerText({ timeout: 10000 })
+    .catch(() => '')
+
+  return `${html}<pre data-collected-body-text="true">${escapeHtml(bodyText)}</pre>`
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
 }
 
 function sleep(ms: number): Promise<void> {

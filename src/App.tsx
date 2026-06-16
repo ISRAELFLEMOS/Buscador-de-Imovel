@@ -71,7 +71,7 @@ function App() {
           <p className="eyebrow">Buscador de Imovel BH</p>
           <h1>Alugueis perto da Avenida Brasil, 1666</h1>
           <p className="subtitle">
-            Teste inicial focado em apartamentos para alugar, com teto padrao de R$ 8.000, raio
+            Teste inicial focado em apartamentos para alugar, com teto padrao de R$ 4.500, raio
             de ate 3,5 km, preferencia por Santa Teresa e Santa Efigenia, duas vagas e custo
             mensal total quando informado.
           </p>
@@ -94,7 +94,7 @@ function App() {
         <Metric icon={<Home />} label="Alugueis visiveis" value={String(rentListings.length)} />
         <Metric icon={<MapPinned />} label="No raio filtrado" value={String(confirmedInsideRadius)} />
         <Metric icon={<Car />} label="Com 2+ vagas" value={String(rentListings.filter((listing) => (listing.parkingSpaces ?? 0) >= 2).length)} />
-        <Metric icon={<CircleDollarSign />} label="Ate R$ 8 mil coletados" value={String(rentalsUnderLimit)} />
+        <Metric icon={<CircleDollarSign />} label="Ate R$ 4,5 mil coletados" value={String(rentalsUnderLimit)} />
       </section>
 
       <section className="workspace-grid">

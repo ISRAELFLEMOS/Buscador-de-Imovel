@@ -1,12 +1,13 @@
 # Buscador de Imovel BH
 
-Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos para aluguel em Belo Horizonte, priorizando imoveis em ate 3,5 km da Av. Brasil, 1666 e com teto padrao de R$ 8.000 mensais.
+Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos para aluguel em Belo Horizonte, priorizando imoveis em ate 3,5 km da Av. Brasil, 1666 e com teto padrao de R$ 4.500 mensais.
 
 ## O que faz
 
 - Coleta conservadora de anuncios publicos, respeitando `robots.txt`.
-- Normalizacao de aluguel, condominio, IPTU, seguro, area, vagas, bairro, distancia e link.
+- Normalizacao de aluguel, condominio, IPTU, seguro, taxas, area, vagas, bairro, distancia e link.
 - Custo mensal total usa o valor `total` informado pelo portal quando existir; quando nao existir, soma aluguel, condominio, IPTU, seguro e outros custos visiveis como estimativa.
+- Para QuintoAndar, o scraper tenta abrir a pagina publica do anuncio permitido por `robots.txt` para enriquecer a composicao do custo mensal com condominio, IPTU, seguro incendio e taxa de servico.
 - Ranking por custo-beneficio: bairros preferidos, aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
 - Filtros por aluguel maximo, vagas, raio, reforma, busca livre e bairros preferidos.
 - Preferencias da Layza: Santa Teresa e Santa Efigenia como prioridade maxima; Savassi, Anchieta, Funcionarios e Sao Pedro como preferidos.

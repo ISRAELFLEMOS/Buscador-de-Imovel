@@ -77,6 +77,9 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
                     <span>Cond. {formatCurrency(listing.costs.condominium)}</span>
                     <span>IPTU {formatCurrency(listing.costs.iptu)}</span>
                     <span>Seguro {formatCurrency(listing.costs.insurance)}</span>
+                    {typeof listing.costs.other === 'number' ? (
+                      <span>Taxas {formatCurrency(listing.costs.other)}</span>
+                    ) : null}
                   </div>
                 ) : null}
 

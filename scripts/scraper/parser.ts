@@ -60,6 +60,31 @@ export function parseCandidateForTest(
   })
 }
 
+export function mergeListingWithDetailHtml(listing: Listing, detailHtml: string): Listing {
+  const $ = cheerio.load(detailHtml)
+  const detailText = normalizeText($('body').text())
+  if (!detailText) {
+    return listing
+  }
+
+  const detailCosts = inferCosts(detailText, listing.transaction)
+  const costs = mergeCosts(listing.costs, detailCosts)
+  const rawText = normalizeText([listing.rawText, detailText.slice(0, 2500)].filter(Boolean).join(' | '))
+
+  return {
+    ...listing,
+    address: inferAddress(detailText) ?? listing.address,
+    bedrooms: listing.bedrooms ?? inferNumber(detailText, /(\d+)\s*(?:quarto|quartos|dorm|dormitorio|dormitÃ³rio)/i),
+    bathrooms:
+      listing.bathrooms ?? inferNumber(detailText, /(\d+)\s*(?:banheiro|banheiros|suite|suÃ­te|suites|suÃ­tes)/i),
+    parkingSpaces: listing.parkingSpaces ?? inferNumber(detailText, /(\d+)\s*(?:vaga|vagas|garagem)/i),
+    areaM2: listing.areaM2 ?? inferNumber(detailText, /(\d{2,4})\s*m(?:2|Â²)/i),
+    costs,
+    rawText,
+    warnings: buildWarnings(costs, listing.sourceListingId, listing.distanceConfidence),
+  }
+}
+
 function collectCandidates(
   $: cheerio.CheerioAPI,
   pageUrl: string,
@@ -167,7 +192,7 @@ function inferCosts(text: string, transaction: TransactionType): ListingCosts {
   const iptu = inferCurrencyAfter(text, /iptu/i)
   const insurance = inferCurrencyAfter(text, /seguro/i)
   const other = inferCurrencyAfter(text, /taxa|outr[oa]s/i)
-  const explicitMonthlyTotal = transaction === 'rent' ? inferExplicitMonthlyTotal(text) : undefined
+  const explicitMonthlyTotal = transaction === 'rent' ? inferExplicitMonthlyTotal(text, rent) : undefined
   const estimatedMonthlyTotal = transaction === 'rent' ? sumKnown([rent, condominium, iptu, insurance, other]) : undefined
   const monthlyTotal = explicitMonthlyTotal ?? estimatedMonthlyTotal
   const areaM2 = inferNumber(text, /(\d{2,4})\s*m(?:2|²)/i)
@@ -186,24 +211,95 @@ function inferCosts(text: string, transaction: TransactionType): ListingCosts {
   }
 }
 
-function inferExplicitMonthlyTotal(text: string): number | undefined {
-  for (const match of text.matchAll(/(R\$\s*[\d.,]+)\s*(?:total|valor\s+total|mensal)/gi)) {
+function inferExplicitMonthlyTotal(text: string, rent?: number): number | undefined {
+  const candidates: number[] = []
+
+  for (const match of text.matchAll(/\b(?:valor\s+total|total\s+(?:mensal|do\s+aluguel)|total)\b\s*[:#-]?\s*(R\$\s*[\d.,]+)/gi)) {
     const value = parseBrazilianCurrency(match[1])
+    if (isPlausibleMonthlyTotal(value, rent)) {
+      candidates.push(value)
+    }
+  }
+
+  for (const match of text.matchAll(/(R\$\s*[\d.,]+)\s*(?:total|valor\s+total)/gi)) {
+    const value = parseBrazilianCurrency(match[1])
+    if (isPlausibleMonthlyTotal(value, rent)) {
+      candidates.push(value)
+    }
+  }
+
+  const value = inferCurrencyAfter(text, /total\s+(?:mensal|do\s+aluguel)|valor\s+total/i)
+  if (isPlausibleMonthlyTotal(value, rent)) {
+    candidates.push(value)
+  }
+
+  if (candidates.length === 0) {
+    return undefined
+  }
+
+  if (typeof rent === 'number') {
+    const firstAboveRent = candidates.find((candidate) => candidate > rent + 1)
+    if (firstAboveRent) {
+      return firstAboveRent
+    }
+  }
+
+  return candidates[0]
+}
+
+function isPlausibleMonthlyTotal(value: number | undefined, rent?: number): value is number {
+  if (typeof value !== 'number') {
+    return false
+  }
+
+  if (typeof rent === 'number' && value + 1 < rent) {
+    return false
+  }
+
+  return value > 0 && value <= 50000
+}
+
+function mergeCosts(summary: ListingCosts, detail: ListingCosts): ListingCosts {
+  return {
+    rent: detail.rent ?? summary.rent,
+    condominium: detail.condominium ?? summary.condominium,
+    iptu: detail.iptu ?? summary.iptu,
+    insurance: detail.insurance ?? summary.insurance,
+    other: detail.other ?? summary.other,
+    monthlyTotal: detail.monthlyTotal ?? summary.monthlyTotal,
+    monthlyTotalConfidence: strongestConfidence(summary.monthlyTotalConfidence, detail.monthlyTotalConfidence),
+    salePrice: detail.salePrice ?? summary.salePrice,
+    pricePerSquareMeter: detail.pricePerSquareMeter ?? summary.pricePerSquareMeter,
+  }
+}
+
+function strongestConfidence(left: ListingCosts['monthlyTotalConfidence'], right: ListingCosts['monthlyTotalConfidence']) {
+  const weights: Record<ListingCosts['monthlyTotalConfidence'], number> = {
+    missing: 0,
+    estimated: 1,
+    confirmed: 2,
+  }
+
+  return weights[right] > weights[left] ? right : left
+}
+
+function inferCurrencyAfter(text: string, label: RegExp): number | undefined {
+  const flags = label.flags.includes('g') ? label.flags : `${label.flags}g`
+  const pattern = new RegExp(label.source, flags)
+
+  for (const match of text.matchAll(pattern)) {
+    const index = match.index ?? -1
+    if (index < 0) {
+      continue
+    }
+
+    const value = parseAllBrazilianCurrencies(text.slice(index, index + 160))[0]
     if (typeof value === 'number') {
       return value
     }
   }
 
-  return inferCurrencyAfter(text, /total\s+(?:mensal|do\s+aluguel)|valor\s+total/i)
-}
-
-function inferCurrencyAfter(text: string, label: RegExp): number | undefined {
-  const index = text.search(label)
-  if (index < 0) {
-    return undefined
-  }
-  const slice = text.slice(index, index + 120)
-  return parseAllBrazilianCurrencies(slice)[0]
+  return undefined
 }
 
 function inferTitle(text: string): string | undefined {

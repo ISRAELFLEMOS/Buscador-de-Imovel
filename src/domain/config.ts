@@ -12,7 +12,7 @@ export const SEARCH_CENTER: SearchCenter = {
 }
 
 export const DEFAULT_RADIUS_KM = 3.5
-export const DEFAULT_MAX_RENT_TOTAL = 8000
+export const DEFAULT_MAX_RENT_TOTAL = 4500
 
 export const PRIMARY_PREFERRED_NEIGHBORHOODS = ['Santa Teresa', 'Santa Efigenia'] as const
 export const SECONDARY_PREFERRED_NEIGHBORHOODS = [

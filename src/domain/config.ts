@@ -1,0 +1,58 @@
+import type { SearchCenter } from './types'
+
+export const SEARCH_CENTER: SearchCenter = {
+  label: 'CMU - Av. Brasil, 1666',
+  address: 'Avenida Brasil, 1666, Boa Viagem, Belo Horizonte, MG, 30140-004',
+  coordinates: {
+    lat: -19.9313091,
+    lon: -43.93434,
+  },
+  coordinateSource:
+    'Coordenada aproximada por Nominatim/OpenStreetMap para o segmento da Av. Brasil na regiao Boa Viagem/Savassi, validada contra endereco oficial da CMU.',
+}
+
+export const DEFAULT_RADIUS_KM = 3.5
+
+export const CENTRAL_BH_NEIGHBORHOODS = [
+  'Anchieta',
+  'Barro Preto',
+  'Boa Viagem',
+  'Centro',
+  'Cruzeiro',
+  'Funcionarios',
+  'Funcionários',
+  'Floresta',
+  'Lourdes',
+  'Santa Efigenia',
+  'Santa Efigênia',
+  'Santo Agostinho',
+  'Santo Antonio',
+  'Santo Antônio',
+  'Sao Pedro',
+  'São Pedro',
+  'Savassi',
+  'Serra',
+  'Sion',
+]
+
+export const NEIGHBORHOOD_COORDINATES: Record<string, { lat: number; lon: number }> = {
+  anchieta: { lat: -19.9465, lon: -43.9265 },
+  'barro preto': { lat: -19.9188, lon: -43.9503 },
+  'boa viagem': { lat: -19.9289, lon: -43.9343 },
+  centro: { lat: -19.9191, lon: -43.9386 },
+  cruzeiro: { lat: -19.9451, lon: -43.9305 },
+  funcionarios: { lat: -19.9322, lon: -43.9298 },
+  funcionários: { lat: -19.9322, lon: -43.9298 },
+  floresta: { lat: -19.9186, lon: -43.9226 },
+  lourdes: { lat: -19.9278, lon: -43.9437 },
+  'santa efigenia': { lat: -19.9256, lon: -43.9207 },
+  'santa efigênia': { lat: -19.9256, lon: -43.9207 },
+  'santo agostinho': { lat: -19.9253, lon: -43.9536 },
+  'santo antonio': { lat: -19.9398, lon: -43.9464 },
+  'santo antônio': { lat: -19.9398, lon: -43.9464 },
+  'sao pedro': { lat: -19.9398, lon: -43.9352 },
+  'são pedro': { lat: -19.9398, lon: -43.9352 },
+  savassi: { lat: -19.9367, lon: -43.9342 },
+  serra: { lat: -19.9442, lon: -43.9224 },
+  sion: { lat: -19.9522, lon: -43.9317 },
+}

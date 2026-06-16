@@ -1,0 +1,46 @@
+{
+  "name": "buscador-de-imovel",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Buscador de apartamentos em Belo Horizonte perto da Av. Brasil, 1666, com ranking e simulador de financiamento.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "tsx --test tests/unit/*.test.ts",
+    "test:watch": "tsx --test --watch tests/unit/*.test.ts",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc -b",
+    "scrape": "tsx scripts/scraper/run.ts",
+    "scrape:dry": "tsx scripts/scraper/run.ts --dry-run",
+    "format": "prettier --check ."
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.18.0",
+    "playwright": "^1.61.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "robots-parser": "^3.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.4",
+    "tsx": "^4.22.4",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12"
+  }
+}

@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto'
 import * as cheerio from 'cheerio'
+import type { AnyNode } from 'domhandler'
 import { CENTRAL_BH_NEIGHBORHOODS } from '../../src/domain/config'
 import { distanceFromCenter, inferCoordinatesFromNeighborhood, normalizeNeighborhood } from '../../src/domain/geo'
 import { parseAllBrazilianCurrencies, parseBrazilianCurrency, sumKnown } from '../../src/domain/money'
@@ -16,7 +17,7 @@ interface ParseOptions {
 interface AnchorCandidate {
   url: string
   text: string
-  image?: string
+  images?: string[]
 }
 
 export function parseListingsFromHtml(options: ParseOptions): Listing[] {
@@ -70,6 +71,7 @@ export function mergeListingWithDetailHtml(listing: Listing, detailHtml: string)
   const detailCosts = inferCosts(detailText, listing.transaction)
   const costs = mergeCosts(listing.costs, detailCosts)
   const rawText = normalizeText([listing.rawText, detailText.slice(0, 2500)].filter(Boolean).join(' | '))
+  const images = mergeImageUrls(listing.images, collectImageUrls($, listing.url))
 
   return {
     ...listing,
@@ -80,6 +82,7 @@ export function mergeListingWithDetailHtml(listing: Listing, detailHtml: string)
     parkingSpaces: listing.parkingSpaces ?? inferNumber(detailText, /(\d+)\s*(?:vaga|vagas|garagem)/i),
     areaM2: listing.areaM2 ?? inferNumber(detailText, /(\d{2,4})\s*m(?:2|Â²)/i),
     costs,
+    images,
     rawText,
     warnings: buildWarnings(costs, listing.sourceListingId, listing.distanceConfidence),
   }
@@ -111,12 +114,10 @@ function collectCandidates(
       return
     }
 
-    const image =
-      normalizeUrl(anchor.find('img').first().attr('src') ?? container.find('img').first().attr('src'), pageUrl) ??
-      undefined
+    const images = collectElementImages($, anchor, pageUrl)
 
     seen.add(url)
-    candidates.push({ url, text: text.slice(0, 1200), image })
+    candidates.push({ url, text: text.slice(0, 1200), images })
   })
 
   return candidates
@@ -176,7 +177,7 @@ function parseCandidate({
     isNewOrRenovated,
     newOrRenovatedEvidence: isNewOrRenovated ? inferRenovationEvidence(candidate.text) : undefined,
     contactName: inferContact(candidate.text),
-    images: candidate.image ? [candidate.image] : [],
+    images: candidate.images ?? [],
     costs,
     collectedAt,
     rawText: candidate.text,
@@ -418,6 +419,70 @@ function normalizeUrl(value: string | undefined, baseUrl: string): string | unde
   } catch {
     return undefined
   }
+}
+
+function collectElementImages(
+  $: cheerio.CheerioAPI,
+  element: cheerio.Cheerio<AnyNode>,
+  baseUrl: string,
+): string[] {
+  const container = element.closest('article, li, section, div')
+  return collectImageUrls($, baseUrl, element.add(container))
+}
+
+function collectImageUrls(
+  $: cheerio.CheerioAPI,
+  baseUrl: string,
+  root: cheerio.Cheerio<AnyNode> = $('body'),
+): string[] {
+  const urls: string[] = []
+
+  root.find('img, source').each((_, image) => {
+    const node = $(image)
+    for (const attribute of ['src', 'data-src', 'data-original', 'data-lazy-src', 'srcset', 'data-srcset']) {
+      const rawValue = node.attr(attribute)
+      for (const candidate of imageCandidatesFromAttribute(rawValue)) {
+        const url = normalizeUrl(candidate, baseUrl)
+        if (url && looksLikeImageUrl(url)) {
+          urls.push(url)
+        }
+      }
+    }
+  })
+
+  return mergeImageUrls(urls).slice(0, 8)
+}
+
+function imageCandidatesFromAttribute(value: string | undefined): string[] {
+  if (!value) {
+    return []
+  }
+
+  return value
+    .split(',')
+    .map((part) => part.trim().split(/\s+/)[0])
+    .filter(Boolean)
+}
+
+function looksLikeImageUrl(url: string): boolean {
+  return /\.(?:avif|gif|jpe?g|png|webp)(?:[?#]|$)/i.test(url) || /cloudfront|quintoandar|zapimoveis|vivareal/i.test(url)
+}
+
+function mergeImageUrls(...groups: Array<string[] | undefined>): string[] {
+  const seen = new Set<string>()
+  const merged: string[] = []
+
+  for (const group of groups) {
+    for (const url of group ?? []) {
+      if (seen.has(url)) {
+        continue
+      }
+      seen.add(url)
+      merged.push(url)
+    }
+  }
+
+  return merged
 }
 
 function normalizeText(value: string): string {

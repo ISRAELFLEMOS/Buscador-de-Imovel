@@ -1,6 +1,6 @@
 import { DEFAULT_MAX_RENT_TOTAL } from './config'
 import { isInsideDefaultRadius } from './geo'
-import { neighborhoodPreferenceBonus, neighborhoodPreferenceTier } from './neighborhoods'
+import { isSafetyAttentionNeighborhood, neighborhoodPreferenceBonus, neighborhoodPreferenceTier } from './neighborhoods'
 import type { Listing } from './types'
 
 export type PriceBand = 'ate-500k' | '500k-800k' | '800k-1m2' | '1m2-1m8' | 'acima-1m8' | 'sem-preco'
@@ -23,6 +23,10 @@ export function scoreListing(listing: Listing): number {
   }
 
   score += neighborhoodPreferenceBonus(listing.neighborhood)
+
+  if (isSafetyAttentionNeighborhood(listing.neighborhood)) {
+    score -= 18
+  }
 
   if (listing.costs.monthlyTotalConfidence === 'confirmed') {
     score += 12

@@ -74,6 +74,35 @@ describe('parser de anuncios', () => {
     assert.equal(listings[0].costs.monthlyTotalConfidence, 'confirmed')
   })
 
+  it('coleta multiplas imagens do card quando ficam visiveis', () => {
+    const html = `
+      <article>
+        <a href="/imovel/893000001/alugar/apartamento-1-quarto-floresta-belo-horizonte">
+          <img src="https://cdn.example.com/foto-1.webp" />
+          <img src="https://cdn.example.com/foto-2.webp" />
+          Apartamento para alugar no Floresta
+          R$ 2.300 aluguel
+          R$ 2.900 total
+          45 m2 Â· 1 quarto Â· 1 vaga
+        </a>
+      </article>
+    `
+    const listings = parseListingsFromHtml({
+      html,
+      source: 'QuintoAndar',
+      transaction: 'rent',
+      pageUrl: 'https://www.quintoandar.com.br/alugar/imovel/floresta-belo-horizonte-mg-brasil/apartamento',
+      maxListings: 5,
+    })
+
+    assert.equal(listings.length, 1)
+    assert.equal(listings[0].neighborhood, 'Floresta')
+    assert.deepEqual(listings[0].images, [
+      'https://cdn.example.com/foto-1.webp',
+      'https://cdn.example.com/foto-2.webp',
+    ])
+  })
+
   it('enriquece anuncio do QuintoAndar com composicao de custos da pagina de detalhe', () => {
     const html = `
       <article>

@@ -369,7 +369,7 @@ select {
 .image-slot span {
   position: absolute;
   left: 8px;
-  bottom: 8px;
+  top: 8px;
   max-width: calc(100% - 16px);
   border-radius: 8px;
   padding: 5px 7px;
@@ -377,6 +377,26 @@ select {
   font-size: 0.76rem;
   font-weight: 800;
   background: rgba(23, 32, 42, 0.78);
+}
+
+.image-thumbs {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  pointer-events: none;
+}
+
+.image-thumbs img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(23, 32, 42, 0.24);
 }
 
 .listing-body {
@@ -460,6 +480,15 @@ select {
   color: #43535a;
   font-size: 0.78rem;
   background: #f8fbfa;
+}
+
+.tag-row .danger-tag {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  color: #9a1f1f;
+  border-color: #e5a3a3;
+  background: #fff0f0;
 }
 
 .listing-actions {

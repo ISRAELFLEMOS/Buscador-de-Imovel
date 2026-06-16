@@ -72,7 +72,7 @@ function App() {
           <h1>Alugueis perto da Avenida Brasil, 1666</h1>
           <p className="subtitle">
             Teste inicial focado em apartamentos para alugar, com teto padrao de R$ 4.500, raio
-            de ate 3,5 km, preferencia por Santa Teresa e Santa Efigenia, duas vagas e custo
+            de ate 3,8 km, preferencia por Santa Teresa, Santa Efigenia e Floresta, duas vagas e custo
             mensal total quando informado.
           </p>
         </div>

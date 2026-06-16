@@ -3,6 +3,7 @@ import { describe, it } from 'node:test'
 import { SEARCH_CENTER } from '../../src/domain/config'
 import { uniqueNeighborhoods } from '../../src/domain/filters'
 import { distanceFromCenter, haversineDistanceKm } from '../../src/domain/geo'
+import { isSafetyAttentionNeighborhood, neighborhoodPreferenceLabel } from '../../src/domain/neighborhoods'
 import { scoreListing, sortByCostBenefit } from '../../src/domain/ranking'
 import type { Listing } from '../../src/domain/types'
 
@@ -57,7 +58,14 @@ describe('geo e ranking', () => {
     }
 
     assert.equal(uniqueNeighborhoods([centro])[0], 'Santa Teresa')
+    assert.ok(uniqueNeighborhoods([centro]).includes('Floresta'))
+    assert.equal(neighborhoodPreferenceLabel('Floresta'), 'Preferido')
     assert.ok(scoreListing(santaTeresa) > scoreListing(centro))
     assert.equal(sortByCostBenefit([centro, santaTeresa])[0].id, 'santa-teresa')
+  })
+
+  it('marca bairros de atencao para avaliacao de seguranca', () => {
+    assert.equal(isSafetyAttentionNeighborhood('Centro'), true)
+    assert.equal(isSafetyAttentionNeighborhood('Floresta'), false)
   })
 })

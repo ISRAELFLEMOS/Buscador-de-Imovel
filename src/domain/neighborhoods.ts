@@ -1,6 +1,7 @@
 import {
   PREFERRED_NEIGHBORHOODS,
   PRIMARY_PREFERRED_NEIGHBORHOODS,
+  SAFETY_ATTENTION_NEIGHBORHOODS,
   SECONDARY_PREFERRED_NEIGHBORHOODS,
 } from './config'
 import { normalizeNeighborhood } from './geo'
@@ -9,6 +10,7 @@ export type NeighborhoodPreferenceTier = 0 | 1 | 2
 
 const primarySet = new Set(PRIMARY_PREFERRED_NEIGHBORHOODS.map(normalizeNeighborhood))
 const secondarySet = new Set(SECONDARY_PREFERRED_NEIGHBORHOODS.map(normalizeNeighborhood))
+const safetyAttentionSet = new Set(SAFETY_ATTENTION_NEIGHBORHOODS.map(normalizeNeighborhood))
 const preferredOrder = new Map(
   PREFERRED_NEIGHBORHOODS.map((neighborhood, index) => [normalizeNeighborhood(neighborhood), index]),
 )
@@ -41,6 +43,14 @@ export function neighborhoodPreferenceLabel(neighborhood: string): string | unde
   if (tier === 0) return 'Prioridade maxima'
   if (tier === 1) return 'Preferido'
   return undefined
+}
+
+export function isSafetyAttentionNeighborhood(neighborhood?: string): boolean {
+  return Boolean(neighborhood && safetyAttentionSet.has(normalizeNeighborhood(neighborhood)))
+}
+
+export function safetyAttentionLabel(neighborhood?: string): string | undefined {
+  return isSafetyAttentionNeighborhood(neighborhood) ? 'Atencao seguranca' : undefined
 }
 
 export function sortNeighborhoodNames(neighborhoods: string[]): string[] {

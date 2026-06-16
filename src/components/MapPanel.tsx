@@ -1,11 +1,12 @@
 import type { Listing, SearchCenter } from '../domain/types'
+import { DEFAULT_RADIUS_KM } from '../domain/config'
 
 export function MapPanel({ listings, center }: { listings: Listing[]; center: SearchCenter }) {
   const plotted = listings
     .filter((listing) => typeof listing.distanceKm === 'number')
     .slice(0, 24)
     .map((listing, index) => {
-      const distanceRatio = Math.min(1, (listing.distanceKm ?? 0) / 3.5)
+      const distanceRatio = Math.min(1, (listing.distanceKm ?? 0) / DEFAULT_RADIUS_KM)
       const angle = (index * 137.5 * Math.PI) / 180
       const radius = 8 + distanceRatio * 38
       return {

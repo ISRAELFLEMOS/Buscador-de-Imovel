@@ -65,6 +65,10 @@ export const SOURCE_CONFIGS: SourceConfig[] = [
       },
       {
         transaction: 'rent',
+        url: 'https://www.quintoandar.com.br/alugar/imovel/floresta-belo-horizonte-mg-brasil/apartamento',
+      },
+      {
+        transaction: 'rent',
         url: 'https://www.quintoandar.com.br/alugar/imovel/savassi-belo-horizonte-mg-brasil/apartamento',
       },
       {

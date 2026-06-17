@@ -3,7 +3,7 @@ import path from 'node:path'
 import { chromium, type Browser, type Page } from 'playwright'
 import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from '../../src/domain/config'
 import { sortByCostBenefit } from '../../src/domain/ranking'
-import type { Listing, ListingsDataset, SourceRunReport } from '../../src/domain/types'
+import type { Listing, ListingSource, ListingsDataset, SourceRunReport } from '../../src/domain/types'
 import { mergeListingWithDetailHtml, parseListingsFromHtml } from './parser'
 import { checkRobots } from './robots'
 import { SOURCE_CONFIGS } from './sourceConfig'
@@ -17,7 +17,10 @@ interface CliOptions {
 const options = parseArgs(process.argv.slice(2))
 const reports: SourceRunReport[] = []
 const listings: Listing[] = []
-const DETAIL_ENRICHMENT_LIMIT = 60
+const DETAIL_ENRICHMENT_LIMITS: Partial<Record<ListingSource, number>> = {
+  QuintoAndar: 40,
+  'ZAP Imoveis': 25,
+}
 
 await main()
 
@@ -117,16 +120,16 @@ async function main() {
     center: SEARCH_CENTER,
     radiusKm: DEFAULT_RADIUS_KM,
     strictRadiusDefault: false,
-    listings: sortByCostBenefit(applyRentalPolicy(normalizedListings)),
+    listings: sortByCostBenefit(applyListingPolicy(normalizedListings)),
     reports,
     notices: [
       'Scraper conservador: respeita robots.txt, nao usa login, nao resolve CAPTCHA e nao burla bloqueios.',
       'Contato e numero do anuncio sao coletados somente quando ficam visiveis no HTML publico.',
-      `Fase inicial focada em aluguel; anuncios acima de ${DEFAULT_MAX_RENT_TOTAL.toLocaleString('pt-BR', {
+      `Foco padrao em aluguel; anuncios de aluguel acima de ${DEFAULT_MAX_RENT_TOTAL.toLocaleString('pt-BR', {
         style: 'currency',
         currency: 'BRL',
         maximumFractionDigits: 0,
-      })} sao descartados por padrao.`,
+      })} sao descartados por padrao. Anuncios de venda continuam disponiveis no filtro Compra.`,
     ],
   }
 
@@ -167,10 +170,10 @@ function dedupeListings(items: Listing[]): Listing[] {
   })
 }
 
-function applyRentalPolicy(items: Listing[]): Listing[] {
+function applyListingPolicy(items: Listing[]): Listing[] {
   return items.filter((item) => {
     if (item.transaction !== 'rent') {
-      return false
+      return true
     }
 
     const rentTotal = item.costs.monthlyTotal ?? item.costs.rent
@@ -179,35 +182,37 @@ function applyRentalPolicy(items: Listing[]): Listing[] {
 }
 
 async function enrichListingsWithDetailPages(browser: Browser, items: Listing[]): Promise<Listing[]> {
-  const sourceConfig = SOURCE_CONFIGS.find((source) => source.source === 'QuintoAndar')
-  if (!sourceConfig) {
-    return items
-  }
-
-  const startedAt = new Date().toISOString()
-  let enriched = 0
-  let blocked = 0
-  let failed = 0
-  let skippedByPrice = 0
-
+  const stats = new Map<
+    ListingSource,
+    { startedAt: string; enriched: number; blocked: number; failed: number; skippedByPrice: number }
+  >()
   const enrichedItems: Listing[] = []
 
   for (const item of items) {
-    if (item.source !== 'QuintoAndar' || item.transaction !== 'rent' || enriched >= DETAIL_ENRICHMENT_LIMIT) {
+    const limit = DETAIL_ENRICHMENT_LIMITS[item.source]
+    const sourceConfig = SOURCE_CONFIGS.find((source) => source.source === item.source)
+
+    if (!limit || !sourceConfig || item.transaction !== 'rent') {
+      enrichedItems.push(item)
+      continue
+    }
+
+    const sourceStats = getDetailStats(stats, item.source)
+    if (sourceStats.enriched >= limit) {
       enrichedItems.push(item)
       continue
     }
 
     const rentTotal = item.costs.monthlyTotal ?? item.costs.rent
     if (typeof rentTotal === 'number' && rentTotal > DEFAULT_MAX_RENT_TOTAL) {
-      skippedByPrice += 1
+      sourceStats.skippedByPrice += 1
       enrichedItems.push(item)
       continue
     }
 
     const robots = await checkRobots(sourceConfig, item.url)
     if (!robots.allowed) {
-      blocked += 1
+      sourceStats.blocked += 1
       enrichedItems.push(item)
       continue
     }
@@ -223,26 +228,49 @@ async function enrichListingsWithDetailPages(browser: Browser, items: Listing[])
       await page.waitForTimeout(2500)
       const html = await collectDetailHtml(page)
       enrichedItems.push(mergeListingWithDetailHtml(item, html))
-      enriched += 1
+      sourceStats.enriched += 1
     } catch {
-      failed += 1
+      sourceStats.failed += 1
       enrichedItems.push(item)
     } finally {
       await page.close()
     }
   }
 
-  reports.push({
-    source: 'QuintoAndar',
-    status: failed > 0 && enriched === 0 ? 'failed' : 'ok',
-    url: sourceConfig.baseUrl,
-    message: `Detalhes consultados para custos completos: ${enriched}. Bloqueados por robots: ${blocked}. Ignorados por teto: ${skippedByPrice}. Falhas: ${failed}.`,
-    collected: enriched,
-    startedAt,
-    finishedAt: new Date().toISOString(),
-  })
+  for (const [source, sourceStats] of stats) {
+    const sourceConfig = SOURCE_CONFIGS.find((config) => config.source === source)
+    reports.push({
+      source,
+      status: sourceStats.failed > 0 && sourceStats.enriched === 0 ? 'failed' : 'ok',
+      url: sourceConfig?.baseUrl ?? '',
+      message: `Detalhes consultados para custos completos: ${sourceStats.enriched}. Bloqueados por robots: ${sourceStats.blocked}. Ignorados por teto: ${sourceStats.skippedByPrice}. Falhas: ${sourceStats.failed}.`,
+      collected: sourceStats.enriched,
+      startedAt: sourceStats.startedAt,
+      finishedAt: new Date().toISOString(),
+    })
+  }
 
   return enrichedItems
+}
+
+function getDetailStats(
+  stats: Map<ListingSource, { startedAt: string; enriched: number; blocked: number; failed: number; skippedByPrice: number }>,
+  source: ListingSource,
+) {
+  const current = stats.get(source)
+  if (current) {
+    return current
+  }
+
+  const next = {
+    startedAt: new Date().toISOString(),
+    enriched: 0,
+    blocked: 0,
+    failed: 0,
+    skippedByPrice: 0,
+  }
+  stats.set(source, next)
+  return next
 }
 
 async function collectDetailHtml(page: Page): Promise<string> {

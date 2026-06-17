@@ -103,6 +103,52 @@ describe('parser de anuncios', () => {
     ])
   })
 
+  it('extrai anuncios de venda do Zap e reconhece Sagrada Familia', () => {
+    const html = `
+      <article>
+        <a href="https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-sagrada-familia-belo-horizonte-mg-98m2-id-2886787973/">
+          Apartamento a venda com 3 quartos no Sagrada Familia, Belo Horizonte.
+          R$ 690.000
+          98 m2 - 3 quartos - 2 vagas
+          Rua Conselheiro Lafaiete, Sagrada Familia
+        </a>
+      </article>
+    `
+    const listings = parseListingsFromHtml({
+      html,
+      source: 'ZAP Imoveis',
+      transaction: 'sale',
+      pageUrl: 'https://www.zapimoveis.com.br/venda/apartamentos/mg+belo-horizonte+sagrada-familia/',
+      maxListings: 5,
+    })
+
+    assert.equal(listings.length, 1)
+    assert.equal(listings[0].neighborhood, 'Sagrada Familia')
+    assert.equal(listings[0].costs.salePrice, 690000)
+    assert.equal(listings[0].sourceListingId, '2886787973')
+  })
+
+  it('nao mistura anuncio de aluguel em busca de venda', () => {
+    const html = `
+      <article>
+        <a href="https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-sagrada-familia-belo-horizonte-mg-98m2-id-2886787973/">
+          Apartamento para aluguel com 3 quartos no Sagrada Familia.
+          Aluguel R$ 3.600
+          98 m2 - 3 quartos - 2 vagas
+        </a>
+      </article>
+    `
+    const listings = parseListingsFromHtml({
+      html,
+      source: 'ZAP Imoveis',
+      transaction: 'sale',
+      pageUrl: 'https://www.zapimoveis.com.br/venda/apartamentos/mg+belo-horizonte+sagrada-familia/',
+      maxListings: 5,
+    })
+
+    assert.equal(listings.length, 0)
+  })
+
   it('enriquece anuncio do QuintoAndar com composicao de custos da pagina de detalhe', () => {
     const html = `
       <article>

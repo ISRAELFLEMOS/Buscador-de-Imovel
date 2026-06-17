@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test'
 test('carrega filtros, mapa e simulador recolhido', async ({ page }) => {
   await page.goto('/')
 
-  await expect(page.getByRole('heading', { name: /Alugueis perto da Avenida Brasil/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Imoveis perto da Avenida Brasil/i })).toBeVisible()
   await expect(page.getByLabel('Filtros')).toBeVisible()
   await expect(page.getByLabel('Aluguel maximo')).toHaveValue('4500')
   await expect(page.getByRole('img', { name: /Mapa radial simplificado/i })).toBeVisible()

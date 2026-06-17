@@ -26,7 +26,6 @@
 }
 
 .toolbar h1,
-.best-strip h2,
 .map-panel h2,
 .section-title h2 {
   margin: 0;
@@ -236,7 +235,6 @@ select {
   border-color: #ead491;
 }
 
-.best-strip,
 .map-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
@@ -246,16 +244,6 @@ select {
   border-radius: 8px;
   padding: 16px;
   background: #edf5f4;
-}
-
-.best-strip {
-  grid-template-columns: minmax(0, 1fr) auto;
-}
-
-.best-strip > svg {
-  width: 46px;
-  height: 46px;
-  color: #27605c;
 }
 
 .map-visual {

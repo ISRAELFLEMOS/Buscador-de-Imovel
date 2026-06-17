@@ -59,7 +59,9 @@ describe('geo e ranking', () => {
 
     assert.equal(uniqueNeighborhoods([centro])[0], 'Santa Teresa')
     assert.ok(uniqueNeighborhoods([centro]).includes('Floresta'))
+    assert.ok(uniqueNeighborhoods([centro]).includes('Sagrada Familia'))
     assert.equal(neighborhoodPreferenceLabel('Floresta'), 'Preferido')
+    assert.equal(neighborhoodPreferenceLabel('Sagrada Familia'), 'Preferido')
     assert.ok(scoreListing(santaTeresa) > scoreListing(centro))
     assert.equal(sortByCostBenefit([centro, santaTeresa])[0].id, 'santa-teresa')
   })

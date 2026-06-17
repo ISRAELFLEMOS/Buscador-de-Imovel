@@ -11,12 +11,13 @@ export const SEARCH_CENTER: SearchCenter = {
     'Coordenada aproximada por Nominatim/OpenStreetMap para o segmento da Avenida Brasil na regiao Boa Viagem/Savassi.',
 }
 
-export const DEFAULT_RADIUS_KM = 3.8
+export const DEFAULT_RADIUS_KM = 3.9
 export const DEFAULT_MAX_RENT_TOTAL = 4500
 
 export const PRIMARY_PREFERRED_NEIGHBORHOODS = ['Santa Teresa', 'Santa Efigenia'] as const
 export const SECONDARY_PREFERRED_NEIGHBORHOODS = [
   'Floresta',
+  'Sagrada Familia',
   'Savassi',
   'Anchieta',
   'Funcionarios',
@@ -43,6 +44,7 @@ export const CENTRAL_BH_NEIGHBORHOODS = [
   'Santo Agostinho',
   'Santo Antonio',
   'Sao Pedro',
+  'Sagrada Familia',
   'Savassi',
   'Serra',
   'Sion',
@@ -62,6 +64,7 @@ export const NEIGHBORHOOD_COORDINATES: Record<string, { lat: number; lon: number
   'santo agostinho': { lat: -19.9253, lon: -43.9536 },
   'santo antonio': { lat: -19.9398, lon: -43.9464 },
   'sao pedro': { lat: -19.9398, lon: -43.9352 },
+  'sagrada familia': { lat: -19.9006, lon: -43.9188 },
   savassi: { lat: -19.9367, lon: -43.9342 },
   serra: { lat: -19.9442, lon: -43.9224 },
   sion: { lat: -19.9522, lon: -43.9317 },

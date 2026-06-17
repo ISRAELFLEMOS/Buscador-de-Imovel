@@ -1,19 +1,20 @@
 # Buscador de Imovel BH
 
-Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos para aluguel em Belo Horizonte, priorizando imoveis em ate 3,8 km da Av. Brasil, 1666 e com teto padrao de R$ 4.500 mensais.
+Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos em Belo Horizonte, com foco padrao em aluguel, opcao de compra, raio de ate 3,9 km da Av. Brasil, 1666 e teto padrao de R$ 4.500 mensais para aluguel.
 
 ## O que faz
 
 - Coleta conservadora de anuncios publicos, respeitando `robots.txt`.
+- Zap Imoveis entrou como fonte preferida da Layza, com URLs de aluguel e venda por bairros; quando o portal bloquear alguma URL ou o `robots.txt`, o app registra no relatorio e nao tenta contornar.
 - Normalizacao de aluguel, condominio, IPTU, seguro, taxas, area, vagas, bairro, distancia, imagens e link.
 - Custo mensal total usa o valor `total` informado pelo portal quando existir; quando nao existir, soma aluguel, condominio, IPTU, seguro e outros custos visiveis como estimativa.
-- Para QuintoAndar, o scraper tenta abrir a pagina publica do anuncio permitido por `robots.txt` para enriquecer a composicao do custo mensal com condominio, IPTU, seguro incendio e taxa de servico.
-- A interface mostra ate 3 miniaturas extras quando o portal expõe mais imagens publicamente.
+- Para QuintoAndar e Zap Imoveis, o scraper tenta abrir a pagina publica do anuncio permitido por `robots.txt` para enriquecer a composicao do custo mensal com condominio, IPTU, seguro incendio e taxa de servico.
+- A interface mostra ate 3 miniaturas extras quando o portal expoe mais imagens publicamente.
 - Ranking por custo-beneficio: bairros preferidos, aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
 - Filtros por aluguel maximo, vagas, raio, reforma, busca livre e bairros preferidos.
-- Preferencias da Layza: Santa Teresa e Santa Efigenia como prioridade maxima; Floresta, Savassi, Anchieta, Funcionarios e Sao Pedro como preferidos.
+- Preferencias da Layza: Santa Teresa e Santa Efigenia como prioridade maxima; Floresta, Sagrada Familia, Savassi, Anchieta, Funcionarios e Sao Pedro como preferidos.
 - Bairros na lista `SAFETY_ATTENTION_NEIGHBORHOODS` aparecem com alerta vermelho `Atencao seguranca`; a lista e editavel e deve ser revisada com dados oficiais antes de decisao final.
-- Modo de venda e simulador educativo SAC/Price mantidos como apoio para uma etapa futura, sem ser o foco inicial.
+- Modo de venda voltou ao filtro `Operacao`, mantendo aluguel como visualizacao inicial.
 - Publicacao via GitHub Pages.
 
 ## Limites importantes

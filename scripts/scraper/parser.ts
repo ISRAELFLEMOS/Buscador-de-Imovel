@@ -406,7 +406,7 @@ function looksLikeWrongTransaction(title: string, transaction: TransactionType):
     return /\b(?:a venda|venda|comprar|à venda)\b/i.test(title) && !/\balugar|aluguel|loca[cç][aã]o\b/i.test(title)
   }
 
-  return false
+  return /\b(?:alugar|aluguel|loca[cç][aã]o)\b/i.test(title) && !/\b(?:a venda|venda|comprar|à venda)\b/i.test(title)
 }
 
 function normalizeUrl(value: string | undefined, baseUrl: string): string | undefined {

@@ -10,18 +10,17 @@ import {
   RefreshCw,
   Search,
   ShieldAlert,
-  Sparkles,
 } from 'lucide-react'
 import './App.css'
 import { FinancingPanel } from './components/FinancingPanel'
 import { ListingTable } from './components/ListingTable'
 import { MapPanel } from './components/MapPanel'
-import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from './domain/config'
+import { DEFAULT_RADIUS_KM, SEARCH_CENTER } from './domain/config'
 import { DEFAULT_FILTERS, filterListings, uniqueNeighborhoods } from './domain/filters'
 import type { ListingFilters } from './domain/filters'
 import { formatCurrency } from './domain/money'
 import { neighborhoodPreferenceLabel } from './domain/neighborhoods'
-import { scoreListing, sortByCostBenefit } from './domain/ranking'
+import { sortByCostBenefit } from './domain/ranking'
 import type { ListingsDataset } from './domain/types'
 import { emptyDataset } from './data/emptyDataset'
 
@@ -55,25 +54,20 @@ function App() {
   )
   const rentListings = visibleListings.filter((listing) => listing.transaction === 'rent')
   const saleListings = visibleListings.filter((listing) => listing.transaction === 'sale')
-  const bestListing = visibleListings[0]
   const confirmedInsideRadius = visibleListings.filter(
     (listing) => typeof listing.distanceKm === 'number' && listing.distanceKm <= DEFAULT_RADIUS_KM,
   ).length
-  const rentalsUnderLimit = dataset.listings.filter((listing) => {
-    const rentTotal = listing.costs.monthlyTotal ?? listing.costs.rent
-    return listing.transaction === 'rent' && typeof rentTotal === 'number' && rentTotal <= DEFAULT_MAX_RENT_TOTAL
-  }).length
+  const salesCollected = dataset.listings.filter((listing) => listing.transaction === 'sale').length
 
   return (
     <main className="app-shell">
       <section className="toolbar" aria-label="Painel principal">
         <div>
           <p className="eyebrow">Buscador de Imovel BH</p>
-          <h1>Alugueis perto da Avenida Brasil, 1666</h1>
+          <h1>Imoveis perto da Avenida Brasil, 1666</h1>
           <p className="subtitle">
-            Teste inicial focado em apartamentos para alugar, com teto padrao de R$ 4.500, raio
-            de ate 3,8 km, preferencia por Santa Teresa, Santa Efigenia e Floresta, duas vagas e custo
-            mensal total quando informado.
+            Teste inicial com foco em aluguel, teto padrao de R$ 4.500 e opcao de compra no filtro.
+            Raio de ate 3,9 km, incluindo Sagrada Familia, Floresta, Santa Teresa e Santa Efigenia.
           </p>
         </div>
         <div className="toolbar-actions">
@@ -94,7 +88,7 @@ function App() {
         <Metric icon={<Home />} label="Alugueis visiveis" value={String(rentListings.length)} />
         <Metric icon={<MapPinned />} label="No raio filtrado" value={String(confirmedInsideRadius)} />
         <Metric icon={<Car />} label="Com 2+ vagas" value={String(rentListings.filter((listing) => (listing.parkingSpaces ?? 0) >= 2).length)} />
-        <Metric icon={<CircleDollarSign />} label="Ate R$ 4,5 mil coletados" value={String(rentalsUnderLimit)} />
+        <Metric icon={<CircleDollarSign />} label="Vendas coletadas" value={String(salesCollected)} />
       </section>
 
       <section className="workspace-grid">
@@ -121,21 +115,23 @@ function App() {
             </select>
           </label>
 
-          <label>
-            Aluguel maximo
-            <input
-              type="number"
-              min={0}
-              step={500}
-              value={filters.maxRentTotal}
-              onChange={(event) =>
-                setFilters((current) => ({
-                  ...current,
-                  maxRentTotal: Number(event.target.value),
-                }))
-              }
-            />
-          </label>
+          {filters.transaction !== 'sale' ? (
+            <label>
+              Aluguel maximo
+              <input
+                type="number"
+                min={0}
+                step={500}
+                value={filters.maxRentTotal}
+                onChange={(event) =>
+                  setFilters((current) => ({
+                    ...current,
+                    maxRentTotal: Number(event.target.value),
+                  }))
+                }
+              />
+            </label>
+          ) : null}
 
           <label>
             Busca livre
@@ -227,32 +223,14 @@ function App() {
             </div>
           ) : null}
 
-          {dataset.notices.map((notice) => (
-            <div className="notice" key={notice}>
-              <ShieldAlert size={18} aria-hidden="true" />
-              <span>{notice}</span>
-            </div>
-          ))}
-
-          <div className="best-strip">
-            <div>
-              <p className="eyebrow">Menor aluguel com bom encaixe</p>
-              <h2>{bestListing ? bestListing.title : 'Nenhum anuncio no filtro atual'}</h2>
-              <p>
-                {bestListing
-                  ? `${bestListing.source} - ${formatCurrency(bestListing.costs.monthlyTotal ?? bestListing.costs.rent)} - score ${scoreListing(bestListing)} - ${bestListing.neighborhood ?? 'bairro nao informado'}`
-                  : 'Ajuste filtros ou gere uma nova coleta.'}
-              </p>
-            </div>
-            <Sparkles aria-hidden="true" />
-          </div>
-
           <MapPanel listings={visibleListings} center={SEARCH_CENTER} />
 
-          <ListingTable
-            title={`Alugueis ate ${formatCurrency(filters.maxRentTotal)}`}
-            listings={rentListings}
-          />
+          {filters.transaction !== 'sale' ? (
+            <ListingTable
+              title={`Alugueis ate ${formatCurrency(filters.maxRentTotal)}`}
+              listings={rentListings}
+            />
+          ) : null}
 
           {filters.transaction !== 'rent' ? <ListingTable title="Venda" listings={saleListings} /> : null}
 

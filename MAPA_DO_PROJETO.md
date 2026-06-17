@@ -1,12 +1,12 @@
 # Mapa do Projeto - Buscador de Imovel BH
 
-Atualizado em: 2026-06-16
+Atualizado em: 2026-06-17
 
 ## Resumo executivo
 
 - Pasta: `99_OUTROS/BUSCADOR_DE_IMOVEL`
-- Tipo: app web estatico com scraper, ranking de aluguel e simulador financeiro auxiliar.
-- Objetivo: buscar e priorizar apartamentos para aluguel em Belo Horizonte, ate 3,8 km da Av. Brasil, 1666, com teto padrao de R$ 4.500 mensais e preferencia por Santa Teresa, Santa Efigenia, Floresta, Savassi, Anchieta, Funcionarios e Sao Pedro.
+- Tipo: app web estatico com scraper, ranking de aluguel, opcao de compra e simulador financeiro auxiliar.
+- Objetivo: buscar e priorizar apartamentos em Belo Horizonte, com foco padrao em aluguel ate R$ 4.500 mensais, opcao de compra, raio de ate 3,9 km da Av. Brasil, 1666 e preferencia por Santa Teresa, Santa Efigenia, Floresta, Sagrada Familia, Savassi, Anchieta, Funcionarios e Sao Pedro.
 - Publicacao: GitHub Pages em `https://israelflemos.github.io/Buscador-de-Imovel/`.
 - Controle Git: repositorio proprio dentro desta pasta.
 
@@ -15,12 +15,13 @@ Atualizado em: 2026-06-16
 1. `npm run scrape:dry` verifica `robots.txt` e URLs configuradas.
 2. `npm run scrape` coleta paginas permitidas, sem login, CAPTCHA ou bypass.
 3. O scraper gera `public/data/listings.json`.
-4. O app Vite/React carrega o JSON e apresenta filtros, ranking por bairro/aluguel, mapa radial e simulador recolhido para etapa futura.
+4. O app Vite/React carrega o JSON e apresenta filtros, ranking por bairro/aluguel, modo compra, mapa radial e simulador recolhido para etapa futura.
 5. Para aluguel, o custo total exibido pelo portal tem prioridade; na ausencia dele, o app usa soma estimada de aluguel, condominio, IPTU, seguro e outros custos visiveis.
-6. Para QuintoAndar, quando permitido, o scraper abre o detalhe publico do anuncio para preencher condominio, IPTU, seguro incendio e taxa de servico.
+6. Para QuintoAndar e Zap Imoveis, quando permitido, o scraper abre o detalhe publico do anuncio para preencher condominio, IPTU, seguro incendio e taxa de servico.
 7. Quando o portal expoe mais imagens publicas, o app mostra miniaturas extras no card.
 8. Bairros na lista `SAFETY_ATTENTION_NEIGHBORHOODS` recebem alerta visual vermelho para validacao de seguranca.
-9. GitHub Actions executa coleta diaria e publica via Pages.
+9. Zap Imoveis fica configurado como fonte preferida; bloqueios de `robots.txt` ou rede sao registrados no relatorio sem tentativa de contorno.
+10. GitHub Actions executa coleta diaria e publica via Pages.
 
 ## Estrutura
 

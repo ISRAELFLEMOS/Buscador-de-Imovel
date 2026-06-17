@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { chromium, type Browser, type Page } from 'playwright'
 import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from '../../src/domain/config'
@@ -21,6 +21,8 @@ const DETAIL_ENRICHMENT_LIMITS: Partial<Record<ListingSource, number>> = {
   QuintoAndar: 40,
   'ZAP Imoveis': 25,
 }
+const CARRY_OVER_SOURCES: ListingSource[] = ['ZAP Imoveis']
+const CARRY_OVER_MAX_AGE_DAYS = 7
 
 await main()
 
@@ -111,6 +113,9 @@ async function main() {
     if (browser && !options.dryRun) {
       normalizedListings = await enrichListingsWithDetailPages(browser, normalizedListings)
     }
+    if (!options.dryRun) {
+      normalizedListings = dedupeListings([...normalizedListings, ...(await loadCarryOverListings(options.output, normalizedListings))])
+    }
   } finally {
     await browser?.close()
   }
@@ -179,6 +184,54 @@ function applyListingPolicy(items: Listing[]): Listing[] {
     const rentTotal = item.costs.monthlyTotal ?? item.costs.rent
     return typeof rentTotal === 'number' && rentTotal <= DEFAULT_MAX_RENT_TOTAL
   })
+}
+
+async function loadCarryOverListings(outputPath: string, currentItems: Listing[]): Promise<Listing[]> {
+  const now = Date.now()
+  const carryOver: Listing[] = []
+
+  let previousDataset: ListingsDataset
+  try {
+    previousDataset = JSON.parse(await readFile(outputPath, 'utf8')) as ListingsDataset
+  } catch {
+    return carryOver
+  }
+
+  for (const source of CARRY_OVER_SOURCES) {
+    if (currentItems.some((item) => item.source === source)) {
+      continue
+    }
+
+    const previousItems = previousDataset.listings.filter((item) => {
+      if (item.source !== source) {
+        return false
+      }
+
+      const collectedAt = new Date(item.collectedAt).getTime()
+      if (!Number.isFinite(collectedAt)) {
+        return false
+      }
+
+      return now - collectedAt <= CARRY_OVER_MAX_AGE_DAYS * 24 * 60 * 60 * 1000
+    })
+
+    if (previousItems.length === 0) {
+      continue
+    }
+
+    carryOver.push(...previousItems)
+    reports.push({
+      source,
+      status: 'ok',
+      url: outputPath,
+      message: `Reaproveitados ${previousItems.length} anuncios de coleta anterior recente porque a coleta atual retornou zero para a fonte. Datas originais mantidas em collectedAt.`,
+      collected: previousItems.length,
+      startedAt: new Date().toISOString(),
+      finishedAt: new Date().toISOString(),
+    })
+  }
+
+  return carryOver
 }
 
 async function enrichListingsWithDetailPages(browser: Browser, items: Listing[]): Promise<Listing[]> {

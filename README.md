@@ -11,7 +11,9 @@ Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos em B
 - Para QuintoAndar e Zap Imoveis, o scraper tenta abrir a pagina publica do anuncio permitido por `robots.txt` para enriquecer a composicao do custo mensal com condominio, IPTU, seguro incendio e taxa de servico.
 - A interface mostra ate 3 miniaturas extras quando o portal expoe mais imagens publicamente.
 - Ranking por custo-beneficio: bairros preferidos, aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
-- Filtros por aluguel maximo, vagas, raio, reforma, busca livre e bairros preferidos.
+- Filtros avancados por operacao, fonte, aluguel maximo, compra maxima, quartos, area, vagas, raio, reforma, total confirmado, busca livre e bairros preferidos.
+- Ordenacao por melhor encaixe, menor preco, menor distancia, maior area e coleta mais recente.
+- Interface em painel profissional, com metricas, filtros rapidos, relatorio de fontes recolhido e cards mais completos.
 - Preferencias da Layza: Santa Teresa e Santa Efigenia como prioridade maxima; Floresta, Sagrada Familia, Savassi, Anchieta, Funcionarios e Sao Pedro como preferidos.
 - Bairros na lista `SAFETY_ATTENTION_NEIGHBORHOODS` aparecem com alerta vermelho `Atencao seguranca`; a lista e editavel e deve ser revisada com dados oficiais antes de decisao final.
 - Modo de venda voltou ao filtro `Operacao`, mantendo aluguel como visualizacao inicial.

@@ -1,19 +1,27 @@
 export function parseBrazilianCurrency(value: string): number | undefined {
-  const match = value.match(/R\$\s*([\d.,]+)/i)
+  const match = value.match(BRAZILIAN_CURRENCY_PATTERN)
   if (!match) {
     return undefined
   }
 
-  const normalized = match[1].replace(/\./g, '').replace(',', '.')
-  const parsed = Number(normalized)
-  return Number.isFinite(parsed) ? parsed : undefined
+  return parseCurrencyToken(match[1])
 }
 
 export function parseAllBrazilianCurrencies(value: string): number[] {
-  const matches = value.matchAll(/R\$\s*([\d.,]+)/gi)
+  const matches = value.matchAll(BRAZILIAN_CURRENCY_GLOBAL_PATTERN)
   return Array.from(matches)
-    .map((match) => Number(match[1].replace(/\./g, '').replace(',', '.')))
-    .filter((parsed) => Number.isFinite(parsed))
+    .map((match) => parseCurrencyToken(match[1]))
+    .filter((parsed): parsed is number => typeof parsed === 'number' && Number.isFinite(parsed))
+}
+
+const BRAZILIAN_CURRENCY_SOURCE = String.raw`R\$\s*((?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d{1,2})?)`
+const BRAZILIAN_CURRENCY_PATTERN = new RegExp(BRAZILIAN_CURRENCY_SOURCE, 'i')
+const BRAZILIAN_CURRENCY_GLOBAL_PATTERN = new RegExp(BRAZILIAN_CURRENCY_SOURCE, 'gi')
+
+function parseCurrencyToken(token: string): number | undefined {
+  const normalized = token.replace(/\./g, '').replace(',', '.')
+  const parsed = Number(normalized)
+  return Number.isFinite(parsed) ? parsed : undefined
 }
 
 export function formatCurrency(value?: number): string {

@@ -27,7 +27,7 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
                   ) : (
                     <ImageOff size={24} aria-hidden="true" />
                   )}
-                  <span>{listing.source}</span>
+                  <span className="source-badge">{listing.source}</span>
                   {extraImages.length > 0 ? (
                     <div className="image-thumbs" aria-label="Mais fotos do anuncio">
                       {extraImages.map((image) => (
@@ -67,6 +67,14 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
                         <dd>{formatCurrency(listing.costs.rent)}</dd>
                       </div>
                     ) : null}
+                    <div>
+                      <dt>Quartos</dt>
+                      <dd>{listing.bedrooms ?? 'N/I'}</dd>
+                    </div>
+                    <div>
+                      <dt>Banheiros</dt>
+                      <dd>{listing.bathrooms ?? 'N/I'}</dd>
+                    </div>
                     <div>
                       <dt>Vagas</dt>
                       <dd>{listing.parkingSpaces ?? 'N/I'}</dd>

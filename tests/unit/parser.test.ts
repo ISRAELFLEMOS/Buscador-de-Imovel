@@ -128,6 +128,30 @@ describe('parser de anuncios', () => {
     assert.equal(listings[0].sourceListingId, '2886787973')
   })
 
+  it('separa preco de venda quando o portal cola a metragem no valor', () => {
+    const html = `
+      <article>
+        <a href="https://www.example.com/imovel/venda-apartamento-4-quartos-lourdes-belo-horizonte-id-123456789/">
+          Venda de apartamento com 4 quartos.
+          R$ 4.980.000310 m2 tot.4 quartos5 ban.3 vagas
+          Rua Curitiba, Lourdes, Belo Horizonte
+        </a>
+      </article>
+    `
+    const listings = parseListingsFromHtml({
+      html,
+      source: 'Outro',
+      transaction: 'sale',
+      pageUrl: 'https://www.example.com/venda/apartamentos/',
+      maxListings: 5,
+    })
+
+    assert.equal(listings.length, 1)
+    assert.equal(listings[0].costs.salePrice, 4980000)
+    assert.equal(listings[0].areaM2, 310)
+    assert.equal(listings[0].costs.pricePerSquareMeter, 16065)
+  })
+
   it('nao mistura anuncio de aluguel em busca de venda', () => {
     const html = `
       <article>

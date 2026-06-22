@@ -1,13 +1,16 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   BadgeCheck,
+  Building2,
   Car,
   CircleDollarSign,
   ExternalLink,
   Filter,
   Home,
+  ListFilter,
   MapPinned,
   RefreshCw,
+  RotateCcw,
   Search,
   ShieldAlert,
 } from 'lucide-react'
@@ -15,14 +18,28 @@ import './App.css'
 import { FinancingPanel } from './components/FinancingPanel'
 import { ListingTable } from './components/ListingTable'
 import { MapPanel } from './components/MapPanel'
-import { DEFAULT_RADIUS_KM, SEARCH_CENTER } from './domain/config'
-import { DEFAULT_FILTERS, filterListings, uniqueNeighborhoods } from './domain/filters'
+import { DEFAULT_FILTERS, filterListings, uniqueNeighborhoods, uniqueSources, type ListingSortMode } from './domain/filters'
 import type { ListingFilters } from './domain/filters'
+import { DEFAULT_MAX_RENT_TOTAL, DEFAULT_RADIUS_KM, SEARCH_CENTER } from './domain/config'
 import { formatCurrency } from './domain/money'
 import { neighborhoodPreferenceLabel } from './domain/neighborhoods'
 import { sortByCostBenefit } from './domain/ranking'
-import type { ListingsDataset } from './domain/types'
+import type { Listing, ListingsDataset } from './domain/types'
 import { emptyDataset } from './data/emptyDataset'
+
+const operationOptions: Array<{ label: string; value: ListingFilters['transaction'] }> = [
+  { label: 'Aluguel', value: 'rent' },
+  { label: 'Todos', value: 'all' },
+  { label: 'Compra', value: 'sale' },
+]
+
+const sortOptions: Array<{ label: string; value: ListingSortMode }> = [
+  { label: 'Melhor encaixe', value: 'best' },
+  { label: 'Menor preco', value: 'price-asc' },
+  { label: 'Menor distancia', value: 'distance-asc' },
+  { label: 'Maior area', value: 'area-desc' },
+  { label: 'Mais recente', value: 'newest' },
+]
 
 function App() {
   const [dataset, setDataset] = useState<ListingsDataset>(emptyDataset)
@@ -48,26 +65,25 @@ function App() {
   }, [])
 
   const neighborhoods = useMemo(() => uniqueNeighborhoods(dataset.listings), [dataset.listings])
-  const visibleListings = useMemo(
-    () => sortByCostBenefit(filterListings(dataset.listings, filters)),
-    [dataset.listings, filters],
-  )
+  const sources = useMemo(() => uniqueSources(dataset.listings), [dataset.listings])
+  const filteredListings = useMemo(() => filterListings(dataset.listings, filters), [dataset.listings, filters])
+  const visibleListings = useMemo(() => sortListings(filteredListings, filters.sortBy), [filteredListings, filters.sortBy])
   const rentListings = visibleListings.filter((listing) => listing.transaction === 'rent')
   const saleListings = visibleListings.filter((listing) => listing.transaction === 'sale')
   const confirmedInsideRadius = visibleListings.filter(
     (listing) => typeof listing.distanceKm === 'number' && listing.distanceKm <= DEFAULT_RADIUS_KM,
   ).length
-  const salesCollected = dataset.listings.filter((listing) => listing.transaction === 'sale').length
+  const activeFilterCount = countActiveFilters(filters)
 
   return (
     <main className="app-shell">
       <section className="toolbar" aria-label="Painel principal">
-        <div>
+        <div className="toolbar-copy">
           <p className="eyebrow">Buscador de Imovel BH</p>
           <h1>Imoveis perto da Avenida Brasil, 1666</h1>
           <p className="subtitle">
-            Teste inicial com foco em aluguel, teto padrao de R$ 4.500 e opcao de compra no filtro.
-            Raio de ate 3,9 km, incluindo Sagrada Familia, Floresta, Santa Teresa e Santa Efigenia.
+            Busca operacional para comparar aluguel e compra por custo total, bairro, garagem,
+            distancia, fonte e qualidade das informacoes.
           </p>
         </div>
         <div className="toolbar-actions">
@@ -77,61 +93,30 @@ function App() {
           </a>
           <span className="status-pill">
             <RefreshCw size={16} aria-hidden="true" />
-            {loadState === 'loading'
-              ? 'Carregando coleta'
-              : `Atualizado ${formatDate(dataset.generatedAt)}`}
+            {loadState === 'loading' ? 'Carregando coleta' : `Atualizado ${formatDate(dataset.generatedAt)}`}
           </span>
         </div>
       </section>
 
       <section className="summary-grid" aria-label="Resumo da busca">
-        <Metric icon={<Home />} label="Alugueis visiveis" value={String(rentListings.length)} />
-        <Metric icon={<MapPinned />} label="No raio filtrado" value={String(confirmedInsideRadius)} />
-        <Metric icon={<Car />} label="Com 2+ vagas" value={String(rentListings.filter((listing) => (listing.parkingSpaces ?? 0) >= 2).length)} />
-        <Metric icon={<CircleDollarSign />} label="Vendas coletadas" value={String(salesCollected)} />
+        <Metric icon={<Home />} label="Resultados" value={String(visibleListings.length)} />
+        <Metric icon={<CircleDollarSign />} label="Alugueis" value={String(rentListings.length)} />
+        <Metric icon={<Building2 />} label="Compras" value={String(saleListings.length)} />
+        <Metric icon={<MapPinned />} label="No raio" value={String(confirmedInsideRadius)} />
       </section>
 
       <section className="workspace-grid">
         <aside className="filter-panel" aria-label="Filtros">
-          <div className="section-title">
-            <Filter size={18} aria-hidden="true" />
-            <h2>Filtros</h2>
+          <div className="panel-heading">
+            <div className="section-title">
+              <Filter size={18} aria-hidden="true" />
+              <h2>Filtros</h2>
+            </div>
+            <button className="ghost-button" type="button" onClick={() => setFilters(DEFAULT_FILTERS)}>
+              <RotateCcw size={16} aria-hidden="true" />
+              Limpar
+            </button>
           </div>
-
-          <label>
-            Operacao
-            <select
-              value={filters.transaction}
-              onChange={(event) =>
-                setFilters((current) => ({
-                  ...current,
-                  transaction: event.target.value as ListingFilters['transaction'],
-                }))
-              }
-            >
-              <option value="rent">Aluguel</option>
-              <option value="all">Todas as operacoes</option>
-              <option value="sale">Venda</option>
-            </select>
-          </label>
-
-          {filters.transaction !== 'sale' ? (
-            <label>
-              Aluguel maximo
-              <input
-                type="number"
-                min={0}
-                step={500}
-                value={filters.maxRentTotal}
-                onChange={(event) =>
-                  setFilters((current) => ({
-                    ...current,
-                    maxRentTotal: Number(event.target.value),
-                  }))
-                }
-              />
-            </label>
-          ) : null}
 
           <label>
             Busca livre
@@ -140,48 +125,173 @@ function App() {
               <input
                 value={filters.query}
                 onChange={(event) => setFilters((current) => ({ ...current, query: event.target.value }))}
-                placeholder="bairro, portal, caracteristica"
+                placeholder="bairro, rua, portal, codigo"
               />
             </div>
           </label>
 
-          <label>
-            Vagas minimas
-            <input
-              type="number"
-              min={0}
-              max={4}
-              value={filters.minParkingSpaces}
-              onChange={(event) =>
-                setFilters((current) => ({
-                  ...current,
-                  minParkingSpaces: Number(event.target.value),
-                }))
-              }
-            />
-          </label>
+          <div className="field-group">
+            <span className="field-label">Operacao</span>
+            <div className="segmented-control" role="group" aria-label="Operacao">
+              {operationOptions.map((option) => (
+                <button
+                  type="button"
+                  key={option.value}
+                  className={filters.transaction === option.value ? 'active' : undefined}
+                  aria-pressed={filters.transaction === option.value}
+                  onClick={() =>
+                    setFilters((current) => ({
+                      ...current,
+                      transaction: option.value,
+                    }))
+                  }
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
-          <label className="checkbox-line">
-            <input
-              type="checkbox"
-              checked={filters.strictRadius}
-              onChange={(event) =>
-                setFilters((current) => ({ ...current, strictRadius: event.target.checked }))
-              }
-            />
-            Restringir ao raio conhecido/estimado ate {DEFAULT_RADIUS_KM} km
-          </label>
+          <div className="input-grid">
+            {filters.transaction !== 'sale' ? (
+              <label>
+                Aluguel maximo
+                <input
+                  type="number"
+                  min={0}
+                  step={500}
+                  value={filters.maxRentTotal}
+                  onChange={(event) =>
+                    setFilters((current) => ({
+                      ...current,
+                      maxRentTotal: Number(event.target.value),
+                    }))
+                  }
+                />
+              </label>
+            ) : null}
 
-          <label className="checkbox-line">
-            <input
-              type="checkbox"
-              checked={filters.onlyNewOrRenovated}
-              onChange={(event) =>
-                setFilters((current) => ({ ...current, onlyNewOrRenovated: event.target.checked }))
-              }
-            />
-            Novo ou reformado
-          </label>
+            {filters.transaction !== 'rent' ? (
+              <label>
+                Compra maxima
+                <input
+                  type="number"
+                  min={0}
+                  step={50000}
+                  value={filters.maxSalePrice}
+                  placeholder="Sem limite"
+                  onChange={(event) =>
+                    setFilters((current) => ({
+                      ...current,
+                      maxSalePrice: Number(event.target.value),
+                    }))
+                  }
+                />
+              </label>
+            ) : null}
+
+            <label>
+              Quartos min.
+              <input
+                type="number"
+                min={0}
+                max={5}
+                value={filters.minBedrooms}
+                onChange={(event) =>
+                  setFilters((current) => ({
+                    ...current,
+                    minBedrooms: Number(event.target.value),
+                  }))
+                }
+              />
+            </label>
+
+            <label>
+              Area min.
+              <input
+                type="number"
+                min={0}
+                step={10}
+                value={filters.minAreaM2}
+                onChange={(event) =>
+                  setFilters((current) => ({
+                    ...current,
+                    minAreaM2: Number(event.target.value),
+                  }))
+                }
+              />
+            </label>
+
+            <label>
+              Vagas min.
+              <input
+                type="number"
+                min={0}
+                max={4}
+                value={filters.minParkingSpaces}
+                onChange={(event) =>
+                  setFilters((current) => ({
+                    ...current,
+                    minParkingSpaces: Number(event.target.value),
+                  }))
+                }
+              />
+            </label>
+          </div>
+
+          <div className="checkbox-stack">
+            <label className="checkbox-line">
+              <input
+                type="checkbox"
+                checked={filters.strictRadius}
+                onChange={(event) => setFilters((current) => ({ ...current, strictRadius: event.target.checked }))}
+              />
+              Restringir ao raio de {DEFAULT_RADIUS_KM} km
+            </label>
+
+            <label className="checkbox-line">
+              <input
+                type="checkbox"
+                checked={filters.onlyTwoPlusParking}
+                onChange={(event) => setFilters((current) => ({ ...current, onlyTwoPlusParking: event.target.checked }))}
+              />
+              Somente 2+ vagas
+            </label>
+
+            <label className="checkbox-line">
+              <input
+                type="checkbox"
+                checked={filters.onlyNewOrRenovated}
+                onChange={(event) => setFilters((current) => ({ ...current, onlyNewOrRenovated: event.target.checked }))}
+              />
+              Novo ou reformado
+            </label>
+
+            {filters.transaction !== 'sale' ? (
+              <label className="checkbox-line">
+                <input
+                  type="checkbox"
+                  checked={filters.onlyKnownTotal}
+                  onChange={(event) => setFilters((current) => ({ ...current, onlyKnownTotal: event.target.checked }))}
+                />
+                Total confirmado pelo portal
+              </label>
+            ) : null}
+          </div>
+
+          <FilterChecklist
+            title="Fontes"
+            items={sources}
+            selected={filters.sources}
+            onChange={(source, checked) =>
+              setFilters((current) => ({
+                ...current,
+                sources: checked
+                  ? [...current.sources, source]
+                  : current.sources.filter((item) => item !== source),
+              }))
+            }
+          />
 
           <div className="neighborhood-list">
             <span>Bairros preferidos da Layza</span>
@@ -223,22 +333,77 @@ function App() {
             </div>
           ) : null}
 
+          <div className="results-toolbar">
+            <div>
+              <p className="eyebrow">Resultados</p>
+              <h2>{visibleListings.length} imoveis encontrados</h2>
+              <p className="muted">{activeFilterCount} filtros ativos</p>
+            </div>
+            <label>
+              Ordenar
+              <select
+                value={filters.sortBy}
+                onChange={(event) =>
+                  setFilters((current) => ({
+                    ...current,
+                    sortBy: event.target.value as ListingSortMode,
+                  }))
+                }
+              >
+                {sortOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <div className="quick-filter-row" aria-label="Atalhos rapidos">
+            <QuickFilter
+              active={filters.onlyTwoPlusParking}
+              icon={<Car size={15} aria-hidden="true" />}
+              label="2+ vagas"
+              onClick={() => setFilters((current) => ({ ...current, onlyTwoPlusParking: !current.onlyTwoPlusParking }))}
+            />
+            <QuickFilter
+              active={filters.strictRadius}
+              icon={<MapPinned size={15} aria-hidden="true" />}
+              label={`Ate ${DEFAULT_RADIUS_KM} km`}
+              onClick={() => setFilters((current) => ({ ...current, strictRadius: !current.strictRadius }))}
+            />
+            <QuickFilter
+              active={filters.onlyNewOrRenovated}
+              icon={<Home size={15} aria-hidden="true" />}
+              label="Novo/reformado"
+              onClick={() => setFilters((current) => ({ ...current, onlyNewOrRenovated: !current.onlyNewOrRenovated }))}
+            />
+            {filters.transaction !== 'sale' ? (
+              <QuickFilter
+                active={filters.onlyKnownTotal}
+                icon={<BadgeCheck size={15} aria-hidden="true" />}
+                label="Total confirmado"
+                onClick={() => setFilters((current) => ({ ...current, onlyKnownTotal: !current.onlyKnownTotal }))}
+              />
+            ) : null}
+          </div>
+
           <MapPanel listings={visibleListings} center={SEARCH_CENTER} />
 
           {filters.transaction !== 'sale' ? (
-            <ListingTable
-              title={`Alugueis ate ${formatCurrency(filters.maxRentTotal)}`}
-              listings={rentListings}
-            />
+            <ListingTable title={`Alugueis ate ${formatCurrency(filters.maxRentTotal)}`} listings={rentListings} />
           ) : null}
 
-          {filters.transaction !== 'rent' ? <ListingTable title="Venda" listings={saleListings} /> : null}
+          {filters.transaction !== 'rent' ? <ListingTable title="Compra" listings={saleListings} /> : null}
 
-          <section className="reports" aria-label="Relatorio das fontes">
-            <div className="section-title">
-              <BadgeCheck size={18} aria-hidden="true" />
-              <h2>Fontes e bloqueios</h2>
-            </div>
+          <details className="reports" aria-label="Relatorio das fontes">
+            <summary>
+              <span>
+                <ListFilter size={18} aria-hidden="true" />
+                Fontes e bloqueios
+              </span>
+              <small>{dataset.reports.length} registros</small>
+            </summary>
             <div className="report-grid">
               {dataset.reports.length === 0 ? (
                 <p className="muted">Nenhum relatorio de scraping carregado.</p>
@@ -252,12 +417,12 @@ function App() {
                 ))
               )}
             </div>
-          </section>
+          </details>
         </section>
       </section>
 
       <details className="simulator-section" aria-label="Simulador de financiamento">
-        <summary>Simulador de financiamento para uma etapa futura</summary>
+        <summary>Simulador de financiamento para compra</summary>
         <h2>Simulador de financiamento</h2>
         <FinancingPanel suggestedPrice={saleListings[0]?.costs.salePrice} />
       </details>
@@ -275,6 +440,105 @@ function Metric({ icon, label, value }: { icon: ReactNode; label: string; value:
       </div>
     </article>
   )
+}
+
+function QuickFilter({
+  active,
+  icon,
+  label,
+  onClick,
+}: {
+  active: boolean
+  icon: ReactNode
+  label: string
+  onClick: () => void
+}) {
+  return (
+    <button type="button" className={active ? 'quick-filter active' : 'quick-filter'} aria-pressed={active} onClick={onClick}>
+      {icon}
+      {label}
+    </button>
+  )
+}
+
+function FilterChecklist<T extends string>({
+  title,
+  items,
+  selected,
+  onChange,
+}: {
+  title: string
+  items: T[]
+  selected: T[]
+  onChange: (item: T, checked: boolean) => void
+}) {
+  if (items.length === 0) {
+    return null
+  }
+
+  return (
+    <div className="checklist">
+      <span>{title}</span>
+      {items.map((item) => (
+        <label className="checkbox-line" key={item}>
+          <input type="checkbox" checked={selected.includes(item)} onChange={(event) => onChange(item, event.target.checked)} />
+          <span>{item}</span>
+        </label>
+      ))}
+    </div>
+  )
+}
+
+function sortListings(listings: Listing[], sortBy: ListingSortMode): Listing[] {
+  const sorted = sortByCostBenefit(listings)
+
+  if (sortBy === 'best') {
+    return sorted
+  }
+
+  return [...sorted].sort((a, b) => {
+    if (sortBy === 'price-asc') {
+      return comparablePrice(a) - comparablePrice(b)
+    }
+
+    if (sortBy === 'distance-asc') {
+      return (a.distanceKm ?? Number.POSITIVE_INFINITY) - (b.distanceKm ?? Number.POSITIVE_INFINITY)
+    }
+
+    if (sortBy === 'area-desc') {
+      return (b.areaM2 ?? 0) - (a.areaM2 ?? 0)
+    }
+
+    return new Date(b.collectedAt).getTime() - new Date(a.collectedAt).getTime()
+  })
+}
+
+function comparablePrice(listing: Listing): number {
+  const value =
+    listing.transaction === 'rent'
+      ? listing.costs.monthlyTotal ?? listing.costs.rent
+      : listing.costs.salePrice
+
+  return typeof value === 'number' ? value : Number.POSITIVE_INFINITY
+}
+
+function countActiveFilters(filters: ListingFilters): number {
+  return [
+    filters.transaction !== DEFAULT_FILTERS.transaction,
+    filters.query.trim().length > 0,
+    filters.maxRentTotal !== DEFAULT_MAX_RENT_TOTAL,
+    filters.maxSalePrice > 0,
+    filters.minBedrooms > 0,
+    filters.minAreaM2 > 0,
+    filters.minParkingSpaces > 0,
+    filters.onlyTwoPlusParking,
+    filters.onlyNewOrRenovated,
+    filters.onlyKnownTotal,
+    filters.strictRadius,
+    filters.neighborhoods.length > 0,
+    filters.sources.length > 0,
+    filters.sortBy !== DEFAULT_FILTERS.sortBy,
+  ].filter(Boolean).length
 }
 
 function formatDate(value: string): string {

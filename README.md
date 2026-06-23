@@ -9,7 +9,7 @@ Aplicacao web estatica para apoiar o teste inicial de busca de apartamentos em B
 - Normalizacao de aluguel, condominio, IPTU, seguro, taxas, area, vagas, bairro, distancia, imagens e link.
 - Custo mensal total usa o valor `total` informado pelo portal quando existir; quando nao existir, soma aluguel, condominio, IPTU, seguro e outros custos visiveis como estimativa.
 - Para QuintoAndar e Zap Imoveis, o scraper tenta abrir a pagina publica do anuncio permitido por `robots.txt` para enriquecer a composicao do custo mensal com condominio, IPTU, seguro incendio e taxa de servico.
-- A interface mostra ate 3 miniaturas extras quando o portal expoe mais imagens publicamente.
+- A interface mostra ate 3 miniaturas extras quando o portal expoe mais imagens publicamente, removendo variacoes repetidas da mesma foto.
 - Ranking por custo-beneficio: bairros preferidos, aluguel mais baixo, raio, duas vagas, novo/reformado, distancia e completude.
 - Filtros avancados por operacao, fonte, aluguel maximo, compra maxima, quartos, area, vagas, raio, reforma, total confirmado, busca livre e bairros preferidos.
 - Ordenacao por melhor encaixe, menor preco, menor distancia, maior area e coleta mais recente.

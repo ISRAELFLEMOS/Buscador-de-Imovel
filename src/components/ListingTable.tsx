@@ -1,4 +1,5 @@
 import { ExternalLink, ImageOff, MapPin, Phone, TriangleAlert } from 'lucide-react'
+import { listingPreviewImages } from '../domain/images'
 import { formatCurrency } from '../domain/money'
 import { safetyAttentionLabel } from '../domain/neighborhoods'
 import { priceBandLabel, salePriceBand, scoreListing } from '../domain/ranking'
@@ -17,20 +18,20 @@ export function ListingTable({ title, listings }: { title: string; listings: Lis
         <div className="listing-grid">
           {listings.map((listing) => {
             const safetyLabel = safetyAttentionLabel(listing.neighborhood)
-            const extraImages = listing.images.slice(1, 4)
+            const previewImages = listingPreviewImages(listing.images)
 
             return (
               <article className="listing-card" key={listing.id}>
                 <div className="image-slot">
-                  {listing.images[0] ? (
-                    <img src={listing.images[0]} alt="" loading="lazy" />
+                  {previewImages.primary ? (
+                    <img src={previewImages.primary} alt="" loading="lazy" />
                   ) : (
                     <ImageOff size={24} aria-hidden="true" />
                   )}
                   <span className="source-badge">{listing.source}</span>
-                  {extraImages.length > 0 ? (
+                  {previewImages.thumbnails.length > 0 ? (
                     <div className="image-thumbs" aria-label="Mais fotos do anuncio">
-                      {extraImages.map((image) => (
+                      {previewImages.thumbnails.map((image) => (
                         <img key={image} src={image} alt="" loading="lazy" />
                       ))}
                     </div>

@@ -3,6 +3,7 @@ import * as cheerio from 'cheerio'
 import type { AnyNode } from 'domhandler'
 import { CENTRAL_BH_NEIGHBORHOODS } from '../../src/domain/config'
 import { distanceFromCenter, inferCoordinatesFromNeighborhood, normalizeNeighborhood } from '../../src/domain/geo'
+import { isLikelyPropertyImageUrl, uniqueImageUrls } from '../../src/domain/images'
 import { parseAllBrazilianCurrencies, parseBrazilianCurrency, sumKnown } from '../../src/domain/money'
 import type { Listing, ListingCosts, ListingSource, TransactionType } from '../../src/domain/types'
 
@@ -465,24 +466,11 @@ function imageCandidatesFromAttribute(value: string | undefined): string[] {
 }
 
 function looksLikeImageUrl(url: string): boolean {
-  return /\.(?:avif|gif|jpe?g|png|webp)(?:[?#]|$)/i.test(url) || /cloudfront|quintoandar|zapimoveis|vivareal/i.test(url)
+  return isLikelyPropertyImageUrl(url)
 }
 
 function mergeImageUrls(...groups: Array<string[] | undefined>): string[] {
-  const seen = new Set<string>()
-  const merged: string[] = []
-
-  for (const group of groups) {
-    for (const url of group ?? []) {
-      if (seen.has(url)) {
-        continue
-      }
-      seen.add(url)
-      merged.push(url)
-    }
-  }
-
-  return merged
+  return uniqueImageUrls(groups.flatMap((group) => group ?? []))
 }
 
 function normalizeText(value: string): string {

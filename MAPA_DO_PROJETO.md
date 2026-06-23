@@ -1,6 +1,6 @@
 # Mapa do Projeto - Buscador de Imovel BH
 
-Atualizado em: 2026-06-22
+Atualizado em: 2026-06-23
 
 ## Resumo executivo
 
@@ -18,7 +18,7 @@ Atualizado em: 2026-06-22
 4. O app Vite/React carrega o JSON e apresenta painel com metricas, filtros avancados, filtros rapidos, ordenacao, ranking por bairro/aluguel, modo compra, mapa radial e simulador recolhido.
 5. Para aluguel, o custo total exibido pelo portal tem prioridade; na ausencia dele, o app usa soma estimada de aluguel, condominio, IPTU, seguro e outros custos visiveis.
 6. Para QuintoAndar e Zap Imoveis, quando permitido, o scraper abre o detalhe publico do anuncio para preencher condominio, IPTU, seguro incendio e taxa de servico.
-7. Quando o portal expoe mais imagens publicas, o app mostra miniaturas extras no card; os cards tambem destacam quartos, banheiros, vagas, area, custos e link do anuncio.
+7. Quando o portal expoe mais imagens publicas, o app mostra miniaturas extras distintas no card e remove variacoes repetidas da mesma foto; os cards tambem destacam quartos, banheiros, vagas, area, custos e link do anuncio.
 8. Bairros na lista `SAFETY_ATTENTION_NEIGHBORHOODS` recebem alerta visual vermelho para validacao de seguranca.
 9. Zap Imoveis fica configurado como fonte preferida; bloqueios de `robots.txt` ou rede sao registrados no relatorio sem tentativa de contorno.
 10. GitHub Actions executa coleta diaria e publica via Pages.
